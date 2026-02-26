@@ -1,0 +1,247 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import AuthorityBrands from "../components/AuthorityBrands.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import { siteConfig } from "../data/siteConfig";
+import { services } from "../data/services";
+---
+
+<BaseLayout
+  title="Plombier Bruxelles, Schaerbeek, Anderlecht | Dépannage 24h/24 - ITR Services"
+  description="Plombier professionnel à Bruxelles, Schaerbeek et Anderlecht. Dépannage urgent 24h/24, débouchage, réparation de fuite, remplacement boiler et rénovation salle de bain. Devis gratuit. Appelez le +32 470 96 08 23."
+>
+  <!-- Hero Section -->
+  <HeroSection
+    h1="Plombier à Bruxelles, Schaerbeek et Anderlecht — Dépannage rapide 24h/24"
+    slogan="Votre plombier de confiance, disponible jour et nuit."
+    imagePrompt="Professional plumber in clean navy blue work uniform, confidently standing in a bright modern European apartment kitchen in Brussels. He holds a professional wrench, smiling warmly at camera. Soft natural window light, shallow depth of field, blurred kitchen background with white tiles and copper pipes. Corporate portrait style, warm tones, photorealistic, 4K, shot on Sony A7III with 85mm f/1.4 lens."
+    imageAlt="Plombier professionnel ITR Services intervenant à Bruxelles"
+    imageSrc="/images/ai/freepik__professional-plumber-in-clean-navy-blue-work-unifo__27188.png"
+  />
+
+  <!-- Mini social proof + price teasing -->
+  <section class="py-6 md:py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <SocialProofMini />
+          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
+          <p class="text-gray-600 text-sm text-center sm:text-left">
+            <strong class="text-dark-blue">Tarifs compétitifs</strong> — Débouchage dès 69€, réparation dès 89€
+          </p>
+        </div>
+        <CTAButton
+          text="Devis gratuit"
+          subtext="Sans engagement"
+          size="sm"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services overview (quick grid) -->
+  <section id="services" class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-3">
+          Tous nos services de plomberie
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Du dépannage d'urgence à la rénovation complète, nous couvrons tous vos besoins en plomberie.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service, i) => (
+          <a
+            href={`/${service.slug}`}
+            class:list={[
+              "group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline animate-on-scroll",
+              `delay-${Math.min(i + 1, 3)}`
+            ]}
+          >
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              {service.icon === "wrench" && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              )}
+              {service.icon === "droplet" && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+                </svg>
+              )}
+              {service.icon === "flame" && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                </svg>
+              )}
+              {service.icon === "pipe" && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 4v16"/>
+                  <path d="M17 4v16"/>
+                  <path d="M7 8h10"/>
+                  <path d="M7 12h10"/>
+                  <path d="M7 16h10"/>
+                </svg>
+              )}
+              {service.icon === "bath" && (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
+                  <line x1="10" x2="8" y1="5" y2="7"/>
+                  <line x1="2" x2="22" y1="12" y2="12"/>
+                  <line x1="7" x2="7" y1="19" y2="21"/>
+                  <line x1="17" x2="17" y1="19" y2="21"/>
+                </svg>
+              )}
+            </div>
+            <h3 class="font-heading font-bold text-dark-blue text-lg mb-2 group-hover:text-primary transition-colors">
+              {service.name}
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              {service.shortDesc}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TextImageCTA: Client need oriented -->
+  <TextImageCTA
+    title="Un problème de plomberie ? Ne restez pas sans solution."
+    text="Fuite d'eau en pleine nuit, boiler en panne, canalisation bouchée… Ces situations d'urgence nécessitent une intervention rapide et professionnelle. Chez ITR Services, nous comprenons le stress que cela représente et nous nous engageons à vous dépanner dans les meilleurs délais."
+    imagePrompt="Close-up action shot of a professional plumber's hands repairing a copper pipe under a kitchen sink. Water droplets visible, professional tools in frame (pipe wrench, PTFE tape). Dramatic side lighting creating depth, slightly dark moody atmosphere conveying urgency. Sharp focus on hands and pipe, blurred background. Documentary photography style, photorealistic, 4K, shot on Canon EOS R5 with 35mm f/1.4 lens."
+    imageAlt="Détecteur d'humidité professionnel utilisé par ITR Services pour la détection de fuites"
+    imageSrc="/images/portfolio/camera-detection-fuite.jpg"
+    imagePosition="right"
+    ctaText="Appelez maintenant"
+    ctaSubtext="Intervention en 30 min* - Devis gratuit"
+    features={[
+      "Intervention d'urgence 24h/24, 7j/7",
+      "Arrivée en 30 à 60 minutes",
+      "Diagnostic gratuit sur place",
+      "Matériel professionnel de dernière génération",
+    ]}
+  />
+
+  <!-- Authority: Partner brands -->
+  <AuthorityBrands />
+
+  <!-- TextImageCTA: Solution oriented -->
+  <TextImageCTA
+    title="Des solutions rapides et durables pour chaque situation."
+    text="Nos plombiers qualifiés utilisent les dernières techniques et des matériaux de qualité professionnelle pour garantir des réparations qui durent. Du simple dépannage à la rénovation complète, chaque intervention est réalisée dans les règles de l'art."
+    imagePrompt="Luxurious modern bathroom renovation, freshly completed. Walk-in rain shower with frameless glass, white marble-effect large format tiles, matte black Grohe fixtures, floating oak vanity with undermount basin, LED backlit mirror. Warm ambient lighting, steam slightly visible. Interior design magazine style, clean composition, natural daylight from frosted window. Photorealistic, 4K, architectural photography, shot on Hasselblad with 24mm tilt-shift lens."
+    imageAlt="Avant/après débouchage évier par ITR Services"
+    imageSrc="/images/portfolio/avant-apres-evier.jpg"
+    imagePosition="left"
+    ctaText="Demandez un devis gratuit"
+    ctaSubtext="Réponse immédiate - Sans engagement"
+    features={[
+      "Plombiers certifiés et expérimentés",
+      "Matériaux de marques reconnues (Grohe, Geberit, Vaillant)",
+      "Devis transparent, aucune surprise",
+      "Garantie sur toutes nos interventions",
+    ]}
+  />
+
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Portfolio: Before/After + Equipment -->
+  <PortfolioGallery />
+
+  <!-- TextImageCTA: Differentiation oriented -->
+  <TextImageCTA
+    title="Pourquoi choisir ITR Services ?"
+    text="Ce qui nous distingue, c'est notre engagement envers la satisfaction client. Pas de déplacement facturé inutilement, pas de surfacturation, et une transparence totale sur nos tarifs. Nous traitons chaque intervention comme si c'était chez nous."
+    imagePrompt="Two friendly professional plumbers in matching clean navy blue uniforms with subtle company logo, standing next to their branded white service van on a typical Brussels residential street. Belgian townhouses with characteristic facades in background. Both smiling confidently, one holding a professional toolbox. Golden hour warm sunlight, friendly approachable mood. Corporate team photography style, photorealistic, 4K, shot on Nikon Z9 with 50mm f/1.8 lens."
+    imageAlt="Caméra thermique professionnelle utilisée par ITR Services pour la détection de fuites"
+    imageSrc="/images/portfolio/appareil-camera.jpg"
+    imagePosition="right"
+    ctaText="Contactez-nous"
+    ctaSubtext="Disponible 24h/24 - 7j/7"
+    features={[
+      "Aucun frais de déplacement caché",
+      "Tarifs parmi les plus bas de Bruxelles",
+      "Intervention garantie le jour même",
+      "Service client réactif et à l'écoute",
+    ]}
+  />
+
+  <!-- Pricing -->
+  <PricingCards />
+
+  <!-- Final CTA -->
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <!-- Decorative background -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Urgence plomberie</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Un problème de plomberie ?<br />Appelez-nous maintenant.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        Nos plombiers sont disponibles 24h/24 pour intervenir rapidement à Bruxelles, Schaerbeek et Anderlecht. Devis gratuit et sans engagement.
+      </p>
+      <CTAButton
+        text="Appel Gratuit : +32 470 96 08 23"
+        subtext="Intervention en 30 min* — Devis gratuit — Sans engagement"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQSection />
+
+  <!-- SEO Text Block -->
+  <SEOTextBlock title="Votre plombier de confiance à Bruxelles : ITR Services">
+    <p>
+      <strong>ITR Services</strong> est votre partenaire plomberie de référence à <strong>Bruxelles</strong>,
+      <strong>Schaerbeek</strong> et <strong>Anderlecht</strong>. Spécialisés dans le <strong>dépannage plomberie urgent</strong>,
+      nous intervenons 24 heures sur 24, 7 jours sur 7, pour résoudre rapidement tous vos problèmes : fuites d'eau,
+      canalisations bouchées, pannes de chauffe-eau, et bien plus encore.
+    </p>
+    <p>
+      Notre équipe de <strong>plombiers qualifiés</strong> maîtrise l'ensemble des interventions de plomberie résidentielle
+      et commerciale. Que vous ayez besoin d'un <strong>débouchage de canalisation</strong> en urgence, d'une
+      <strong>recherche de fuite</strong> avec caméra thermique, d'un <strong>remplacement de boiler électrique</strong>
+      ou d'une <strong>rénovation complète de salle de bain</strong>, nous avons l'expertise et le matériel adapté.
+    </p>
+    <p>
+      Nous nous distinguons par notre <strong>transparence tarifaire</strong> : chaque intervention est précédée d'un
+      devis clair et détaillé, sans frais cachés. Nos tarifs figurent parmi les plus compétitifs de la région bruxelloise,
+      sans jamais compromettre la qualité de notre travail. Toutes nos réparations sont <strong>garanties</strong> et
+      réalisées avec des matériaux de marques reconnues comme Grohe, Geberit et Vaillant.
+    </p>
+    <p>
+      Basés au cœur de Bruxelles, nous connaissons parfaitement les spécificités de la plomberie dans les habitations
+      de la capitale belge. Des immeubles art déco de <strong>Schaerbeek</strong> aux maisons mitoyennes
+      d'<strong>Anderlecht</strong>, en passant par les appartements du centre de <strong>Bruxelles</strong>,
+      nous adaptons chaque intervention au type de bâtiment et d'installation rencontré.
+    </p>
+    <p>
+      Contactez <strong>ITR Services</strong> dès maintenant au <strong>{siteConfig.phone}</strong> pour un dépannage
+      rapide ou un devis gratuit. Votre satisfaction est notre priorité.
+    </p>
+  </SEOTextBlock>
+
+  <!-- Local Info -->
+  <LocalInfo />
+</BaseLayout>

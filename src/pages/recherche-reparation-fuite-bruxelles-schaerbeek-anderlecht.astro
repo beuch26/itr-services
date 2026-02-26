@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import { siteConfig } from "../data/siteConfig";
+import { faqFuite } from "../data/faq";
+---
+
+<BaseLayout
+  title="Recherche & Réparation de Fuite Bruxelles, Schaerbeek, Anderlecht | ITR Services"
+  description="Recherche et réparation de fuite d'eau à Bruxelles, Schaerbeek et Anderlecht. Détection non destructive par caméra thermique. Intervention 24h/24. Devis gratuit. Appelez le +32 470 96 08 23."
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Recherche & Réparation de fuite", href: "/recherche-reparation-fuite-bruxelles-schaerbeek-anderlecht" },
+  ]} />
+
+  <HeroSection
+    h1="Recherche & réparation de fuite à Bruxelles, Schaerbeek et Anderlecht"
+    slogan="On trouve la fuite, on la répare. Sans casser vos murs."
+    imagePrompt="Professional plumber using thermal camera for leak detection"
+    imageAlt="Détection de fuite par caméra thermique - ITR Services"
+    imageSrc="/images/portfolio/chantier-detection-fuite.jpg"
+  />
+
+  <!-- Mini social proof -->
+  <section class="py-6 md:py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <SocialProofMini />
+          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
+          <p class="text-gray-600 text-sm text-center sm:text-left">
+            <strong class="text-dark-blue">Détection non destructive</strong> — Caméra thermique et détecteur d'humidité
+          </p>
+        </div>
+        <CTAButton
+          text="Appeler maintenant"
+          subtext="Diagnostic gratuit"
+          size="sm"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Service details -->
+  <TextImageCTA
+    title="On trouve votre fuite sans casser ni percer."
+    text="Tache d'humidité au plafond, compteur d'eau qui s'emballe, mur qui gondole… Une fuite cachée peut faire des dégâts bien avant d'être visible. Nos plombiers utilisent la caméra thermique, le détecteur d'humidité et la caméra d'inspection pour localiser la fuite au millimètre près — sans toucher à vos murs ni à vos sols."
+    imagePrompt="Thermal camera detecting water leak behind wall"
+    imageAlt="Caméra de détection de fuite utilisée par ITR Services"
+    imageSrc="/images/portfolio/camera-detection-fuite.jpg"
+    imagePosition="right"
+    ctaText="Appelez maintenant"
+    ctaSubtext="Détection précise - Devis gratuit"
+    features={[
+      "Caméra thermique haute résolution",
+      "Détecteur d'humidité professionnel",
+      "Caméra d'inspection vidéo pour canalisations",
+      "Localisation au millimètre, sans démolition",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Fuite trouvée, fuite réparée — dans la foulée."
+    text="Pas besoin de revenir un autre jour. Une fois la source identifiée, nos plombiers réparent immédiatement : raccord, joint, canalisation, vanne — peu importe l'origine. On utilise des pièces solides et éprouvées pour que la réparation tienne dans le temps."
+    imagePrompt="Professional plumber repairing a water pipe"
+    imageAlt="Appareil de détection thermique professionnel"
+    imageSrc="/images/portfolio/appareil-camera.jpg"
+    imagePosition="left"
+    ctaText="Demandez un devis gratuit"
+    ctaSubtext="Réparation garantie - Sans engagement"
+    features={[
+      "Réparation sur place, le jour même",
+      "Pièces et matériaux de marques reconnues",
+      "Garantie sur chaque réparation",
+      "Disponible en urgence 24h/24",
+    ]}
+  />
+
+  <!-- Social proof -->
+  <SocialProofFull />
+
+  <!-- Pricing -->
+  <PricingCards cards={[
+    {
+      title: "Détection de fuite",
+      price: "89",
+      unit: "€",
+      description: "Localisation précise par caméra thermique",
+      features: [
+        "Caméra thermique + détecteur humidité",
+        "Diagnostic complet de la situation",
+        "Rapport de détection",
+        "Devis réparation inclus",
+      ],
+    },
+    {
+      title: "Détection + réparation",
+      price: "129",
+      unit: "€",
+      description: "Recherche et réparation dans la foulée",
+      features: [
+        "Détection complète incluse",
+        "Réparation immédiate sur place",
+        "Pièces de qualité incluses",
+        "Garantie sur la réparation",
+      ],
+      highlighted: true,
+    },
+    {
+      title: "Remplacement tuyauterie",
+      price: "189",
+      unit: "€",
+      description: "Section de canalisation à remplacer",
+      features: [
+        "Inspection de l'état des tuyaux",
+        "Remplacement de la section touchée",
+        "Matériaux cuivre ou multicouche",
+        "Garantie longue durée",
+      ],
+    },
+  ]} />
+
+  <!-- Final CTA -->
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Fuite d'eau</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Une fuite d'eau ?<br />Chaque minute compte.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        Ne laissez pas une fuite causer des dégâts coûteux. Nos plombiers interviennent en urgence avec l'équipement qu'il faut pour trouver et stopper la fuite.
+      </p>
+      <CTAButton
+        text={`Appel Gratuit : ${siteConfig.phone}`}
+        subtext="Détection précise — Réparation garantie — Devis gratuit"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQSection items={faqFuite} title="Questions fréquentes — Recherche de fuite" />
+
+  <!-- SEO Text -->
+  <SEOTextBlock title="Expert en recherche et réparation de fuite à Bruxelles">
+    <p>
+      <strong>ITR Services</strong> est votre spécialiste en <strong>recherche et réparation de fuite à Bruxelles</strong>,
+      <strong>Schaerbeek</strong> et <strong>Anderlecht</strong>. Grâce à notre équipement de détection —
+      <strong>caméra thermique</strong>, <strong>détecteur d'humidité</strong> et <strong>caméra d'inspection vidéo</strong> —
+      nous localisons les fuites cachées sans travaux destructifs.
+    </p>
+    <p>
+      Une fuite non traitée, c'est le risque d'infiltrations, de moisissures, de dommages
+      structurels et de factures d'eau qui explosent. Notre approche : <strong>détecter sans casser</strong>
+      grâce à l'imagerie thermique, puis <strong>réparer sur place dans la foulée</strong>.
+    </p>
+    <p>
+      Disponibles <strong>24h/24 et 7j/7</strong>, nous intervenons dans les 30 à 60 minutes* pour toute urgence
+      de fuite à Bruxelles et ses environs. Nos réparations sont <strong>garanties</strong> et réalisées avec des
+      matériaux éprouvés.
+    </p>
+    <p>
+      Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une recherche de fuite
+      précise et une réparation qui tient. Devis gratuit et sans engagement.
+    </p>
+  </SEOTextBlock>
+
+  <LocalInfo />
+</BaseLayout>

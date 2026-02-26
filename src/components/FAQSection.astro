@@ -1,0 +1,62 @@
+---
+import { faqHomepage, type FAQItem } from "../data/faq";
+
+interface Props {
+  items?: FAQItem[];
+  title?: string;
+}
+
+const { items = faqHomepage, title = "Questions fréquentes" } = Astro.props;
+---
+
+<section class="py-12 md:py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8 animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-3">
+        {title}
+      </h2>
+      <p class="text-gray-600">
+        Tout ce que vous devez savoir avant de faire appel à nos services.
+      </p>
+    </div>
+
+    <div class="space-y-3 animate-on-scroll delay-1">
+      {items.map((item, i) => (
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/30 transition-colors">
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-heading font-semibold text-dark-blue hover:text-primary transition-colors list-none [&::-webkit-details-marker]:hidden">
+            <span class="pr-4">{item.question}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  })} />
+</section>

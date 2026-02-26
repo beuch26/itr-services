@@ -1,0 +1,126 @@
+---
+import { siteConfig } from "../data/siteConfig";
+import CTAButton from "./CTAButton.astro";
+---
+
+<section class="py-12 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <!-- Map -->
+      <div class="animate-on-scroll rounded-2xl overflow-hidden shadow-lg h-[300px] md:h-[400px] relative" id="map-container">
+        <div id="intervention-map" class="w-full h-full z-0"></div>
+      </div>
+
+      <!-- Text -->
+      <div class="animate-on-scroll delay-1">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-5">
+          Votre plombier local à {siteConfig.areasShort}
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          Basés au cœur de Bruxelles, nous connaissons parfaitement les spécificités de la plomberie dans les habitations bruxelloises. Que ce soit dans les immeubles anciens de Schaerbeek ou les maisons d'Anderlecht, nous adaptons nos interventions à chaque situation.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          {siteConfig.areas.map((area) => (
+            <div class="flex items-center gap-2 bg-surface rounded-xl p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span class="font-heading font-semibold text-dark-blue text-sm">{area}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="flex flex-wrap gap-6 text-sm text-gray-600 mb-8">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Intervention en <strong>30-60 min</strong></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span><strong>Disponible 24h/24</strong>, 7j/7</span>
+          </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-start">
+          <CTAButton
+            text="Appelez votre plombier local"
+            subtext="Intervention rapide dans votre quartier"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Center on Brussels area
+    var map = L.map('intervention-map', {
+      scrollWheelZoom: false,
+      dragging: true,
+      zoomControl: true,
+    }).setView([50.848, 4.345], 13);
+
+    // Clean map style (CartoDB Positron)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 19,
+    }).addTo(map);
+
+    // Approximate boundaries for Bruxelles-Ville, Schaerbeek & Anderlecht
+    var bruxelles = [
+      [50.8625, 4.3280], [50.8580, 4.3150], [50.8490, 4.3120],
+      [50.8400, 4.3180], [50.8340, 4.3300], [50.8320, 4.3450],
+      [50.8350, 4.3600], [50.8400, 4.3700], [50.8480, 4.3750],
+      [50.8560, 4.3720], [50.8620, 4.3600], [50.8650, 4.3450],
+    ];
+
+    var schaerbeek = [
+      [50.8650, 4.3450], [50.8620, 4.3600], [50.8600, 4.3750],
+      [50.8620, 4.3850], [50.8680, 4.3950], [50.8750, 4.4000],
+      [50.8800, 4.3950], [50.8830, 4.3830], [50.8810, 4.3680],
+      [50.8770, 4.3550], [50.8720, 4.3450],
+    ];
+
+    var anderlecht = [
+      [50.8490, 4.3120], [50.8450, 4.2950], [50.8380, 4.2850],
+      [50.8280, 4.2830], [50.8200, 4.2900], [50.8160, 4.3050],
+      [50.8180, 4.3200], [50.8240, 4.3350], [50.8320, 4.3450],
+      [50.8340, 4.3300], [50.8400, 4.3180],
+    ];
+
+    var zoneStyle = {
+      color: '#FF6B35',
+      weight: 2,
+      opacity: 0.8,
+      fillColor: '#FF6B35',
+      fillOpacity: 0.15,
+    };
+
+    L.polygon(bruxelles, zoneStyle).addTo(map).bindPopup('<strong>Bruxelles</strong><br>Zone d\'intervention principale');
+    L.polygon(schaerbeek, zoneStyle).addTo(map).bindPopup('<strong>Schaerbeek</strong><br>Zone d\'intervention');
+    L.polygon(anderlecht, zoneStyle).addTo(map).bindPopup('<strong>Anderlecht</strong><br>Zone d\'intervention');
+
+    // Company marker
+    var icon = L.divIcon({
+      html: '<div style="background:#0A2540;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,0.3);border:2px solid white;">ITR</div>',
+      className: '',
+      iconSize: [36, 36],
+      iconAnchor: [18, 18],
+    });
+
+    L.marker([50.848, 4.345], { icon: icon }).addTo(map)
+      .bindPopup('<strong>ITR Services</strong><br>Plombier à Bruxelles<br><a href="tel:+32470960823">+32 470 96 08 23</a>');
+  });
+</script>

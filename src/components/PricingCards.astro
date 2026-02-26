@@ -1,0 +1,122 @@
+---
+import CTAButton from "./CTAButton.astro";
+import { pricingHomepage, type PricingCard } from "../data/pricing";
+
+interface Props {
+  cards?: PricingCard[];
+}
+
+const { cards = pricingHomepage } = Astro.props;
+---
+
+<section class="bg-surface py-12 md:py-16 relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.025] rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-primary/60 mb-3">Tarifs</span>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-3 tracking-tight">
+        Nos tarifs transparents
+      </h2>
+      <p class="text-gray-500 max-w-lg mx-auto">
+        Des prix clairs, annoncés avant chaque intervention. Aucune mauvaise surprise.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+      {cards.map((card, i) => (
+        <div
+          class:list={[
+            "relative rounded-3xl p-7 lg:p-8 transition-all duration-500 hover:-translate-y-2 animate-on-scroll group",
+            `delay-${i + 1}`,
+            card.highlighted
+              ? "bg-dark-blue text-white shadow-2xl shadow-dark-blue/30 md:scale-[1.04] ring-1 ring-white/10"
+              : "bg-white shadow-sm hover:shadow-xl ring-1 ring-gray-100 hover:ring-primary/20"
+          ]}
+        >
+          {card.highlighted && (
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span class="bg-gradient-to-r from-accent to-accent-hover text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full shadow-lg shadow-accent/25">
+                Le plus demandé
+              </span>
+            </div>
+          )}
+
+          {/* Decorative corner */}
+          <div class:list={[
+            "absolute top-0 right-0 w-24 h-24 rounded-bl-[60px] opacity-[0.04]",
+            card.highlighted ? "bg-white" : "bg-primary"
+          ]}></div>
+
+          <h3 class:list={[
+            "relative font-heading font-bold text-xl mb-1.5 tracking-tight",
+            card.highlighted ? "text-white" : "text-dark-blue"
+          ]}>
+            {card.title}
+          </h3>
+
+          <p class:list={[
+            "text-sm mb-5",
+            card.highlighted ? "text-white/50" : "text-gray-400"
+          ]}>
+            {card.description}
+          </p>
+
+          <div class="flex items-baseline gap-1.5 mb-7">
+            <span class:list={["text-sm font-medium", card.highlighted ? "text-white/40" : "text-gray-400"]}>dès</span>
+            <span class:list={[
+              "text-5xl font-heading font-extrabold tracking-tighter",
+              card.highlighted ? "text-accent" : "text-primary"
+            ]}>
+              {card.price}
+            </span>
+            <span class:list={["text-xl font-bold", card.highlighted ? "text-white/40" : "text-gray-400"]}>{card.unit}</span>
+          </div>
+
+          <div class:list={["h-px mb-6", card.highlighted ? "bg-white/10" : "bg-gray-100"]}></div>
+
+          <ul class="space-y-3.5 mb-8">
+            {card.features.map((feature) => (
+              <li class="flex items-center gap-2.5">
+                <div class:list={[
+                  "w-5 h-5 rounded-full flex items-center justify-center shrink-0",
+                  card.highlighted ? "bg-accent/20" : "bg-primary/8"
+                ]}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class:list={["w-3 h-3", card.highlighted ? "text-accent" : "text-primary"]}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+                <span class:list={[
+                  "text-sm",
+                  card.highlighted ? "text-white/80" : "text-gray-600"
+                ]}>
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <CTAButton
+            text="Appeler pour un devis"
+            subtext="Gratuit et sans engagement"
+            variant={card.highlighted ? "accent" : "primary"}
+            size="md"
+            class="w-full text-center"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

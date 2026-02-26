@@ -1,0 +1,129 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import StickyPhoneCTA from "../components/StickyPhoneCTA.astro";
+import { siteConfig } from "../data/siteConfig";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+}
+
+const { title, description, canonicalURL } = Astro.props;
+const canonical = canonicalURL || new URL(Astro.url.pathname, siteConfig.siteUrl).href;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:site_name" content={siteConfig.companyName} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <!-- LocalBusiness JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": siteConfig.companyName,
+      "telephone": siteConfig.phone,
+      "email": siteConfig.email,
+      "url": siteConfig.siteUrl,
+      "areaServed": siteConfig.areas.map(area => ({
+        "@type": "City",
+        "name": area,
+      })),
+      "availableLanguage": "French",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+      },
+      "priceRange": "€€",
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <StickyPhoneCTA />
+
+    <!-- Scroll animations with stagger orchestration -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+      );
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Parallax effect on hero (desktop only — on mobile it clips the overlay badges)
+      const heroImg = document.querySelector("[data-parallax]");
+      if (heroImg && window.matchMedia("(min-width: 1024px)").matches) {
+        window.addEventListener("scroll", () => {
+          const speed = 0.15;
+          const offset = window.scrollY * speed;
+          (heroImg as HTMLElement).style.transform = `translateY(${offset}px)`;
+        }, { passive: true });
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .animate-on-scroll.delay-1 { transition-delay: 0.12s; }
+  .animate-on-scroll.delay-2 { transition-delay: 0.24s; }
+  .animate-on-scroll.delay-3 { transition-delay: 0.36s; }
+  .animate-on-scroll.delay-4 { transition-delay: 0.48s; }
+  .animate-on-scroll.delay-5 { transition-delay: 0.60s; }
+
+  /* Decorative section divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(30,111,217,0.12) 30%, rgba(30,111,217,0.12) 70%, transparent);
+  }
+</style>

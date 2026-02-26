@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:luxe.elegance-properties.com)",
+      "WebFetch(domain:astro.build)",
+      "WebFetch(domain:roofer-astro.vercel.app)",
+      "WebFetch(domain:renjio.netlify.app)",
+      "WebFetch(domain:itr-service.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:tailkits.com)",
+      "WebFetch(domain:dev.to)",
+      "Bash(cd \"/c/Users/Matthieu/Desktop/site plombier\" && npm create astro@latest . -- --template minimal --no-install --no-git --typescript strict 2>&1)",
+      "Bash(cd \"/c/Users/Matthieu/Desktop/site plombier\" && npx create-astro@latest temp-astro --template minimal --no-install --no-git --typescript strict --yes 2>&1)",
+      "Bash(cd \"/c/Users/Matthieu/Desktop/site plombier\" && npm install && npm install tailwindcss @tailwindcss/vite 2>&1)",
+      "Bash(cd:*)",
+      "Bash(cd \"/c/Users/Matthieu/Desktop/site plombier\" && npm run build 2>&1)",
+      "WebFetch(domain:localhost)",
+      "Bash(claude mcp:*)",
+      "mcp__chrome-devtools__list_pages",
+      "Bash(sleep 3:*)",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__chrome-devtools__click",
+      "Bash(powershell:*)",
+      "mcp__chrome-devtools__select_page",
+      "Bash(python --version 2>&1 && python -c \"from PIL import Image; print\\('Pillow OK'\\)\" 2>&1)",
+      "Bash(python:*)",
+      "mcp__chrome-devtools__emulate",
+      "Bash(find:*)",
+      "Bash(npx astro:*)",
+      "Bash(git:*)"
+    ]
+  }
+}

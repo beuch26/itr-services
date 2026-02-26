@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-blue: #0A2540;
+  --color-dark-blue-light: #0F3460;
+  --color-primary: #1E6FD9;
+  --color-primary-light: #3B82F6;
+  --color-primary-dark: #1557A8;
+  --color-accent: #FF6B35;
+  --color-accent-hover: #E85A2A;
+  --color-accent-light: #FFF3ED;
+  --color-gold: #FBBF24;
+  --color-surface: #F7F8FA;
+  --color-surface-alt: #EEF1F6;
+
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --animate-fade-in-up: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes gentle-ring {
+  0%, 100% { transform: rotate(0deg); }
+  15%      { transform: rotate(12deg); }
+  30%      { transform: rotate(-10deg); }
+  45%      { transform: rotate(6deg); }
+  60%      { transform: rotate(-4deg); }
+  75%      { transform: rotate(2deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1E293B;
+  padding-bottom: 76px;
+  background: #FFFFFF;
+  position: relative;
+}
+
+/* Subtle grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(30, 111, 217, 0.15);
+  color: #0A2540;
+}
+
+/* Smooth focus outlines */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Phone ring animation utility */
+.animate-ring {
+  animation: gentle-ring 2s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Shimmer effect for CTAs */
+.shimmer {
+  background: linear-gradient(
+    110deg,
+    transparent 33%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 67%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Float animation */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

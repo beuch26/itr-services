@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { siteConfig } from "../data/siteConfig";
+---
+
+<BaseLayout
+  title="Mentions légales | ITR Services - Plombier Bruxelles"
+  description="Mentions légales du site ITR Services, plombier professionnel à Bruxelles, Schaerbeek et Anderlecht."
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Mentions légales", href: "/mentions-legales" },
+  ]} />
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-8 animate-on-scroll">
+        Mentions légales
+      </h1>
+
+      <div class="prose prose-gray max-w-none space-y-8 animate-on-scroll delay-1">
+
+        <!-- Éditeur du site -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Éditeur du site</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le site <strong>itr-service.com</strong> est édité par :<br />
+            <strong>{siteConfig.companyName}</strong><br />
+            Bruxelles, Belgique<br />
+            N° d'entreprise (BCE) : <em class="text-gray-400">à compléter</em><br />
+            TVA : <em class="text-gray-400">à compléter</em><br />
+            Téléphone : <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a><br />
+            Email : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>
+          </p>
+        </div>
+
+        <!-- Responsable de la publication -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Responsable de la publication</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le responsable de la publication est le gérant de la société {siteConfig.companyName}.
+          </p>
+        </div>
+
+        <!-- Hébergement -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Hébergement</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Ce site est hébergé par :<br />
+            Vercel Inc.<br />
+            440 N Barranca Ave #4133<br />
+            Covina, CA 91723, États-Unis<br />
+            Site web : vercel.com
+          </p>
+        </div>
+
+        <!-- Propriété intellectuelle -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Propriété intellectuelle</h2>
+          <p class="text-gray-600 leading-relaxed">
+            L'ensemble du contenu de ce site (textes, images, logos, graphismes, icônes, sons, logiciels, etc.)
+            est la propriété exclusive de {siteConfig.companyName} ou de ses partenaires et est protégé par les
+            lois belges et internationales relatives à la propriété intellectuelle.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des
+            éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation
+            écrite préalable de {siteConfig.companyName}.
+          </p>
+        </div>
+
+        <!-- Protection des données -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Protection des données personnelles</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi belge du
+            30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de
+            données à caractère personnel, vous disposez d'un droit d'accès, de rectification, de suppression
+            et d'opposition aux données personnelles vous concernant.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Les données personnelles collectées sur ce site (via les formulaires de contact ou les appels
+            téléphoniques) sont utilisées uniquement dans le cadre de la relation commerciale avec
+            {siteConfig.companyName} et ne sont en aucun cas transmises à des tiers.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Pour exercer vos droits ou pour toute question relative à la protection de vos données personnelles,
+            vous pouvez nous contacter à l'adresse : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>.
+          </p>
+        </div>
+
+        <!-- Cookies -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Cookies</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Ce site peut utiliser des cookies pour améliorer l'expérience utilisateur. Les cookies sont de
+            petits fichiers texte stockés sur votre appareil qui nous permettent de mémoriser vos préférences
+            et d'analyser le trafic du site.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies. Cependant,
+            certaines fonctionnalités du site pourraient ne plus être disponibles.
+          </p>
+        </div>
+
+        <!-- Limitation de responsabilité -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Limitation de responsabilité</h2>
+          <p class="text-gray-600 leading-relaxed">
+            {siteConfig.companyName} s'efforce d'assurer l'exactitude et la mise à jour des informations
+            diffusées sur ce site. Toutefois, {siteConfig.companyName} ne peut garantir l'exactitude, la
+            précision ou l'exhaustivité des informations mises à disposition sur ce site.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            {siteConfig.companyName} décline toute responsabilité pour toute imprécision, inexactitude ou
+            omission portant sur des informations disponibles sur ce site, ainsi que pour tout dommage résultant
+            d'une intrusion frauduleuse d'un tiers.
+          </p>
+        </div>
+
+        <!-- Droit applicable -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Droit applicable</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Les présentes mentions légales sont régies par le droit belge. En cas de litige, les tribunaux
+            de Bruxelles seront seuls compétents.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Contact</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Pour toute question concernant ces mentions légales, vous pouvez nous contacter :<br />
+            Téléphone : <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a><br />
+            Email : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

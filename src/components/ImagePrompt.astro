@@ -1,0 +1,45 @@
+---
+interface Props {
+  prompt: string;
+  alt: string;
+  class?: string;
+  loading?: "eager" | "lazy";
+  src?: string;
+}
+
+const { prompt, alt, class: className = "", loading = "lazy", src } = Astro.props;
+---
+
+{src ? (
+  <img src={src} alt={alt} class={className} loading={loading} />
+) : (
+  <div class:list={["relative overflow-hidden bg-gradient-to-br from-dark-blue/5 via-primary/5 to-accent/5 flex flex-col items-center justify-center p-6 text-center", className]}>
+    <!-- Decorative background pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%230A2540&quot; fill-opacity=&quot;1&quot;><path d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/></g></g></svg>'); background-size: 30px 30px;"></div>
+
+    <!-- Camera icon -->
+    <div class="relative mb-4">
+      <div class="w-14 h-14 rounded-2xl bg-white/80 backdrop-blur-sm shadow-sm flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+          <circle cx="12" cy="13" r="3"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Prompt label -->
+    <span class="relative text-[10px] font-heading font-bold uppercase tracking-widest text-primary/60 mb-2">
+      Prompt IA pour cette image
+    </span>
+
+    <!-- Prompt text -->
+    <p class="relative text-sm leading-relaxed text-dark-blue/70 max-w-md font-medium italic">
+      "{prompt}"
+    </p>
+
+    <!-- Alt text indicator -->
+    <span class="relative mt-3 text-[10px] text-gray-400">
+      alt: {alt}
+    </span>
+  </div>
+)}

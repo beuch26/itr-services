@@ -1,0 +1,129 @@
+---
+import CTAButton from "./CTAButton.astro";
+import SocialProofMini from "./SocialProofMini.astro";
+import ImagePrompt from "./ImagePrompt.astro";
+
+interface Props {
+  h1: string;
+  slogan: string;
+  imagePrompt: string;
+  imageAlt: string;
+  imageSrc?: string;
+}
+
+const { h1, slogan, imagePrompt, imageAlt, imageSrc } = Astro.props;
+---
+
+<section class="relative bg-gradient-to-br from-surface via-white to-surface overflow-hidden">
+  <!-- Decorative background shapes -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/[0.03] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/[0.03] rounded-full blur-3xl"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.025]" style="background-image: radial-gradient(circle at 1px 1px, #0A2540 1px, transparent 0); background-size: 40px 40px;"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+      <!-- Text -->
+      <div class="animate-on-scroll">
+        <SocialProofMini class="mb-6" />
+
+        <h1 class="text-base md:text-lg text-primary font-heading font-semibold mb-4 tracking-wide uppercase">
+          {h1}
+        </h1>
+
+        <p class="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-extrabold text-dark-blue leading-[1.1] mb-6 tracking-tight" set:html={slogan.replace(/jour et nuit/i, '<span class="text-accent">jour et nuit</span>')} />
+
+        <p class="text-lg text-gray-500 mb-10 max-w-xl leading-relaxed">
+          Dépannage, réparation, installation et rénovation. <strong class="text-gray-700">ITR Services</strong> intervient rapidement à Bruxelles, Schaerbeek et Anderlecht pour résoudre tous vos problèmes de plomberie.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 items-center">
+          <CTAButton
+            text="Appelez maintenant"
+            subtext="Intervention en 30 min* - Devis gratuit"
+            size="lg"
+          />
+          <CTAButton
+            text="Nos services"
+            subtext=""
+            href="#services"
+            variant="white"
+            size="lg"
+          />
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-gray-100">
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <div class="w-8 h-8 rounded-lg bg-primary/8 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <span>24h/24</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <div class="w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <span>Devis gratuit</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+            </div>
+            <span>4.4/5 Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="animate-on-scroll delay-2 relative">
+        <!-- Decorative frame -->
+        <div class="absolute -inset-3 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-3xl blur-sm"></div>
+
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-dark-blue/10 ring-1 ring-black/[0.04]" data-parallax>
+          <ImagePrompt
+            prompt={imagePrompt}
+            alt={imageAlt}
+            src={imageSrc}
+            class="w-full h-[350px] md:h-[450px] lg:h-[520px] object-cover"
+            loading="eager"
+          />
+
+          <!-- Overlay badge -->
+          <div class="absolute bottom-5 left-5 bg-white/[0.92] backdrop-blur-md rounded-2xl px-5 py-3.5 shadow-xl ring-1 ring-black/[0.04]">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 bg-gradient-to-br from-accent/10 to-accent/20 rounded-xl flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-heading font-bold text-dark-blue text-sm tracking-tight">Disponible 24h/24</p>
+                <p class="text-xs text-gray-400">7 jours sur 7</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats badge (top right) -->
+          <div class="absolute top-5 right-5 bg-dark-blue/90 backdrop-blur-md rounded-2xl px-4 py-2.5 shadow-xl">
+            <div class="flex items-center gap-2">
+              <span class="text-accent font-heading font-bold text-lg">20+</span>
+              <span class="text-white/70 text-xs">ans<br/>d'expérience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
