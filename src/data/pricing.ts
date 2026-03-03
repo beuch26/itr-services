@@ -10,7 +10,7 @@ export interface PricingCard {
 export const pricingHomepage: PricingCard[] = [
   {
     title: "Débouchage",
-    price: "69",
+    price: "129",
     unit: "€",
     description: "Débouchage rapide de vos canalisations",
     features: [
@@ -22,7 +22,7 @@ export const pricingHomepage: PricingCard[] = [
   },
   {
     title: "Réparation de fuite",
-    price: "89",
+    price: "399",
     unit: "€",
     description: "Détection et réparation de toute fuite d'eau",
     features: [
@@ -35,7 +35,7 @@ export const pricingHomepage: PricingCard[] = [
   },
   {
     title: "Remplacement boiler",
-    price: "349",
+    price: "899",
     unit: "€",
     description: "Installation d'un nouveau boiler électrique",
     features: [
