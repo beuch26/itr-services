@@ -46,3 +46,19 @@ export const pricingHomepage: PricingCard[] = [
     ],
   },
 ];
+
+export const pricingFull: PricingCard[] = [
+  ...pricingHomepage,
+  {
+    title: "Déplacement",
+    price: "50",
+    unit: "€",
+    description: "Frais de déplacement dans la région bruxelloise",
+    features: [
+      "Diagnostic sur place inclus",
+      "Devis gratuit avant travaux",
+      "Toute la région de Bruxelles",
+      "Disponible 24h/24, 7j/7",
+    ],
+  },
+];

@@ -14,21 +14,21 @@ import CTAButton from "./CTAButton.astro";
       <!-- Text -->
       <div class="animate-on-scroll delay-1">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-5">
-          Votre plombier local à {siteConfig.areasShort}
+          Votre plombier local à {siteConfig.areasShort} et toutes les communes
         </h2>
         <p class="text-gray-600 text-lg leading-relaxed mb-6">
-          Basés au cœur de Bruxelles, nous connaissons parfaitement les spécificités de la plomberie dans les habitations bruxelloises. Que ce soit dans les immeubles anciens de Schaerbeek ou les maisons d'Anderlecht, nous adaptons nos interventions à chaque situation.
+          Basés au cœur de Bruxelles, nous intervenons en <strong class="text-dark-blue">moins d'1 heure</strong> dans toutes les communes de la région bruxelloise. Des immeubles anciens de Schaerbeek aux maisons d'Anderlecht, nous adaptons nos interventions à chaque situation.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          {siteConfig.areas.map((area) => (
-            <div class="flex items-center gap-2 bg-surface rounded-xl p-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flex flex-wrap gap-2 mb-8">
+          {siteConfig.areasDetailed.map((area) => (
+            <span class="inline-flex items-center gap-1.5 bg-surface rounded-xl px-3.5 py-2 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span class="font-heading font-semibold text-dark-blue text-sm">{area}</span>
-            </div>
+              <span class="font-heading font-semibold text-dark-blue">{area}</span>
+            </span>
           ))}
         </div>
 
