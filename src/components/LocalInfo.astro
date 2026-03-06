@@ -70,7 +70,7 @@ import CTAButton from "./CTAButton.astro";
       scrollWheelZoom: false,
       dragging: true,
       zoomControl: true,
-    }).setView([50.848, 4.345], 13);
+    }).setView([50.845, 4.350], 12);
 
     // Clean map style (CartoDB Positron)
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -78,39 +78,19 @@ import CTAButton from "./CTAButton.astro";
       maxZoom: 19,
     }).addTo(map);
 
-    // Approximate boundaries for Bruxelles-Ville, Schaerbeek & Anderlecht
-    var bruxelles = [
-      [50.8625, 4.3280], [50.8580, 4.3150], [50.8490, 4.3120],
-      [50.8400, 4.3180], [50.8340, 4.3300], [50.8320, 4.3450],
-      [50.8350, 4.3600], [50.8400, 4.3700], [50.8480, 4.3750],
-      [50.8560, 4.3720], [50.8620, 4.3600], [50.8650, 4.3450],
-    ];
-
-    var schaerbeek = [
-      [50.8650, 4.3450], [50.8620, 4.3600], [50.8600, 4.3750],
-      [50.8620, 4.3850], [50.8680, 4.3950], [50.8750, 4.4000],
-      [50.8800, 4.3950], [50.8830, 4.3830], [50.8810, 4.3680],
-      [50.8770, 4.3550], [50.8720, 4.3450],
-    ];
-
-    var anderlecht = [
-      [50.8490, 4.3120], [50.8450, 4.2950], [50.8380, 4.2850],
-      [50.8280, 4.2830], [50.8200, 4.2900], [50.8160, 4.3050],
-      [50.8180, 4.3200], [50.8240, 4.3350], [50.8320, 4.3450],
-      [50.8340, 4.3300], [50.8400, 4.3180],
-    ];
-
+    // Single wide intervention zone covering all of Brussels region
     var zoneStyle = {
       color: '#FF6B35',
       weight: 2,
-      opacity: 0.8,
+      opacity: 0.6,
       fillColor: '#FF6B35',
-      fillOpacity: 0.15,
+      fillOpacity: 0.12,
     };
 
-    L.polygon(bruxelles, zoneStyle).addTo(map).bindPopup('<strong>Bruxelles</strong><br>Zone d\'intervention principale');
-    L.polygon(schaerbeek, zoneStyle).addTo(map).bindPopup('<strong>Schaerbeek</strong><br>Zone d\'intervention');
-    L.polygon(anderlecht, zoneStyle).addTo(map).bindPopup('<strong>Anderlecht</strong><br>Zone d\'intervention');
+    L.circle([50.845, 4.350], {
+      radius: 8000,
+      ...zoneStyle,
+    }).addTo(map).bindPopup('<strong>Zone d\'intervention ITR Services</strong><br>Bruxelles et toutes les communes');
 
     // Company marker
     var icon = L.divIcon({
