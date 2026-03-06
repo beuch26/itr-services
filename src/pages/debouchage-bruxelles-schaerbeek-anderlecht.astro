@@ -32,25 +32,11 @@ import { faqDebouchage } from "../data/faq";
     imageSrc="/images/portfolio/debouchage-evier.jpg"
   />
 
-  <!-- Mini social proof -->
-  <section class="py-6 md:py-8 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-          <SocialProofMini />
-          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
-          <p class="text-gray-600 text-sm text-center sm:text-left">
-            <strong class="text-dark-blue">Débouchage dès 129€</strong> — Résultat garanti ou on revient gratuitement
-          </p>
-        </div>
-        <CTAButton
-          text="Appeler maintenant"
-          subtext="Urgence 24h/24"
-          size="sm"
-        />
-      </div>
-    </div>
-  </section>
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo />
 
   <!-- Service details -->
   <TextImageCTA
@@ -60,7 +46,7 @@ import { faqDebouchage } from "../data/faq";
     imageAlt="Avant/après débouchage d'un regard par ITR Services"
     imageSrc="/images/portfolio/debouchage-chambre-visite.jpg"
     imagePosition="right"
-    ctaText="Appelez maintenant"
+    ctaText="Appeler Joseph"
     ctaSubtext="Intervention en 30 min* - Dès 129€"
     features={[
       "Débouchage WC, évier, douche, baignoire",
@@ -77,7 +63,7 @@ import { faqDebouchage } from "../data/faq";
     imageAlt="Avant/après débouchage de toilette par ITR Services"
     imageSrc="/images/portfolio/debouchage-wc.jpg"
     imagePosition="left"
-    ctaText="Demandez un devis gratuit"
+    ctaText="Appeler Joseph"
     ctaSubtext="Sans produit chimique - Sans engagement"
     features={[
       "Furet mécanique pour bouchons courants",
@@ -186,5 +172,4 @@ import { faqDebouchage } from "../data/faq";
     </p>
   </SEOTextBlock>
 
-  <LocalInfo />
 </BaseLayout>

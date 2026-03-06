@@ -18,7 +18,7 @@ import { pricingHomepage } from "../data/pricing";
 ---
 
 <BaseLayout
-  title="Plombier Dépannage Bruxelles, Schaerbeek, Anderlecht | Urgence 24h/24 - ITR Services"
+  title="Plombier Dépannage Bruxelles, Schaerbeek, Anderlecht | Dépannage 24h/24 - ITR Services"
   description="Plombier dépannage urgent à Bruxelles, Schaerbeek et Anderlecht. Intervention en 30-60 min, 24h/24 et 7j/7. Devis gratuit, tarifs transparents. Appelez le +32 470 96 08 23."
 >
   <Breadcrumb items={[
@@ -27,32 +27,18 @@ import { pricingHomepage } from "../data/pricing";
   ]} />
 
   <HeroSection
-    h1="Plombier dépannage à Bruxelles, Schaerbeek et Anderlecht — Urgence 24h/24"
+    h1="Plombier dépannage à Bruxelles, Schaerbeek et Anderlecht — Dépannage 24h/24"
     slogan="Un problème de plomberie ? On est chez vous dans l'heure."
     imagePrompt="Professional plumber fixing an emergency pipe leak under a kitchen sink, dramatic lighting, urgent atmosphere"
     imageAlt="Avant/après réparation de robinetterie par ITR Services à Bruxelles"
     imageSrc="/images/portfolio/reparation-robinetterie.jpg"
   />
 
-  <!-- Mini social proof -->
-  <section class="py-6 md:py-8 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-          <SocialProofMini />
-          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
-          <p class="text-gray-600 text-sm text-center sm:text-left">
-            <strong class="text-dark-blue">Intervention rapide</strong> — Sur place en 30 à 60 minutes*
-          </p>
-        </div>
-        <CTAButton
-          text="Appeler maintenant"
-          subtext="Urgence 24h/24"
-          size="sm"
-        />
-      </div>
-    </div>
-  </section>
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo />
 
   <!-- Service details -->
   <TextImageCTA
@@ -62,7 +48,7 @@ import { pricingHomepage } from "../data/pricing";
     imageAlt="Avant/après réparation de tuyau encastré par ITR Services"
     imageSrc="/images/portfolio/reparation-tuyau-encastre.jpg"
     imagePosition="right"
-    ctaText="Appelez maintenant"
+    ctaText="Appeler Joseph"
     ctaSubtext="Intervention en 30 min* - Devis gratuit"
     features={[
       "Disponible 24h/24, 7j/7, jours fériés inclus",
@@ -81,7 +67,7 @@ import { pricingHomepage } from "../data/pricing";
     imageAlt="Avant/après réparation de canalisation en cave par ITR Services"
     imageSrc="/images/portfolio/reparation-canalisation-cave.jpg"
     imagePosition="left"
-    ctaText="Demandez un devis gratuit"
+    ctaText="Appeler Joseph"
     ctaSubtext="Réponse immédiate - Sans engagement"
     features={[
       "Fuites d'eau et canalisations percées",
@@ -108,9 +94,9 @@ import { pricingHomepage } from "../data/pricing";
       <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
     </div>
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Urgence plomberie</span>
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Dépannage plomberie</span>
       <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
-        Besoin d'un plombier en urgence ?<br />Appelez, on arrive.
+        Besoin d'un plombier en dépannage ?<br />Appelez, on arrive.
       </h2>
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Nos plombiers sont disponibles 24h/24 pour intervenir à Bruxelles, Schaerbeek et Anderlecht. Devis gratuit, pas de surprise sur la facture.
@@ -151,5 +137,4 @@ import { pricingHomepage } from "../data/pricing";
     </p>
   </SEOTextBlock>
 
-  <LocalInfo />
 </BaseLayout>

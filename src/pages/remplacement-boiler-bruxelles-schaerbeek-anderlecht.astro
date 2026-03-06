@@ -26,40 +26,26 @@ import { faqBoiler } from "../data/faq";
   <HeroSection
     h1="Remplacement de boiler à Bruxelles, Schaerbeek et Anderlecht"
     slogan="Plus d'eau chaude ? On remplace votre boiler le jour même."
-    imagePrompt="Professional plumber installing a new water heater boiler"
-    imageAlt="Avant/après rénovation salle de bain avec boiler par ITR Services"
-    imageSrc="/images/portfolio/renovation-sdb-douche-moderne.jpg"
+    imagePrompt=""
+    imageAlt="Avant/après remplacement de boiler par ITR Services"
+    imageSrc="/images/avant-apres-boiler-thermor.jpeg"
   />
 
-  <!-- Mini social proof -->
-  <section class="py-6 md:py-8 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-          <SocialProofMini />
-          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
-          <p class="text-gray-600 text-sm text-center sm:text-left">
-            <strong class="text-dark-blue">Remplacement boiler dès 899€</strong> — Fourniture + installation + garantie
-          </p>
-        </div>
-        <CTAButton
-          text="Appeler maintenant"
-          subtext="Devis gratuit"
-          size="sm"
-        />
-      </div>
-    </div>
-  </section>
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo />
 
   <!-- Service details -->
   <TextImageCTA
     title="Boiler en panne ? On le remplace aujourd'hui."
     text="Plus d'eau chaude, un boiler qui fuit ou qui fait des bruits étranges — pas besoin d'attendre une semaine pour retrouver votre confort. Nos plombiers diagnostiquent le problème sur place et, si le remplacement s'impose, ils l'effectuent le jour même. On repart, vous avez de l'eau chaude."
-    imagePrompt="Modern water heater installed in a clean bathroom"
-    imageAlt="Chantier de remplacement de boiler par ITR Services"
-    imageSrc="/images/portfolio/reparation-tuyau-encastre.jpg"
+    imagePrompt=""
+    imageAlt="Avant/après remplacement de boiler sous évier par ITR Services"
+    imageSrc="/images/avant-apres-boiler-evier.jpeg"
     imagePosition="right"
-    ctaText="Appelez maintenant"
+    ctaText="Appeler Joseph"
     ctaSubtext="Remplacement le jour même - Devis gratuit"
     features={[
       "Diagnostic gratuit de votre boiler actuel",
@@ -72,11 +58,11 @@ import { faqBoiler } from "../data/faq";
   <TextImageCTA
     title="Atlantic, Ariston, Bosch — on installe les marques qui tiennent."
     text="On ne pose pas n'importe quoi. Nous travaillons avec des marques reconnues pour leur fiabilité — Atlantic, Ariston et Bosch en tête. Notre équipe vous oriente vers le modèle adapté à la taille de votre foyer, vos habitudes de consommation et votre budget. Pas de vente forcée, juste du bon conseil."
-    imagePrompt="Various branded water heater boilers"
-    imageAlt="Avant/après installation robinetterie de qualité par ITR Services"
-    imageSrc="/images/portfolio/reparation-robinetterie.jpg"
+    imagePrompt=""
+    imageAlt="Avant/après remplacement de boiler Fisch vers Ariston par ITR Services"
+    imageSrc="/images/avant-apres-boiler-fisch.jpeg"
     imagePosition="left"
-    ctaText="Demandez un devis gratuit"
+    ctaText="Appeler Joseph"
     ctaSubtext="Conseil personnalisé - Sans engagement"
     features={[
       "Marques éprouvées : Atlantic, Ariston, Bosch",
@@ -182,5 +168,4 @@ import { faqBoiler } from "../data/faq";
     </p>
   </SEOTextBlock>
 
-  <LocalInfo />
 </BaseLayout>

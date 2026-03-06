@@ -9,9 +9,14 @@ interface Props {
   imagePrompt: string;
   imageAlt: string;
   imageSrc?: string;
+  subtitle?: string;
+  description?: string;
+  features?: string[];
+  ctaText?: string;
+  ctaSubtext?: string;
 }
 
-const { h1, slogan, imagePrompt, imageAlt, imageSrc } = Astro.props;
+const { h1, slogan, imagePrompt, imageAlt, imageSrc, subtitle, description, features, ctaText, ctaSubtext } = Astro.props;
 ---
 
 <section class="relative bg-gradient-to-br from-surface via-white to-surface overflow-hidden">
@@ -33,23 +38,33 @@ const { h1, slogan, imagePrompt, imageAlt, imageSrc } = Astro.props;
           {h1}
         </h1>
 
-        <p class="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-extrabold text-dark-blue leading-[1.1] mb-6 tracking-tight" set:html={slogan.replace(/jour et nuit/i, '<span class="text-accent">jour et nuit</span>')} />
+        <p class="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-extrabold text-dark-blue leading-[1.1] mb-4 tracking-tight" set:html={slogan.replace(/jour et nuit/i, '<span class="text-accent">jour et nuit</span>')} />
 
-        <p class="text-lg text-gray-500 mb-10 max-w-xl leading-relaxed">
-          Fuite d'eau, canalisation bouchée, panne de boiler ? <strong class="text-gray-700">ITR Services</strong>, votre <strong class="text-gray-700">plombier à Bruxelles</strong>, intervient en <strong class="text-gray-700">moins d'1 heure</strong>. Devis clair avant travaux, zéro surprise sur la facture. Disponible <strong class="text-gray-700">24h/24, 7j/7</strong> à Schaerbeek, Anderlecht et toutes les communes bruxelloises.
-        </p>
+        {subtitle && (
+          <p class="text-xl md:text-2xl text-gray-500 mb-6 max-w-xl leading-relaxed font-light">
+            {subtitle}
+          </p>
+        )}
+
+        <p class="text-lg text-gray-500 mb-6 max-w-xl leading-relaxed" set:html={description || `Fuite d'eau, canalisation bouchée, panne de boiler ? <strong class="text-gray-700">ITR Services</strong>, votre <strong class="text-gray-700">plombier à Bruxelles</strong>, intervient en <strong class="text-gray-700">moins d'1 heure</strong>. Devis clair avant travaux, zéro surprise sur la facture. Disponible <strong class="text-gray-700">24h/24, 7j/7</strong> à Schaerbeek, Anderlecht et toutes les communes bruxelloises.`} />
+
+        {features && (
+          <ul class="mb-8 space-y-2 max-w-xl">
+            {features.map((f) => (
+              <li class="flex items-center gap-2 text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div class="flex flex-col sm:flex-row gap-4 items-center">
           <CTAButton
-            text="Appelez maintenant"
-            subtext="Intervention en 30 min* - Devis gratuit"
-            size="lg"
-          />
-          <CTAButton
-            text="Nos services"
-            subtext=""
-            href="#services"
-            variant="white"
+            text={ctaText || "Appeler Joseph"}
+            subtext={ctaSubtext || "Intervention en 30 min* - Devis gratuit"}
             size="lg"
           />
         </div>

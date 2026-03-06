@@ -31,25 +31,11 @@ import { faqFuite } from "../data/faq";
     imageSrc="/images/portfolio/detection-camera-thermique.jpg"
   />
 
-  <!-- Mini social proof -->
-  <section class="py-6 md:py-8 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-          <SocialProofMini />
-          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
-          <p class="text-gray-600 text-sm text-center sm:text-left">
-            <strong class="text-dark-blue">Détection non destructive</strong> — Caméra thermique et détecteur d'humidité
-          </p>
-        </div>
-        <CTAButton
-          text="Appeler maintenant"
-          subtext="Diagnostic gratuit"
-          size="sm"
-        />
-      </div>
-    </div>
-  </section>
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo />
 
   <!-- Service details -->
   <TextImageCTA
@@ -59,7 +45,7 @@ import { faqFuite } from "../data/faq";
     imageAlt="Technicien ITR Services utilisant un détecteur à ultra-sons pour localiser une fuite"
     imageSrc="/images/portfolio/detection-ultrasons.jpg"
     imagePosition="right"
-    ctaText="Appelez maintenant"
+    ctaText="Appeler Joseph"
     ctaSubtext="Détection précise - Devis gratuit"
     features={[
       "Caméra thermique haute résolution",
@@ -76,7 +62,7 @@ import { faqFuite } from "../data/faq";
     imageAlt="Appareil de détection thermique professionnel"
     imageSrc="/images/portfolio/detection-colorant-toiture.jpg"
     imagePosition="left"
-    ctaText="Demandez un devis gratuit"
+    ctaText="Appeler Joseph"
     ctaSubtext="Réparation garantie - Sans engagement"
     features={[
       "Réparation sur place, le jour même",
@@ -92,20 +78,8 @@ import { faqFuite } from "../data/faq";
   <!-- Pricing -->
   <PricingCards cards={[
     {
-      title: "Détection de fuite",
-      price: "199",
-      unit: "€",
-      description: "Localisation précise par caméra thermique",
-      features: [
-        "Caméra thermique + détecteur humidité",
-        "Diagnostic complet de la situation",
-        "Rapport de détection",
-        "Devis réparation inclus",
-      ],
-    },
-    {
       title: "Détection + réparation",
-      price: "399",
+      price: "390",
       unit: "€",
       description: "Recherche et réparation dans la foulée",
       features: [
@@ -117,8 +91,20 @@ import { faqFuite } from "../data/faq";
       highlighted: true,
     },
     {
+      title: "Détection de fuite",
+      price: "390",
+      unit: "€",
+      description: "Localisation précise par caméra thermique",
+      features: [
+        "Caméra thermique + détecteur humidité",
+        "Diagnostic complet de la situation",
+        "Rapport de détection",
+        "Devis réparation inclus",
+      ],
+    },
+    {
       title: "Remplacement tuyauterie",
-      price: "499",
+      price: "490",
       unit: "€",
       description: "Section de canalisation à remplacer",
       features: [
@@ -181,5 +167,4 @@ import { faqFuite } from "../data/faq";
     </p>
   </SEOTextBlock>
 
-  <LocalInfo />
 </BaseLayout>

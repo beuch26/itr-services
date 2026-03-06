@@ -32,25 +32,11 @@ import { faqRenovation } from "../data/faq";
     imageSrc="/images/portfolio/renovation-sdb-marbre-blanc.jpg"
   />
 
-  <!-- Mini social proof -->
-  <section class="py-6 md:py-8 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-accent-light rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row items-center gap-4">
-          <SocialProofMini />
-          <span class="hidden sm:block w-px h-8 bg-gray-200"></span>
-          <p class="text-gray-600 text-sm text-center sm:text-left">
-            <strong class="text-dark-blue">Service clé en main</strong> — Conception, fourniture et installation
-          </p>
-        </div>
-        <CTAButton
-          text="Devis gratuit"
-          subtext="Sur place, sans engagement"
-          size="sm"
-        />
-      </div>
-    </div>
-  </section>
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo />
 
   <!-- Service details -->
   <TextImageCTA
@@ -60,7 +46,7 @@ import { faqRenovation } from "../data/faq";
     imageAlt="Rénovation de salle de bain en cours par ITR Services"
     imageSrc="/images/portfolio/renovation-sdb-baignoire-marbre.jpg"
     imagePosition="right"
-    ctaText="Demander un devis gratuit"
+    ctaText="Appeler Joseph"
     ctaSubtext="Visite à domicile gratuite"
     features={[
       "Projet clé en main, de la conception aux finitions",
@@ -80,7 +66,7 @@ import { faqRenovation } from "../data/faq";
     imageAlt="Chantier de rénovation de salle de bain par ITR Services"
     imageSrc="/images/portfolio/renovation-wc-geberit.jpg"
     imagePosition="left"
-    ctaText="Appelez-nous"
+    ctaText="Appeler Joseph"
     ctaSubtext="Conseil personnalisé gratuit"
     features={[
       "Robinetterie et douches Grohe / Hansgrohe",
@@ -179,5 +165,4 @@ import { faqRenovation } from "../data/faq";
     </p>
   </SEOTextBlock>
 
-  <LocalInfo />
 </BaseLayout>
