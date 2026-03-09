@@ -5,13 +5,15 @@ interface Props {
   class?: string;
   loading?: "eager" | "lazy";
   src?: string;
+  width?: number;
+  height?: number;
 }
 
-const { prompt, alt, class: className = "", loading = "lazy", src } = Astro.props;
+const { prompt, alt, class: className = "", loading = "lazy", src, width, height } = Astro.props;
 ---
 
 {src ? (
-  <img src={src} alt={alt} class={className} loading={loading} />
+  <img src={src} alt={alt} class={className} loading={loading} width={width} height={height} decoding={loading === "eager" ? "sync" : "async"} fetchpriority={loading === "eager" ? "high" : undefined} />
 ) : (
   <div class:list={["relative overflow-hidden bg-gradient-to-br from-dark-blue/5 via-primary/5 to-accent/5 flex flex-col items-center justify-center p-6 text-center", className]}>
     <!-- Decorative background pattern -->
