@@ -5,7 +5,7 @@ export const siteConfig = {
   phoneTel: "tel:+32470960823",
   whatsapp: "https://wa.me/32470960823",
   email: "Info@itr-services.be",
-  siteUrl: "https://itr-service.com",
+  siteUrl: "https://itrplomberie.be",
   areas: ["Bruxelles", "Schaerbeek", "Anderlecht"],
   areasDetailed: [
     "Bruxelles-Ville",
