@@ -28,8 +28,8 @@ const { h1, slogan, imagePrompt, imageAlt, imageSrc, subtitle, description, feat
     <div class="absolute inset-0 opacity-[0.025]" style="background-image: radial-gradient(circle at 1px 1px, #0A2540 1px, transparent 0); background-size: 40px 40px;"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-16 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-center">
       <!-- Text -->
       <div class="animate-on-scroll">
         <SocialProofMini class="mb-6" />
@@ -41,15 +41,17 @@ const { h1, slogan, imagePrompt, imageAlt, imageSrc, subtitle, description, feat
         <p class="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-extrabold text-dark-blue leading-[1.1] mb-4 tracking-tight" set:html={slogan.replace(/jour et nuit/i, '<span class="text-accent">jour et nuit</span>')} />
 
         {subtitle && (
-          <p class="text-xl md:text-2xl text-gray-500 mb-6 max-w-xl leading-relaxed font-light">
+          <p class="hidden md:block text-xl md:text-2xl text-gray-500 mb-6 max-w-xl leading-relaxed font-light">
             {subtitle}
           </p>
         )}
 
-        <p class="text-lg text-gray-500 mb-6 max-w-xl leading-relaxed" set:html={description || `Fuite d'eau, canalisation bouchée, panne de boiler ? <strong class="text-gray-700">ITR Services</strong>, votre <strong class="text-gray-700">plombier à Bruxelles</strong>, intervient en <strong class="text-gray-700">moins d'1 heure</strong>. Devis clair avant travaux, zéro surprise sur la facture. Disponible <strong class="text-gray-700">24h/24, 7j/7</strong> à Schaerbeek, Anderlecht et toutes les communes bruxelloises.`} />
+        {description && (
+          <p class="hidden md:block text-lg text-gray-500 mb-6 max-w-xl leading-relaxed" set:html={description} />
+        )}
 
         {features && (
-          <ul class="mb-8 space-y-2 max-w-xl">
+          <ul class="hidden md:block mb-8 space-y-2 max-w-xl">
             {features.map((f) => (
               <li class="flex items-center gap-2 text-gray-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -69,8 +71,8 @@ const { h1, slogan, imagePrompt, imageAlt, imageSrc, subtitle, description, feat
           />
         </div>
 
-        <!-- Trust badges -->
-        <div class="flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-gray-100">
+        <!-- Trust badges (hidden on mobile for cleaner layout) -->
+        <div class="hidden md:flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-gray-100">
           <div class="flex items-center gap-2 text-sm text-gray-500">
             <div class="w-8 h-8 rounded-lg bg-primary/8 flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -101,8 +103,8 @@ const { h1, slogan, imagePrompt, imageAlt, imageSrc, subtitle, description, feat
         </div>
       </div>
 
-      <!-- Image -->
-      <div class="animate-on-scroll delay-2 relative">
+      <!-- Image (shown first on mobile) -->
+      <div class="animate-on-scroll delay-2 relative order-first lg:order-none">
         <!-- Decorative frame -->
         <div class="absolute -inset-3 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-3xl blur-sm"></div>
 

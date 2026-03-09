@@ -28,7 +28,7 @@ export const siteConfig = {
     "Berchem-Sainte-Agathe",
     "Saint-Josse-ten-Noode",
   ],
-  areasShort: "Bruxelles, Schaerbeek & Anderlecht",
+  areasShort: "Bruxelles et ses alentours",
   slogan: "Service fiable, rapide et à prix compétitif",
   availability: "24h/24 - 7j/7",
 };

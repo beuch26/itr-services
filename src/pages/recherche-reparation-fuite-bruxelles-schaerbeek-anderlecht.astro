@@ -12,6 +12,7 @@ import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqFuite } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
 ---
 
 <BaseLayout
@@ -24,8 +25,9 @@ import { faqFuite } from "../data/faq";
   ]} />
 
   <HeroSection
-    h1="Recherche & réparation de fuite à Bruxelles, Schaerbeek et Anderlecht"
+    h1="Recherche & réparation de fuite à Bruxelles et ses alentours"
     slogan="On trouve la fuite, on la répare. Sans casser vos murs."
+    description="Détection par caméra thermique et réparation immédiate sur place. <strong class='text-gray-700'>Intervention 24h/24</strong>, devis gratuit."
     imagePrompt="Professional plumber using thermal camera for leak detection"
     imageAlt="Détection de fuite par caméra thermique - ITR Services"
     imageSrc="/images/plombier-itr-services.jpeg"
@@ -76,45 +78,7 @@ import { faqFuite } from "../data/faq";
   <SocialProofFull />
 
   <!-- Pricing -->
-  <PricingCards cards={[
-    {
-      title: "Détection + réparation",
-      price: "390",
-      unit: "€",
-      description: "Recherche et réparation dans la foulée",
-      features: [
-        "Détection complète incluse",
-        "Réparation immédiate sur place",
-        "Pièces de qualité incluses",
-        "Garantie sur la réparation",
-      ],
-      highlighted: true,
-    },
-    {
-      title: "Détection de fuite",
-      price: "390",
-      unit: "€",
-      description: "Localisation précise par caméra thermique",
-      features: [
-        "Caméra thermique + détecteur humidité",
-        "Diagnostic complet de la situation",
-        "Rapport de détection",
-        "Devis réparation inclus",
-      ],
-    },
-    {
-      title: "Remplacement tuyauterie",
-      price: "490",
-      unit: "€",
-      description: "Section de canalisation à remplacer",
-      features: [
-        "Inspection de l'état des tuyaux",
-        "Remplacement de la section touchée",
-        "Matériaux cuivre ou multicouche",
-        "Garantie longue durée",
-      ],
-    },
-  ]} />
+  <PricingCards cards={pricingHomepage} />
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">

@@ -19,9 +19,9 @@ export const services: Service[] = [
     icon: "droplet",
   },
   {
-    name: "Remplacement boiler",
+    name: "Boiler (réparation & remplacement)",
     slug: "remplacement-boiler-bruxelles-schaerbeek-anderlecht",
-    shortDesc: "Installation et remplacement de boilers électriques, rapide et garanti.",
+    shortDesc: "Réparation et remplacement de boilers électriques, rapide et garanti.",
     icon: "flame",
   },
   {

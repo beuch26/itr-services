@@ -12,20 +12,22 @@ import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqBoiler } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
 ---
 
 <BaseLayout
-  title="Remplacement Boiler Bruxelles, Schaerbeek, Anderlecht | Installation - ITR Services"
-  description="Remplacement et installation de boiler à Bruxelles, Schaerbeek et Anderlecht. Dès 899€, intervention le jour même, garantie constructeur. Appelez le +32 470 96 08 23."
+  title="Réparation & Remplacement Boiler Bruxelles, Schaerbeek, Anderlecht - ITR Services"
+  description="Réparation et remplacement de boiler à Bruxelles et ses alentours. Diagnostic gratuit, intervention le jour même, garantie constructeur. Appelez le +32 470 96 08 23."
 >
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
-    { label: "Remplacement boiler", href: "/remplacement-boiler-bruxelles-schaerbeek-anderlecht" },
+    { label: "Boiler (réparation & remplacement)", href: "/remplacement-boiler-bruxelles-schaerbeek-anderlecht" },
   ]} />
 
   <HeroSection
-    h1="Remplacement de boiler à Bruxelles, Schaerbeek et Anderlecht"
-    slogan="Plus d'eau chaude ? On remplace votre boiler le jour même."
+    h1="Réparation & remplacement de boiler à Bruxelles et ses alentours"
+    slogan="Boiler en panne ? On le répare ou on le remplace le jour même."
+    description="Diagnostic gratuit sur place. Si votre boiler peut être réparé, on le répare. Sinon, on le remplace dans la journée. <strong class='text-gray-700'>Marques fiables, garantie incluse</strong>."
     imagePrompt=""
     imageAlt="Avant/après remplacement de boiler par ITR Services"
     imageSrc="/images/avant-apres-boiler-thermor.jpeg"
@@ -39,8 +41,8 @@ import { faqBoiler } from "../data/faq";
 
   <!-- Service details -->
   <TextImageCTA
-    title="Boiler en panne ? On le remplace aujourd'hui."
-    text="Plus d'eau chaude, un boiler qui fuit ou qui fait des bruits étranges — pas besoin d'attendre une semaine pour retrouver votre confort. Nos plombiers diagnostiquent le problème sur place et, si le remplacement s'impose, ils l'effectuent le jour même. On repart, vous avez de l'eau chaude."
+    title="Boiler en panne ? On diagnostique et on agit."
+    text="Plus d'eau chaude, un boiler qui fuit ou qui fait des bruits étranges — pas besoin d'attendre une semaine. Nos plombiers diagnostiquent le problème sur place : si une réparation suffit, on la fait. Si le remplacement s'impose, on l'effectue le jour même. On repart, vous avez de l'eau chaude."
     imagePrompt=""
     imageAlt="Avant/après remplacement de boiler sous évier par ITR Services"
     imageSrc="/images/avant-apres-boiler-evier.jpeg"
@@ -76,45 +78,7 @@ import { faqBoiler } from "../data/faq";
   <SocialProofFull />
 
   <!-- Pricing -->
-  <PricingCards cards={[
-    {
-      title: "Réparation boiler",
-      price: "89",
-      unit: "€",
-      description: "Diagnostic et réparation de votre boiler",
-      features: [
-        "Diagnostic complet sur place",
-        "Réparation si l'appareil le permet",
-        "Pièces incluses dans le tarif",
-        "Garantie sur la réparation",
-      ],
-    },
-    {
-      title: "Remplacement standard",
-      price: "899",
-      unit: "€",
-      description: "Nouveau boiler fourni, posé et mis en service",
-      features: [
-        "Dépose de l'ancien boiler",
-        "Fourniture appareil neuf",
-        "Installation et raccordement",
-        "Garantie constructeur incluse",
-      ],
-      highlighted: true,
-    },
-    {
-      title: "Grande capacité (150L+)",
-      price: "1199",
-      unit: "€",
-      description: "Pour les foyers de 3 personnes et plus",
-      features: [
-        "Boiler 150 litres ou plus",
-        "Marque au choix (Atlantic, Ariston…)",
-        "Installation et mise en service",
-        "Garantie constructeur 5 ans",
-      ],
-    },
-  ]} />
+  <PricingCards cards={pricingHomepage} />
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -129,7 +93,7 @@ import { faqBoiler } from "../data/faq";
         Plus d'eau chaude ?<br />On s'en occupe aujourd'hui.
       </h2>
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-        Remplacement de boiler le jour même à Bruxelles, Schaerbeek et Anderlecht. Marques solides, garantie constructeur, tarif annoncé avant intervention.
+        Réparation ou remplacement de boiler le jour même à Bruxelles et ses alentours. Marques solides, garantie constructeur, tarif annoncé avant intervention.
       </p>
       <CTAButton
         text={`Appel Gratuit : ${siteConfig.phone}`}
