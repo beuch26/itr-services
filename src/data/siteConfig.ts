@@ -4,7 +4,7 @@ export const siteConfig = {
   phoneRaw: "+32470960823",
   phoneTel: "tel:+32470960823",
   whatsapp: "https://wa.me/32470960823",
-  email: "contact@itr-service.com",
+  email: "Info@itr-services.be",
   siteUrl: "https://itr-service.com",
   areas: ["Bruxelles", "Schaerbeek", "Anderlecht"],
   areasDetailed: [
