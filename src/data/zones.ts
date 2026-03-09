@@ -47,7 +47,7 @@ export const zones: Zone[] = [
     mapRadius: 15000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Waterloo, Wavre, Nivelles et alentours",
     localInfoTitle: "Votre plombier local à Waterloo, Wavre, Nivelles et alentours",
-    localInfoText: "Nous intervenons en <strong class=\"text-dark-blue\">moins d'1 heure</strong> à Waterloo, Wavre, Nivelles et dans toutes les communes du Brabant wallon. Des villas de Waterloo aux habitations de Wavre et Nivelles, nous adaptons nos interventions à chaque situation.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Waterloo, Wavre, Nivelles et dans toutes les communes du Brabant wallon. Service professionnel, rapide et au prix juste.",
   },
   {
     id: "charleroi",
@@ -66,7 +66,7 @@ export const zones: Zone[] = [
     mapRadius: 25000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Charleroi, Mons, La Louvière et alentours",
     localInfoTitle: "Votre plombier local à Charleroi, Mons, La Louvière et alentours",
-    localInfoText: "Nous intervenons en <strong class=\"text-dark-blue\">moins d'1 heure</strong> à Charleroi, Mons, La Louvière et dans toutes les communes du Hainaut. Des maisons de Charleroi aux habitations de Mons et La Louvière, nous adaptons nos interventions à chaque situation.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Charleroi, Mons, La Louvière et dans toutes les communes du Hainaut. Service professionnel, rapide et au prix juste.",
   },
   {
     id: "namur",
@@ -85,7 +85,7 @@ export const zones: Zone[] = [
     mapRadius: 12000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Namur et alentours",
     localInfoTitle: "Votre plombier local à Namur et ses alentours",
-    localInfoText: "Nous intervenons en <strong class=\"text-dark-blue\">moins d'1 heure</strong> à Namur et dans toutes les communes environnantes. Du centre de Namur aux quartiers de Jambes, Wépion et alentours, nous adaptons nos interventions à chaque situation.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Namur et dans toutes les communes environnantes. Service professionnel, rapide et au prix juste.",
   },
 ];
 

@@ -6,7 +6,7 @@ export interface FAQItem {
 export const faqDepannage: FAQItem[] = [
   {
     question: "En combien de temps intervenez-vous pour une urgence plomberie ?",
-    answer: "Pour toute urgence plomberie à Bruxelles, Schaerbeek et Anderlecht, nous nous engageons à être sur place dans les 30 à 60 minutes suivant votre appel. Notre équipe est disponible 24h/24, 7j/7.",
+    answer: "Pour toute urgence plomberie à Bruxelles et ses alentours, nous intervenons dans les heures qui suivent votre appel. Notre équipe est disponible 24h/24, 7j/7.",
   },
   {
     question: "Quels types de pannes de plomberie prenez-vous en charge ?",
@@ -41,7 +41,7 @@ export const faqFuite: FAQItem[] = [
   },
   {
     question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
-    answer: "Absolument. Les fuites d'eau sont des urgences que nous traitons en priorité. Nous intervenons dans les 30 à 60 minutes à Bruxelles, Schaerbeek et Anderlecht, 24h/24 et 7j/7.",
+    answer: "Absolument. Les fuites d'eau sont des urgences que nous traitons en priorité. Nous intervenons dans les heures qui suivent votre appel à Bruxelles et ses alentours, 24h/24 et 7j/7.",
   },
   {
     question: "La réparation de fuite est-elle garantie ?",
@@ -79,7 +79,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Pouvez-vous déboucher un WC en urgence ?",
-    answer: "Oui, le débouchage de WC est l'une de nos interventions les plus fréquentes. Nous intervenons en urgence 24h/24 à Bruxelles, Schaerbeek et Anderlecht, généralement dans les 30 à 60 minutes.",
+    answer: "Oui, le débouchage de WC est l'une de nos interventions les plus fréquentes. Nous intervenons en urgence 24h/24 à Bruxelles et ses alentours, dans les heures qui suivent votre appel.",
   },
   {
     question: "Le débouchage est-il garanti ?",
@@ -123,7 +123,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
   return [
     {
       question: "En combien de temps intervenez-vous pour une urgence plomberie ?",
-      answer: `Pour toute urgence plomberie à ${citiesInline}, nous nous engageons à être sur place dans les 30 à 60 minutes suivant votre appel. Notre équipe est disponible 24h/24, 7j/7.`,
+      answer: `Pour toute urgence plomberie à ${citiesInline}, nous intervenons dans les heures qui suivent votre appel. Notre équipe est disponible 24h/24, 7j/7.`,
     },
     {
       question: "Quels types de pannes de plomberie prenez-vous en charge ?",
@@ -160,7 +160,7 @@ export function getFaqFuite(citiesInline: string): FAQItem[] {
     },
     {
       question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
-      answer: `Absolument. Les fuites d'eau sont des urgences que nous traitons en priorité. Nous intervenons dans les 30 à 60 minutes à ${citiesInline}, 24h/24 et 7j/7.`,
+      answer: `Absolument. Les fuites d'eau sont des urgences que nous traitons en priorité. Nous intervenons dans les heures qui suivent votre appel à ${citiesInline}, 24h/24 et 7j/7.`,
     },
     {
       question: "La réparation de fuite est-elle garantie ?",
@@ -177,7 +177,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Pouvez-vous déboucher un WC en urgence ?",
-      answer: `Oui, le débouchage de WC est l'une de nos interventions les plus fréquentes. Nous intervenons en urgence 24h/24 à ${citiesInline}, généralement dans les 30 à 60 minutes.`,
+      answer: `Oui, le débouchage de WC est l'une de nos interventions les plus fréquentes. Nous intervenons en urgence 24h/24 à ${citiesInline}, dans les heures qui suivent votre appel.`,
     },
     {
       question: "Le débouchage est-il garanti ?",
@@ -205,7 +205,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "En combien de temps pouvez-vous intervenir ?",
-    answer: "Pour les urgences, nous nous engageons à une intervention dans les 30 à 60 minutes dans les zones de Bruxelles, Schaerbeek et Anderlecht. Pour les interventions planifiées, nous convenons ensemble d'un créneau qui vous arrange.",
+    answer: "Pour les urgences, nous intervenons dans les heures qui suivent votre appel à Bruxelles et ses alentours. Pour les interventions planifiées, nous convenons ensemble d'un créneau qui vous arrange.",
   },
   {
     question: "Vos réparations sont-elles garanties ?",

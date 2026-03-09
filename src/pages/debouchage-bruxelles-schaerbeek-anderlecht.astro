@@ -13,7 +13,7 @@ import LocalInfo from "../components/LocalInfo.astro";
 import PortfolioGallery from "../components/PortfolioGallery.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqDebouchage } from "../data/faq";
-import { pricingHomepage } from "../data/pricing";
+import { pricingDebouchage } from "../data/pricing";
 ---
 
 <BaseLayout
@@ -30,8 +30,8 @@ import { pricingHomepage } from "../data/pricing";
     slogan="WC, évier, douche, canalisation — Débouchage garanti dès 129€."
     description="Furet mécanique, hydrocurage, caméra d'inspection — on débloque la situation rapidement. <strong class='text-gray-700'>Résultat garanti</strong>, devis gratuit."
     imagePrompt="Professional plumber unclogging a drain with professional equipment"
-    imageAlt="Débouchage professionnel par ITR Services à Bruxelles"
-    imageSrc="/images/plombier-itr-services.webp"
+    imageAlt="Avant/après débouchage d'un regard par ITR Services"
+    imageSrc="/images/avant-apres-debouchage-regard.webp"
   />
 
   <!-- Social proof: Full reviews -->
@@ -45,11 +45,11 @@ import { pricingHomepage } from "../data/pricing";
     title="Canalisation bouchée ? On intervient, vous respirez."
     text="Évier qui ne se vide plus, WC bouché, douche qui refoule, odeurs qui remontent… Ce genre de situation, ça ne peut pas attendre. Nos plombiers arrivent avec le matériel qu'il faut — furet mécanique, hydrocurage, caméra d'inspection — et ils ne repartent pas tant que ça ne coule pas comme il faut."
     imagePrompt="Professional drain unclogging equipment in action"
-    imageAlt="Avant/après débouchage d'un regard par ITR Services"
-    imageSrc="/images/portfolio/debouchage-chambre-visite.webp"
+    imageAlt="Avant/après débouchage de WC par ITR Services"
+    imageSrc="/images/avant-apres-debouchage-wc.webp"
     imagePosition="right"
     ctaText="Appeler Joseph"
-    ctaSubtext="Intervention en 30 min* - Dès 129€"
+    ctaSubtext="Intervention rapide - Dès 129€"
     features={[
       "Débouchage WC, évier, douche, baignoire",
       "Furet mécanique et hydrocurage haute pression",
@@ -62,8 +62,8 @@ import { pricingHomepage } from "../data/pricing";
     title="Zéro produit chimique, 100% mécanique."
     text="Les produits Destop & co ? Ils soulagent deux jours et abîment vos tuyaux sur le long terme. Nous, on traite le problème à la source avec des techniques mécaniques : le furet pour les bouchons accessibles, l'hydrocurage haute pression pour les obstructions profondes. Graisse, calcaire, racines, objets coincés — tout y passe."
     imagePrompt="Close-up of hydro-jetting equipment cleaning a pipe"
-    imageAlt="Avant/après débouchage de toilette par ITR Services"
-    imageSrc="/images/portfolio/debouchage-wc.webp"
+    imageAlt="Avant/après débouchage d'évier par ITR Services"
+    imageSrc="/images/avant-apres-debouchage-evier.webp"
     imagePosition="left"
     ctaText="Appeler Joseph"
     ctaSubtext="Sans produit chimique - Sans engagement"
@@ -82,7 +82,7 @@ import { pricingHomepage } from "../data/pricing";
   <PortfolioGallery />
 
   <!-- Pricing -->
-  <PricingCards cards={pricingHomepage} />
+  <PricingCards cards={pricingDebouchage} />
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">

@@ -14,7 +14,7 @@ export const pricingHomepage: PricingCard[] = [
     unit: "€",
     description: "Débouchage rapide de vos canalisations",
     features: [
-      "Intervention en 30-60 min",
+      "Intervention rapide",
       "Devis gratuit sur place",
       "Matériel professionnel",
       "Garantie de résultat",
@@ -44,6 +44,34 @@ export const pricingHomepage: PricingCard[] = [
       "Mise en service complète",
       "Garantie constructeur",
     ],
+  },
+];
+
+export const pricingDebouchage: PricingCard[] = [
+  {
+    title: "Curage canalisation",
+    price: "199",
+    unit: "€",
+    description: "Curage mécanique de vos canalisations",
+    features: [
+      "Intervention rapide",
+      "Devis gratuit sur place",
+      "Furet mécanique professionnel",
+      "Garantie de résultat",
+    ],
+  },
+  {
+    title: "Débouchage hydrocurage",
+    price: "399",
+    unit: "€",
+    description: "Débouchage haute pression de vos canalisations",
+    features: [
+      "Hydrocurage haute pression",
+      "Bouchons tenaces et profonds",
+      "Caméra d'inspection incluse",
+      "Garantie de résultat",
+    ],
+    highlighted: true,
   },
 ];
 

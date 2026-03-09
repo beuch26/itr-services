@@ -26,7 +26,10 @@ const { cards = pricingFull } = Astro.props;
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+    <div class:list={[
+      "grid grid-cols-1 gap-5 lg:gap-6",
+      cards.length <= 2 ? "sm:grid-cols-2 max-w-3xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4"
+    ]}>
       {cards.map((card, i) => (
         <div
           class:list={[
