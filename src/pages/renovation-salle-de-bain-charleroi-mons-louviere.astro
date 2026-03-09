@@ -1,0 +1,180 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import AuthorityBrands from "../components/AuthorityBrands.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import { siteConfig } from "../data/siteConfig";
+import { faqRenovation } from "../data/faq";
+import { getZone } from "../data/zones";
+
+const zone = getZone("charleroi");
+---
+
+<BaseLayout
+  title={`Rénovation Salle de Bain ${zone.citiesInline} | ITR Services`}
+  description={`Rénovation complète de salle de bain à ${zone.citiesInline}. Service clé en main, marques premium (Grohe, Geberit). Devis gratuit. Appelez le ${siteConfig.phone}.`}
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Rénovation salle de bain", href: `/renovation-salle-de-bain-${zone.slugSuffix}` },
+  ]} />
+
+  <HeroSection
+    h1={`Rénovation de salle de bain à ${zone.areasShort}`}
+    slogan="Du sol au plafond, votre salle de bain rêvée devient réalité."
+    description="Projet clé en main : conception, plomberie, carrelage, finitions. Un seul interlocuteur, <strong class='text-gray-700'>marques premium</strong> (Grohe, Geberit), devis gratuit."
+    imagePrompt="Beautiful modern renovated bathroom with walk-in shower and premium fixtures"
+    imageAlt={`Avant/après rénovation salle de bain complète en marbre blanc par ITR Services à ${zone.cities[0]}`}
+    imageSrc="/images/portfolio/renovation-sdb-marbre-blanc.webp"
+  />
+
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo
+    mapCenter={zone.mapCenter}
+    mapZoom={zone.mapZoom}
+    mapRadius={zone.mapRadius}
+    mapPopupText={zone.mapPopupText}
+    areasDetailed={zone.areasDetailed}
+    localInfoTitle={zone.localInfoTitle}
+    localInfoText={zone.localInfoText}
+  />
+
+  <!-- Service details -->
+  <TextImageCTA
+    title="On s'occupe de tout, du premier coup de masse aux finitions."
+    text={`Salle de bain vieillissante, carrelage fissuré, plomberie qui lâche ou juste envie de changement ? On gère le projet de A à Z : conception, démolition, plomberie, carrelage, pose des sanitaires et finitions. Vous avez un seul interlocuteur, et vous retrouvez une salle de bain neuve sans avoir eu à courir entre les artisans.`}
+    imagePrompt=""
+    imageAlt="Avant/après rénovation salle de bain complète par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-douche-moderne.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Visite à domicile gratuite"
+    features={[
+      "Projet clé en main, de la conception aux finitions",
+      "Fourniture des matériaux et sanitaires",
+      "Plomberie, carrelage, électricité coordonnés",
+      "Un seul interlocuteur du début à la fin",
+    ]}
+  />
+
+  <!-- Authority brands -->
+  <AuthorityBrands />
+
+  <TextImageCTA
+    title="Grohe, Geberit, Villeroy & Boch — on pose ce qui se fait de mieux."
+    text="On ne travaille qu'avec des marques qui ont fait leurs preuves. Grohe pour les robinets et colonnes de douche, Hansgrohe pour la douchetterie, Geberit pour les WC suspendus, Villeroy & Boch pour la céramique. On vous conseille les bons produits selon votre budget, sans pousser au plus cher."
+    imagePrompt="Premium bathroom fixtures and tiles showroom display"
+    imageAlt="Chantier de rénovation de salle de bain par ITR Services"
+    imageSrc="/images/portfolio/renovation-wc-geberit.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Conseil personnalisé gratuit"
+    features={[
+      "Robinetterie et douches Grohe / Hansgrohe",
+      "WC suspendus et bâtis Geberit",
+      "Céramique et lavabos Villeroy & Boch",
+      "Carrelage grand format et faïence moderne",
+    ]}
+  />
+
+  <!-- Social proof -->
+  <SocialProofFull />
+
+  <!-- Portfolio -->
+  <PortfolioGallery />
+
+  <!-- Process section -->
+  <section class="py-12 md:py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 animate-on-scroll">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-primary/60 mb-3">Notre processus</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-3 tracking-tight">
+          Comment se déroule votre rénovation ?
+        </h2>
+        <p class="text-gray-500 max-w-lg mx-auto">
+          Quatre étapes simples, de la première visite à la remise des clés.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {[
+          { step: "1", title: "Visite & Devis", desc: "On se déplace gratuitement chez vous pour prendre les mesures et comprendre ce que vous voulez. Devis détaillé sous 48h." },
+          { step: "2", title: "Conception", desc: "On vous propose un plan sur mesure : choix des matériaux, des sanitaires, des finitions. Vous validez, on commande." },
+          { step: "3", title: "Travaux", desc: "Notre équipe gère tout sur place : démolition, plomberie, carrelage, pose des sanitaires et finitions. Vous n'avez rien à faire." },
+          { step: "4", title: "Réception", desc: "On fait le tour ensemble. Si tout est bon, vous signez. Vous ne payez le solde qu'après avoir tout validé." },
+        ].map((item, i) => (
+          <div class:list={["bg-white rounded-2xl p-6 border border-gray-100 animate-on-scroll", `delay-${Math.min(i + 1, 4)}`]}>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <span class="font-heading font-bold text-primary text-lg">{item.step}</span>
+            </div>
+            <h3 class="font-heading font-bold text-dark-blue text-lg mb-2">{item.title}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Rénovation salle de bain</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Prêt à transformer<br />votre salle de bain ?
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        {`Visite gratuite à domicile à ${zone.areasShort}, devis détaillé sous 48h, et un seul interlocuteur de A à Z. Votre nouvelle salle de bain commence par un coup de fil.`}
+      </p>
+      <CTAButton
+        text={`Appel Gratuit : ${siteConfig.phone}`}
+        subtext="Visite gratuite — Devis sous 48h — Sans engagement"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQSection items={faqRenovation} title="Questions fréquentes — Rénovation salle de bain" />
+
+  <!-- SEO Text -->
+  <SEOTextBlock title={`Rénovation de salle de bain à ${zone.cities[0]} : votre projet clé en main`}>
+    <p>
+      <strong>ITR Services</strong> est votre partenaire pour la <strong>rénovation de salle de bain
+      à {zone.cities[0]}</strong>, <strong>{zone.cities[1]}</strong> et <strong>{zone.cities[2]}</strong>. Que vous souhaitiez
+      moderniser une salle de bain vieillissante ou créer un espace entièrement nouveau, nous proposons un
+      <strong>service clé en main</strong> qui couvre toutes les étapes du projet.
+    </p>
+    <p>
+      De la <strong>conception</strong> à la <strong>remise des clés</strong>, notre équipe coordonne l'ensemble
+      des corps de métier : plomberie, carrelage, électricité, menuiserie et finitions. Nous travaillons avec
+      <strong>Grohe</strong>, <strong>Geberit</strong>, <strong>Villeroy & Boch</strong> et
+      <strong>Hansgrohe</strong> — des marques qui tiennent dans le temps.
+    </p>
+    <p>
+      Notre processus est simple : visite gratuite à domicile, <strong>devis détaillé sous 48h</strong>,
+      planning de travaux précis et un <strong>seul interlocuteur</strong> tout au long du projet. Vous ne payez
+      le solde qu'après avoir validé l'ensemble des travaux.
+    </p>
+    <p>
+      Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une visite gratuite
+      et un devis personnalisé pour votre projet de rénovation de salle de bain à {zone.citiesInline}.
+    </p>
+  </SEOTextBlock>
+
+</BaseLayout>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import AuthorityBrands from "../components/AuthorityBrands.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import { siteConfig } from "../data/siteConfig";
+import { getFaqDepannage } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
+import { getZone } from "../data/zones";
+
+const zone = getZone("namur");
+const faqItems = getFaqDepannage(zone.citiesInline);
+---
+
+<BaseLayout
+  title="Plombier Dépannage Namur et Alentours | Dépannage 24h/24 - ITR Services"
+  description={`Plombier dépannage urgent à Namur et ses alentours. Intervention en 30-60 min, 24h/24 et 7j/7. Devis gratuit, tarifs transparents. Appelez le ${siteConfig.phone}.`}
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Plomberie dépannage", href: "/plombier-namur" },
+  ]} />
+
+  <HeroSection
+    h1="Plombier dépannage à Namur et ses alentours — 24h/24"
+    slogan="Un problème de plomberie ? On est chez vous dans l'heure."
+    description={`Fuite, panne, canalisation bouchée — nos plombiers interviennent en urgence avec un devis clair avant toute réparation. Disponible <strong class='text-gray-700'>24h/24, 7j/7</strong>.`}
+    imagePrompt=""
+    imageAlt="Joseph, plombier dépannage ITR Services à Namur"
+    imageSrc="/images/plombier-itr-services.webp"
+  />
+
+  <SocialProofFull />
+
+  <LocalInfo
+    mapCenter={zone.mapCenter}
+    mapZoom={zone.mapZoom}
+    mapRadius={zone.mapRadius}
+    mapPopupText={zone.mapPopupText}
+    areasDetailed={zone.areasDetailed}
+    localInfoTitle={zone.localInfoTitle}
+    localInfoText={zone.localInfoText}
+  />
+
+  <TextImageCTA
+    title="Fuite, robinet cassé, canalisation percée — on gère."
+    text="L'eau qui coule là où elle ne devrait pas, c'est le genre de problème qui ne peut pas attendre demain. Chez ITR Services, on le sait : quand ça fuit, chaque minute compte. C'est pourquoi nos plombiers sont sur place en 30 à 60 minutes* à Namur et ses alentours — de jour comme de nuit."
+    imagePrompt=""
+    imageAlt="Avant/après réparation de tuyau encastré par ITR Services"
+    imageSrc="/images/portfolio/reparation-tuyau-encastre.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Intervention en 30 min* - Devis gratuit"
+    features={[
+      "Disponible 24h/24, 7j/7, jours fériés inclus",
+      "Sur place en 30 à 60 minutes*",
+      "Diagnostic gratuit avant toute intervention",
+      "Aucun frais de déplacement caché",
+    ]}
+  />
+
+  <AuthorityBrands />
+
+  <TextImageCTA
+    title="Du joint qui goutte au tuyau qui lâche, on s'occupe de tout."
+    text="Pas besoin d'appeler trois artisans différents. Nos plombiers sont formés pour intervenir sur tous les problèmes de plomberie, en résidentiel comme en commercial. Un seul appel, un seul interlocuteur, et votre problème est réglé."
+    imagePrompt=""
+    imageAlt="Avant/après réparation de canalisation en cave par ITR Services"
+    imageSrc="/images/portfolio/reparation-canalisation-cave.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Réponse immédiate - Sans engagement"
+    features={[
+      "Fuites d'eau et canalisations percées",
+      "Robinets, mitigeurs et chasses d'eau",
+      "Problèmes de pression et de débit",
+      "Joints, siphons, vannes et raccords",
+    ]}
+  />
+
+  <SocialProofFull />
+  <PortfolioGallery />
+  <PricingCards cards={pricingHomepage} />
+
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Dépannage plomberie</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Besoin d'un plombier en dépannage ?<br />Appelez, on arrive.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        Nos plombiers sont disponibles 24h/24 pour intervenir à Namur et ses alentours. Devis gratuit, pas de surprise sur la facture.
+      </p>
+      <CTAButton
+        text={`Appel Gratuit : ${siteConfig.phone}`}
+        subtext="Intervention en 30 min* — Devis gratuit — Sans engagement"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <FAQSection items={faqItems} title="Questions fréquentes — Dépannage plomberie" />
+
+  <SEOTextBlock title="Votre plombier dépannage de confiance à Namur">
+    <p>
+      <strong>ITR Services</strong> est votre plombier de référence pour le <strong>dépannage plomberie à Namur</strong>
+      et ses alentours. Disponibles <strong>24h/24 et 7j/7</strong>, nos plombiers
+      qualifiés interviennent en urgence pour résoudre tous vos problèmes : fuites d'eau, canalisations percées,
+      robinets défaillants, chasses d'eau en panne et tout autre souci de plomberie.
+    </p>
+    <p>
+      Notre force : être <strong>sur place en 30 à 60 minutes*</strong> avec un diagnostic gratuit.
+      On vous présente un devis clair avant toute réparation. Pas de frais de déplacement cachés,
+      pas de surfacturation. Nos tarifs sont parmi les plus compétitifs de la région namuroise.
+    </p>
+    <p>
+      Nos plombiers travaillent avec du matériel adapté à chaque situation et utilisent des pièces
+      de marques reconnues (Grohe, Geberit, Vaillant). Chaque intervention est
+      <strong>garantie</strong> pour votre tranquillité d'esprit.
+    </p>
+    <p>
+      Contactez <strong>ITR Services</strong> dès maintenant au <strong>{siteConfig.phone}</strong> pour un
+      dépannage plomberie à Namur et ses alentours.
+    </p>
+  </SEOTextBlock>
+
+</BaseLayout>

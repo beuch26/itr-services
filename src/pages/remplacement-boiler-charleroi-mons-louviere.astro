@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import { siteConfig } from "../data/siteConfig";
+import { faqBoiler } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
+import { getZone } from "../data/zones";
+
+const zone = getZone("charleroi");
+---
+
+<BaseLayout
+  title={`Réparation & Remplacement Boiler ${zone.citiesInline} - ITR Services`}
+  description={`Réparation et remplacement de boiler à ${zone.citiesInline}. Diagnostic gratuit, intervention le jour même, garantie constructeur. Appelez le ${siteConfig.phone}.`}
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Boiler (réparation & remplacement)", href: `/remplacement-boiler-${zone.slugSuffix}` },
+  ]} />
+
+  <HeroSection
+    h1={`Réparation & remplacement de boiler à ${zone.areasShort}`}
+    slogan="Boiler en panne ? On le répare ou on le remplace le jour même."
+    description="Diagnostic gratuit sur place. Si votre boiler peut être réparé, on le répare. Sinon, on le remplace dans la journée. <strong class='text-gray-700'>Marques fiables, garantie incluse</strong>."
+    imagePrompt=""
+    imageAlt={`Avant/après remplacement de boiler par ITR Services à ${zone.cities[0]}`}
+    imageSrc="/images/avant-apres-boiler-thermor.webp"
+  />
+
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo
+    mapCenter={zone.mapCenter}
+    mapZoom={zone.mapZoom}
+    mapRadius={zone.mapRadius}
+    mapPopupText={zone.mapPopupText}
+    areasDetailed={zone.areasDetailed}
+    localInfoTitle={zone.localInfoTitle}
+    localInfoText={zone.localInfoText}
+  />
+
+  <!-- Service details -->
+  <TextImageCTA
+    title="Boiler en panne ? On diagnostique et on agit."
+    text={`Plus d'eau chaude, un boiler qui fuit ou qui fait des bruits étranges — pas besoin d'attendre une semaine. Nos plombiers diagnostiquent le problème sur place : si une réparation suffit, on la fait. Si le remplacement s'impose, on l'effectue le jour même. On repart, vous avez de l'eau chaude.`}
+    imagePrompt=""
+    imageAlt="Avant/après remplacement de boiler sous évier par ITR Services"
+    imageSrc="/images/avant-apres-boiler-evier.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Remplacement le jour même - Devis gratuit"
+    features={[
+      "Diagnostic gratuit de votre boiler actuel",
+      "Conseil personnalisé sur le modèle adapté",
+      "Dépose de l'ancien + installation du nouveau",
+      "Mise en service et vérification complète",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Atlantic, Ariston, Bosch — on installe les marques qui tiennent."
+    text="On ne pose pas n'importe quoi. Nous travaillons avec des marques reconnues pour leur fiabilité — Atlantic, Ariston et Bosch en tête. Notre équipe vous oriente vers le modèle adapté à la taille de votre foyer, vos habitudes de consommation et votre budget. Pas de vente forcée, juste du bon conseil."
+    imagePrompt=""
+    imageAlt="Avant/après remplacement de boiler Fisch vers Ariston par ITR Services"
+    imageSrc="/images/avant-apres-boiler-fisch.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Conseil personnalisé - Sans engagement"
+    features={[
+      "Marques éprouvées : Atlantic, Ariston, Bosch",
+      "Garantie constructeur de 2 à 5 ans",
+      "Garantie main-d'œuvre ITR Services",
+      "Accompagnement et service après-vente",
+    ]}
+  />
+
+  <!-- Social proof -->
+  <SocialProofFull />
+
+  <!-- Pricing -->
+  <PricingCards cards={pricingHomepage} />
+
+  <!-- Final CTA -->
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Boiler en panne</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Plus d'eau chaude ?<br />On s'en occupe aujourd'hui.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        {`Réparation ou remplacement de boiler le jour même à ${zone.areasShort}. Marques solides, garantie constructeur, tarif annoncé avant intervention.`}
+      </p>
+      <CTAButton
+        text={`Appel Gratuit : ${siteConfig.phone}`}
+        subtext="Remplacement le jour même — Devis gratuit — Garantie incluse"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQSection items={faqBoiler} title="Questions fréquentes — Remplacement boiler" />
+
+  <!-- SEO Text -->
+  <SEOTextBlock title={`Remplacement de boiler à ${zone.cities[0]} : le jour même, garanti`}>
+    <p>
+      <strong>ITR Services</strong> assure le <strong>remplacement de boiler à {zone.cities[0]}</strong>,
+      <strong>{zone.cities[1]}</strong> et <strong>{zone.cities[2]}</strong>. Que votre boiler soit en panne, qu'il fuie ou
+      qu'il ne chauffe plus, nos plombiers interviennent pour diagnostiquer le problème
+      et, si nécessaire, procéder à son <strong>remplacement le jour même</strong>.
+    </p>
+    <p>
+      Nous installons des <strong>boilers</strong> de marques reconnues — Atlantic, Ariston
+      et Bosch — choisies pour leur fiabilité et leur rendement énergétique. Chaque installation comprend
+      la <strong>dépose de l'ancien appareil</strong>, la fourniture et la pose du nouveau boiler,
+      ainsi que la <strong>mise en service complète</strong>.
+    </p>
+    <p>
+      Nos tarifs commencent à <strong>899€ tout compris</strong> pour un remplacement standard, avec
+      <strong>garantie constructeur</strong> et garantie main-d'œuvre incluses. On vous conseille le
+      modèle adapté à votre foyer, sans pousser à la vente.
+    </p>
+    <p>
+      Appelez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour un devis gratuit
+      et un remplacement de boiler sans attendre.
+    </p>
+  </SEOTextBlock>
+
+</BaseLayout>

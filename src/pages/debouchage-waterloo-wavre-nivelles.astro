@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SocialProofMini from "../components/SocialProofMini.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import { siteConfig } from "../data/siteConfig";
+import { getFaqDebouchage } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
+import { getZone } from "../data/zones";
+
+const zone = getZone("waterloo");
+const faqItems = getFaqDebouchage(zone.citiesInline);
+---
+
+<BaseLayout
+  title="Débouchage Waterloo, Wavre, Nivelles | Canalisation, WC, Évier - ITR Services"
+  description="Débouchage professionnel de canalisations, WC, éviers et douches à Waterloo, Wavre, Nivelles et alentours. Dès 129€, intervention 24h/24. Devis gratuit. Appelez le +32 470 96 08 23."
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Débouchage", href: "/debouchage-waterloo-wavre-nivelles" },
+  ]} />
+
+  <HeroSection
+    h1="Débouchage de canalisations à Waterloo, Wavre, Nivelles et alentours"
+    slogan="WC, évier, douche, canalisation — Débouchage garanti dès 129€."
+    description="Furet mécanique, hydrocurage, caméra d'inspection — on débloque la situation rapidement. <strong class='text-gray-700'>Résultat garanti</strong>, devis gratuit."
+    imagePrompt="Professional plumber unclogging a drain with professional equipment"
+    imageAlt="Débouchage professionnel par ITR Services à Waterloo, Wavre et Nivelles"
+    imageSrc="/images/plombier-itr-services.webp"
+  />
+
+  <!-- Social proof: Full reviews -->
+  <SocialProofFull />
+
+  <!-- Local Info (zone d'intervention) -->
+  <LocalInfo
+    mapCenter={zone.mapCenter}
+    mapZoom={zone.mapZoom}
+    mapRadius={zone.mapRadius}
+    mapPopupText={zone.mapPopupText}
+    areasDetailed={zone.areasDetailed}
+    localInfoTitle={zone.localInfoTitle}
+    localInfoText={zone.localInfoText}
+  />
+
+  <!-- Service details -->
+  <TextImageCTA
+    title="Canalisation bouchée ? On intervient, vous respirez."
+    text="Évier qui ne se vide plus, WC bouché, douche qui refoule, odeurs qui remontent… Ce genre de situation, ça ne peut pas attendre. Nos plombiers arrivent avec le matériel qu'il faut — furet mécanique, hydrocurage, caméra d'inspection — et ils ne repartent pas tant que ça ne coule pas comme il faut."
+    imagePrompt="Professional drain unclogging equipment in action"
+    imageAlt="Avant/après débouchage d'un regard par ITR Services"
+    imageSrc="/images/portfolio/debouchage-chambre-visite.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Intervention en 30 min* - Dès 129€"
+    features={[
+      "Débouchage WC, évier, douche, baignoire",
+      "Furet mécanique et hydrocurage haute pression",
+      "Caméra d'inspection pour bouchons complexes",
+      "Résultat garanti ou retour gratuit",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Zéro produit chimique, 100% mécanique."
+    text="Les produits Destop & co ? Ils soulagent deux jours et abîment vos tuyaux sur le long terme. Nous, on traite le problème à la source avec des techniques mécaniques : le furet pour les bouchons accessibles, l'hydrocurage haute pression pour les obstructions profondes. Graisse, calcaire, racines, objets coincés — tout y passe."
+    imagePrompt="Close-up of hydro-jetting equipment cleaning a pipe"
+    imageAlt="Avant/après débouchage de toilette par ITR Services"
+    imageSrc="/images/portfolio/debouchage-wc.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Sans produit chimique - Sans engagement"
+    features={[
+      "Furet mécanique pour bouchons courants",
+      "Hydrocurage haute pression pour les cas sérieux",
+      "Caméra d'inspection pour voir l'intérieur du tuyau",
+      "Respectueux de vos canalisations et de l'environnement",
+    ]}
+  />
+
+  <!-- Social proof -->
+  <SocialProofFull />
+
+  <!-- Portfolio -->
+  <PortfolioGallery />
+
+  <!-- Pricing -->
+  <PricingCards cards={pricingHomepage} />
+
+  <!-- Final CTA -->
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Canalisation bouchée</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        WC bouché ? Évier bloqué ?<br />On débouche dans l'heure.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        Débouchage garanti à Waterloo, Wavre, Nivelles et alentours. On arrive vite, on règle le problème, et on vous laisse tranquille. Dès 129€.
+      </p>
+      <CTAButton
+        text={`Appel Gratuit : ${siteConfig.phone}`}
+        subtext="Débouchage garanti — Dès 129€ — Devis gratuit"
+        variant="accent"
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQSection items={faqItems} title="Questions fréquentes — Débouchage" />
+
+  <!-- SEO Text -->
+  <SEOTextBlock title="Débouchage à Waterloo, Wavre et Nivelles : garanti, sans produit chimique">
+    <p>
+      <strong>ITR Services</strong> est votre expert en <strong>débouchage de canalisations à Waterloo</strong>,
+      <strong>Wavre</strong> et <strong>Nivelles</strong>. Nous intervenons en urgence <strong>24h/24</strong>
+      pour déboucher tous types de canalisations : <strong>WC</strong>, <strong>éviers</strong>, <strong>douches</strong>,
+      <strong>baignoires</strong> et <strong>canalisations principales</strong>.
+    </p>
+    <p>
+      Nos plombiers utilisent des méthodes mécaniques éprouvées : <strong>furet mécanique</strong> pour les
+      bouchons courants et <strong>hydrocurage haute pression</strong> pour les obstructions tenaces.
+      Pour les cas complexes, notre <strong>caméra d'inspection vidéo</strong> permet de voir exactement
+      ce qui bloque et d'adapter la méthode en conséquence.
+    </p>
+    <p>
+      Pas de <strong>produits chimiques</strong> chez nous : ils abîment vos canalisations et ne résolvent
+      rien en profondeur. Nos techniques mécaniques sont plus efficaces et préservent vos installations.
+      Chaque débouchage est <strong>garanti</strong> : si le bouchon revient, on revient aussi — gratuitement.
+    </p>
+    <p>
+      <strong>À partir de 129€</strong>, devis gratuit sur place. Appelez <strong>ITR Services</strong>
+      au <strong>{siteConfig.phone}</strong>.
+    </p>
+  </SEOTextBlock>
+
+</BaseLayout>
