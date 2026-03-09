@@ -45,17 +45,19 @@ const {
         </h2>
         <p class="text-gray-600 text-lg leading-relaxed mb-6" set:html={localInfoText} />
 
-        <div class="flex flex-wrap gap-2 mb-8">
-          {areasDetailed.map((area) => (
-            <span class="inline-flex items-center gap-1.5 bg-surface rounded-xl px-3.5 py-2 text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span class="font-heading font-semibold text-dark-blue">{area}</span>
-            </span>
-          ))}
-        </div>
+        {areasDetailed.length > 0 && (
+          <div class="flex flex-wrap gap-2 mb-8">
+            {areasDetailed.map((area) => (
+              <span class="inline-flex items-center gap-1.5 bg-surface rounded-xl px-3.5 py-2 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span class="font-heading font-semibold text-dark-blue">{area}</span>
+              </span>
+            ))}
+          </div>
+        )}
 
         <div class="flex flex-wrap gap-6 text-sm text-gray-600 mb-8">
           <div class="flex items-center gap-2">
