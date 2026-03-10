@@ -91,6 +91,58 @@ export const pricingDebouchage: PricingCard[] = [
   },
 ];
 
+export const pricingBoiler: PricingCard[] = [
+  {
+    title: "Diagnostic",
+    price: "99",
+    unit: "€",
+    description: "Diagnostic complet de votre installation",
+    features: [
+      "Intervention rapide",
+      "Analyse complète du système",
+      "Devis détaillé fourni",
+      "Sans engagement",
+    ],
+  },
+  {
+    title: "Débouchage classique",
+    price: "129",
+    unit: "€",
+    description: "Débouchage rapide de vos canalisations",
+    features: [
+      "Intervention rapide",
+      "Devis gratuit sur place",
+      "Matériel professionnel",
+      "Garantie de résultat",
+    ],
+  },
+  {
+    title: "Groupe de sécurité",
+    price: "199",
+    unit: "€",
+    description: "Remplacement du groupe de sécurité",
+    features: [
+      "Pièces de qualité",
+      "Installation professionnelle",
+      "Mise en service incluse",
+      "Garantie sur la réparation",
+    ],
+  },
+  {
+    title: "Remplacement boiler",
+    price: "899",
+    unit: "€",
+    description: "Installation d'un nouveau boiler électrique",
+    features: [
+      "Dépose ancien boiler",
+      "Installation neuf",
+      "Mise en service complète",
+      "Garantie constructeur",
+    ],
+    highlighted: true,
+  },
+];
+
 export const pricingFull: PricingCard[] = [
   ...pricingHomepage,
   {

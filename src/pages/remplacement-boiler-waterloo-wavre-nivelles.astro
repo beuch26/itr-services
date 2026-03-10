@@ -12,7 +12,7 @@ import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqBoiler } from "../data/faq";
-import { pricingHomepage } from "../data/pricing";
+import { pricingBoiler } from "../data/pricing";
 import { getZone } from "../data/zones";
 
 const zone = getZone("waterloo");
@@ -89,7 +89,7 @@ const zone = getZone("waterloo");
   <SocialProofFull />
 
   <!-- Pricing -->
-  <PricingCards cards={pricingHomepage} />
+  <PricingCards cards={pricingBoiler} />
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
