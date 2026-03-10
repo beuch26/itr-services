@@ -12,7 +12,7 @@ import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqFuite } from "../data/faq";
-import { pricingHomepage } from "../data/pricing";
+import { pricingFuite } from "../data/pricing";
 ---
 
 <BaseLayout
@@ -37,7 +37,7 @@ import { pricingHomepage } from "../data/pricing";
   <SocialProofFull />
 
   <!-- Local Info (zone d'intervention) -->
-  <LocalInfo />
+  <LocalInfo localInfoTitle="Recherche de fuite à Bruxelles – Intervention 24h/24" />
 
   <!-- Service details -->
   <TextImageCTA
@@ -79,7 +79,7 @@ import { pricingHomepage } from "../data/pricing";
   <SocialProofFull />
 
   <!-- Pricing -->
-  <PricingCards cards={pricingHomepage} />
+  <PricingCards cards={pricingFuite} />
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">

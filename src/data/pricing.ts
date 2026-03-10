@@ -9,20 +9,8 @@ export interface PricingCard {
 
 export const pricingHomepage: PricingCard[] = [
   {
-    title: "Débouchage",
-    price: "129",
-    unit: "€",
-    description: "Débouchage rapide de vos canalisations",
-    features: [
-      "Intervention rapide",
-      "Devis gratuit sur place",
-      "Matériel professionnel",
-      "Garantie de résultat",
-    ],
-  },
-  {
-    title: "Réparation de fuite",
-    price: "399",
+    title: "Détection de fuite",
+    price: "390",
     unit: "€",
     description: "Détection et réparation de toute fuite d'eau",
     features: [
@@ -47,22 +35,50 @@ export const pricingHomepage: PricingCard[] = [
   },
 ];
 
+export const pricingFuite: PricingCard[] = [
+  {
+    title: "Détection de fuite",
+    price: "390",
+    unit: "€",
+    description: "Détection et réparation de toute fuite d'eau",
+    features: [
+      "Diagnostic complet",
+      "Réparation durable",
+      "Pièces de qualité incluses",
+      "Garantie sur la réparation",
+    ],
+    highlighted: true,
+  },
+];
+
 export const pricingDebouchage: PricingCard[] = [
   {
-    title: "Curage canalisation",
-    price: "199",
+    title: "Débouchage classique",
+    price: "129",
     unit: "€",
-    description: "Curage mécanique de vos canalisations",
+    description: "Débouchage rapide de vos canalisations",
     features: [
       "Intervention rapide",
       "Devis gratuit sur place",
-      "Furet mécanique professionnel",
+      "Matériel professionnel",
+      "Garantie de résultat",
+    ],
+  },
+  {
+    title: "Curage haute pression",
+    price: "199",
+    unit: "€",
+    description: "Curage de vos canalisations à l'eau haute pression",
+    features: [
+      "Intervention rapide",
+      "Devis gratuit sur place",
+      "Eau haute pression professionnelle",
       "Garantie de résultat",
     ],
   },
   {
     title: "Débouchage hydrocurage",
-    price: "399",
+    price: "390",
     unit: "€",
     description: "Débouchage haute pression de vos canalisations",
     features: [

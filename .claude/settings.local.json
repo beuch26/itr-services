@@ -32,7 +32,15 @@
       "mcp__chrome-devtools__emulate",
       "Bash(find:*)",
       "Bash(npx astro:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh run:*)",
+      "Bash(npm run:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(gh workflow:*)",
+      "WebFetch(domain:pagespeed.web.dev)",
+      "Bash(npx --yes sharp-cli --version)"
     ]
   }
 }
