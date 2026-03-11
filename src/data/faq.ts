@@ -22,7 +22,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Le déplacement est-il facturé ?",
-    answer: "Non, le déplacement est inclus dans nos tarifs pour toutes les interventions à Bruxelles, Schaerbeek et Anderlecht. Aucun frais caché ne vous sera facturé.",
+    answer: "Non, le déplacement est inclus dans nos tarifs pour toutes les interventions à Bruxelles et ses alentours. Aucun frais caché ne vous sera facturé.",
   },
 ];
 
@@ -60,7 +60,7 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Mon boiler fuit, faut-il obligatoirement le remplacer ?",
-    answer: "Pas nécessairement. Notre plombier diagnostique d'abord la cause de la fuite. Si une réparation est possible et économiquement intéressante, nous la privilégions. Le remplacement n'est proposé que lorsqu'il est réellement nécessaire.",
+    answer: "Pas nécessairement. Nos plombiers diagnostiquent d'abord la cause de la fuite. Si une réparation est possible et économiquement intéressante, nous la privilégions. Le remplacement n'est proposé que lorsqu'il est réellement nécessaire.",
   },
   {
     question: "Le remplacement de boiler est-il garanti ?",
@@ -197,7 +197,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
 export const faqHomepage: FAQItem[] = [
   {
     question: "Intervenez-vous en urgence la nuit et le week-end ?",
-    answer: "Oui, ITR Services assure un service de dépannage plomberie 24h/24, 7j/7, y compris les nuits, week-ends et jours fériés à Bruxelles, Schaerbeek et Anderlecht. Appelez-nous et un plombier sera chez vous dans les plus brefs délais.",
+    answer: "Oui, ITR Services assure un service de dépannage plomberie 24h/24, 7j/7, y compris les nuits, week-ends et jours fériés à Bruxelles et ses alentours. Appelez-nous et un plombier sera chez vous dans les plus brefs délais.",
   },
   {
     question: "Combien coûte une intervention de plomberie ?",
@@ -213,10 +213,10 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Faut-il payer avant l'intervention ?",
-    answer: "Non, aucun paiement n'est demandé avant l'intervention. Nous établissons un devis gratuit sur place, et vous ne payez qu'une fois le travail terminé et validé par vos soins. Pas de surprise sur la facture.",
+    answer: "Non, le paiement se fait à la fin de l'intervention, une fois le travail terminé et validé par vos soins. Il est également possible de demander un acompte. Devis gratuit et transparent avant chaque intervention.",
   },
   {
     question: "Quelles zones desservez-vous ?",
-    answer: "Nous intervenons principalement à Bruxelles-Ville, Schaerbeek et Anderlecht. Nous couvrons également les communes limitrophes. N'hésitez pas à nous appeler pour vérifier si nous intervenons dans votre quartier.",
+    answer: "Nous intervenons à Bruxelles et ses alentours, et couvrons toutes les communes de la région. N'hésitez pas à nous appeler pour vérifier si nous intervenons dans vos communes.",
   },
 ];

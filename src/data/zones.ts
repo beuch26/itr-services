@@ -28,7 +28,7 @@ export const zones: Zone[] = [
     mapRadius: 8000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Bruxelles et toutes les communes",
     localInfoTitle: "Plombier à Bruxelles – Dépannage 24h/24",
-    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient rapidement dans toutes les communes de Bruxelles, 24h/24 et 7j/7. Profitez d'un service professionnel, rapide et au prix juste.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Nos plombiers interviennent rapidement dans toutes les communes de Bruxelles et ses alentours, 24h/24 et 7j/7. Profitez d'un service professionnel, rapide et au prix juste.",
   },
   {
     id: "waterloo",
@@ -47,7 +47,7 @@ export const zones: Zone[] = [
     mapRadius: 15000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Waterloo, Wavre, Nivelles et alentours",
     localInfoTitle: "Votre plombier local à Waterloo, Wavre, Nivelles et alentours",
-    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Waterloo, Wavre, Nivelles et dans toutes les communes du Brabant wallon. Service professionnel, rapide et au prix juste.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Nos plombiers interviennent <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Waterloo, Wavre, Nivelles et dans toutes les communes du Brabant wallon. Service professionnel, rapide et au prix juste.",
   },
   {
     id: "charleroi",
@@ -66,7 +66,7 @@ export const zones: Zone[] = [
     mapRadius: 25000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Charleroi, Mons, La Louvière et alentours",
     localInfoTitle: "Votre plombier local à Charleroi, Mons, La Louvière et alentours",
-    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Charleroi, Mons, La Louvière et dans toutes les communes du Hainaut. Service professionnel, rapide et au prix juste.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Nos plombiers interviennent <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Charleroi, Mons, La Louvière et dans toutes les communes du Hainaut. Service professionnel, rapide et au prix juste.",
   },
   {
     id: "namur",
@@ -85,7 +85,7 @@ export const zones: Zone[] = [
     mapRadius: 12000,
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Namur et alentours",
     localInfoTitle: "Votre plombier local à Namur et ses alentours",
-    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Notre plombier intervient <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Namur et dans toutes les communes environnantes. Service professionnel, rapide et au prix juste.",
+    localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Nos plombiers interviennent <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Namur et dans toutes les communes environnantes. Service professionnel, rapide et au prix juste.",
   },
 ];
 
