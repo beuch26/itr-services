@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { siteConfig } from "../data/siteConfig";
+---
+
+<BaseLayout
+  title="Conditions générales de vente | ITR Services - Plombier Bruxelles"
+  description="Conditions générales de vente d'ITR Services, plombier professionnel à Bruxelles. Tarifs, modalités de paiement, garanties et conditions d'intervention."
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Conditions de vente", href: "/conditions-de-vente" },
+  ]} />
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-8 animate-on-scroll">
+        Conditions générales de vente
+      </h1>
+
+      <div class="prose prose-gray max-w-none space-y-8 animate-on-scroll delay-1">
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 1 — Identification du prestataire</h2>
+          <p class="text-gray-600 leading-relaxed">
+            <strong>{siteConfig.companyName}</strong> SRL<br />
+            Leuvensesteenweg 246, bus 1 — 1932 Zaventem, Belgique<br />
+            BCE : 0773.364.370 — TVA : BE 0773.364.370<br />
+            Téléphone : <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a><br />
+            Email : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 2 — Champ d'application</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Les présentes conditions générales de vente (CGV) s'appliquent à l'ensemble des prestations de services
+            de plomberie fournies par {siteConfig.companyName} SRL à ses clients, qu'il s'agisse de dépannage,
+            de réparation, d'installation, de débouchage, de recherche de fuite ou de rénovation.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Toute demande d'intervention ou acceptation de devis implique l'adhésion sans réserve du client aux présentes CGV.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 3 — Devis et tarifs</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Avant toute intervention, un devis gratuit et détaillé est établi sur place par notre plombier.
+            Ce devis comprend le détail des travaux à réaliser, le coût de la main-d'œuvre et des pièces nécessaires.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Les travaux ne débutent qu'après acceptation écrite ou orale du devis par le client.
+            Les tarifs indiqués sur le site sont donnés à titre indicatif et peuvent varier en fonction de la
+            complexité de l'intervention. Le devis sur place fait foi.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Tous les prix sont indiqués en euros, TVA comprise (sauf mention contraire).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 4 — Modalités de paiement</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le paiement est dû à la fin de l'intervention, une fois les travaux terminés et validés par le client.
+            Il est également possible de convenir d'un acompte avant le début des travaux, notamment pour les
+            interventions de plus grande envergure (rénovation, remplacement de boiler, etc.).
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Les moyens de paiement acceptés sont : virement bancaire, paiement en espèces et Bancontact.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            En cas de retard de paiement, des intérêts de retard au taux légal seront appliqués de plein droit,
+            sans mise en demeure préalable, conformément à la loi belge du 2 août 2002 concernant la lutte contre
+            le retard de paiement dans les transactions commerciales.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 5 — Interventions et délais</h2>
+          <p class="text-gray-600 leading-relaxed">
+            {siteConfig.companyName} s'engage à intervenir dans les meilleurs délais. Pour les urgences,
+            nous intervenons dans les heures qui suivent votre appel, sous réserve de disponibilité.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Les délais d'intervention sont donnés à titre indicatif et ne constituent pas un engagement contractuel ferme.
+            {siteConfig.companyName} ne pourra être tenu responsable de retards liés à des circonstances indépendantes
+            de sa volonté (conditions météorologiques, accès au chantier, etc.).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 6 — Zone d'intervention</h2>
+          <p class="text-gray-600 leading-relaxed">
+            {siteConfig.companyName} intervient à Bruxelles et ses alentours, ainsi que dans les régions de
+            Waterloo, Wavre, Nivelles, Charleroi, Mons, La Louvière, Namur et les communes environnantes.
+            Le déplacement est inclus dans nos tarifs pour ces zones.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 7 — Garanties</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Toutes nos interventions de réparation et d'installation sont garanties.
+            En cas de problème consécutif à notre intervention, nous revenons gratuitement pour le résoudre.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Les pièces et matériaux installés bénéficient de la garantie constructeur applicable.
+            La garantie ne couvre pas les dommages résultant d'une utilisation anormale, d'un défaut d'entretien
+            ou d'une intervention ultérieure par un tiers.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 8 — Annulation</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le client peut annuler une intervention planifiée sans frais, à condition d'en informer
+            {siteConfig.companyName} au moins 24 heures avant le rendez-vous prévu.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            En cas d'annulation tardive (moins de 24 heures) ou d'absence au rendez-vous, des frais de déplacement
+            pourront être facturés.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 9 — Responsabilité</h2>
+          <p class="text-gray-600 leading-relaxed">
+            {siteConfig.companyName} est assuré en responsabilité civile professionnelle pour l'ensemble de ses activités.
+            Notre responsabilité est limitée au montant de l'intervention concernée, sauf en cas de faute grave ou intentionnelle.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Le client s'engage à fournir un accès sécurisé aux installations et à signaler tout danger potentiel
+            avant le début de l'intervention.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 10 — Réclamations</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Toute réclamation relative à une intervention doit être adressée par email à
+            <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>
+            ou par téléphone au <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a>
+            dans un délai de 14 jours suivant l'intervention.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Nous nous engageons à traiter votre réclamation dans les meilleurs délais et à trouver une solution satisfaisante.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Article 11 — Droit applicable et litiges</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Les présentes CGV sont régies par le droit belge. En cas de litige, les parties s'engagent à rechercher
+            une solution amiable avant toute action judiciaire. À défaut d'accord, les tribunaux de Bruxelles seront
+            seuls compétents.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-gray-500 text-sm">
+            Dernière mise à jour : mars 2026.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

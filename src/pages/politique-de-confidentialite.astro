@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import { siteConfig } from "../data/siteConfig";
+---
+
+<BaseLayout
+  title="Politique de confidentialité | ITR Services - Plombier Bruxelles"
+  description="Politique de confidentialité du site ITR Services. Informations sur la collecte, le traitement et la protection de vos données personnelles conformément au RGPD."
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
+  ]} />
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-8 animate-on-scroll">
+        Politique de confidentialité
+      </h1>
+
+      <div class="prose prose-gray max-w-none space-y-8 animate-on-scroll delay-1">
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Responsable du traitement</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le responsable du traitement des données personnelles collectées sur ce site est :<br />
+            <strong>{siteConfig.companyName}</strong> SRL<br />
+            Leuvensesteenweg 246, bus 1 — 1932 Zaventem, Belgique<br />
+            BCE : 0773.364.370<br />
+            Email : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a><br />
+            Téléphone : <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Données collectées</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Dans le cadre de nos services, nous pouvons collecter les données personnelles suivantes :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Nom et prénom</li>
+            <li>Numéro de téléphone</li>
+            <li>Adresse email</li>
+            <li>Adresse postale (pour les interventions)</li>
+            <li>Données de navigation (cookies, adresse IP)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Finalités du traitement</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Vos données personnelles sont collectées et traitées pour les finalités suivantes :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Répondre à vos demandes de devis et de renseignements</li>
+            <li>Planifier et réaliser les interventions de plomberie</li>
+            <li>Établir les devis et factures</li>
+            <li>Assurer le suivi après intervention</li>
+            <li>Améliorer nos services et notre site web</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Base légale du traitement</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Le traitement de vos données repose sur les bases légales suivantes :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li><strong>Exécution d'un contrat</strong> : traitement nécessaire à la réalisation de nos prestations de plomberie</li>
+            <li><strong>Intérêt légitime</strong> : amélioration de nos services et gestion de la relation client</li>
+            <li><strong>Consentement</strong> : pour l'envoi de communications commerciales (le cas échéant)</li>
+            <li><strong>Obligation légale</strong> : conservation des factures et documents comptables</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Durée de conservation</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Vos données personnelles sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Données clients : pendant la durée de la relation commerciale, puis 7 ans à des fins comptables</li>
+            <li>Demandes de devis non suivies : 12 mois</li>
+            <li>Données de navigation : 13 mois maximum</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Partage des données</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Vos données personnelles ne sont pas vendues ni transmises à des tiers à des fins commerciales.
+            Elles peuvent être partagées uniquement avec :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Nos sous-traitants techniques (hébergement du site, outils de communication)</li>
+            <li>Les autorités compétentes en cas d'obligation légale</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Cookies</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Notre site utilise des cookies pour :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li><strong>Cookies essentiels</strong> : nécessaires au fonctionnement du site</li>
+            <li><strong>Cookies analytiques</strong> : pour comprendre comment les visiteurs utilisent le site (Google Analytics)</li>
+          </ul>
+          <p class="text-gray-600 leading-relaxed mt-3">
+            Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies. La désactivation de certains cookies peut affecter votre expérience de navigation.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Vos droits</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :
+          </p>
+          <ul class="list-disc pl-6 text-gray-600 space-y-1">
+            <li><strong>Droit d'accès</strong> : obtenir une copie de vos données personnelles</li>
+            <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes</li>
+            <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+            <li><strong>Droit à la limitation</strong> : restreindre le traitement de vos données</li>
+            <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+            <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+          </ul>
+          <p class="text-gray-600 leading-relaxed mt-3">
+            Pour exercer ces droits, contactez-nous à : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>.
+            Nous répondrons à votre demande dans un délai de 30 jours.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Autorité de contrôle</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD,
+            vous avez le droit d'introduire une réclamation auprès de l'Autorité de protection des données (APD) :<br />
+            Rue de la Presse, 35 — 1000 Bruxelles<br />
+            Site web : <span class="text-primary">www.autoriteprotectiondonnees.be</span>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Modification de cette politique</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment.
+            Toute modification sera publiée sur cette page. Nous vous invitons à la consulter régulièrement.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Dernière mise à jour : mars 2026.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

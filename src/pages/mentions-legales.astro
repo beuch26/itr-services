@@ -6,7 +6,7 @@ import { siteConfig } from "../data/siteConfig";
 
 <BaseLayout
   title="Mentions légales | ITR Services - Plombier Bruxelles"
-  description="Mentions légales du site ITR Services, plombier professionnel à Bruxelles, Schaerbeek et Anderlecht."
+  description="Mentions légales du site ITR Services, plombier professionnel à Bruxelles et ses alentours."
 >
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
@@ -25,11 +25,12 @@ import { siteConfig } from "../data/siteConfig";
         <div>
           <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Éditeur du site</h2>
           <p class="text-gray-600 leading-relaxed">
-            Le site <strong>itr-service.com</strong> est édité par :<br />
-            <strong>{siteConfig.companyName}</strong><br />
-            Bruxelles, Belgique<br />
-            N° d'entreprise (BCE) : <em class="text-gray-400">à compléter</em><br />
-            TVA : <em class="text-gray-400">à compléter</em><br />
+            Le site <strong>itrplomberie.be</strong> est édité par :<br />
+            <strong>{siteConfig.companyName}</strong> — Société à responsabilité limitée (SRL)<br />
+            Leuvensesteenweg 246, bus 1 — 1932 Zaventem, Belgique<br />
+            N° d'entreprise (BCE) : 0773.364.370<br />
+            TVA : BE 0773.364.370<br />
+            Gérant : Youssef Hassoun<br />
             Téléphone : <a href={siteConfig.phoneTel} class="text-primary hover:underline">{siteConfig.phone}</a><br />
             Email : <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>
           </p>
@@ -39,7 +40,7 @@ import { siteConfig } from "../data/siteConfig";
         <div>
           <h2 class="text-xl font-heading font-bold text-dark-blue mb-3">Responsable de la publication</h2>
           <p class="text-gray-600 leading-relaxed">
-            Le responsable de la publication est le gérant de la société {siteConfig.companyName}.
+            Le responsable de la publication est Youssef Hassoun, gérant de la société {siteConfig.companyName}.
           </p>
         </div>
 
