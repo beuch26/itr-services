@@ -147,7 +147,7 @@ export const pricingFull: PricingCard[] = [
   ...pricingHomepage,
   {
     title: "Déplacement",
-    price: "50",
+    price: "60 à 120",
     unit: "€",
     description: "Frais de déplacement dans la région bruxelloise",
     features: [
