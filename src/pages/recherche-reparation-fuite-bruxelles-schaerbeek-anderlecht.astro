@@ -10,6 +10,9 @@ import CTAButton from "../components/CTAButton.astro";
 import FAQSection from "../components/FAQSection.astro";
 import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqFuite } from "../data/faq";
 import { pricingFuite } from "../data/pricing";
@@ -17,7 +20,7 @@ import { pricingFuite } from "../data/pricing";
 
 <BaseLayout
   title="Recherche & Réparation de Fuite Bruxelles | ITR Services"
-  description="Recherche et réparation de fuite d'eau à Bruxelles et ses alentours. Détection non destructive par caméra thermique. Intervention 24h/24. Devis gratuit. Appelez le +32 470 96 08 23."
+  description="Recherche et réparation de fuite d'eau à Bruxelles et ses alentours dès 249€. Détection non destructive par caméra thermique. Intervention 24h/24. Devis gratuit. Appelez le +32 470 96 08 23."
 >
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
@@ -75,8 +78,34 @@ import { pricingFuite } from "../data/pricing";
     ]}
   />
 
+  <TextImageCTA
+    title="Une fuite ignorée, c'est des milliers d'euros de dégâts."
+    text="Chaque heure qui passe avec une fuite non traitée aggrave la situation. L'eau s'infiltre dans les murs, les sols, les plafonds — et les conséquences peuvent être lourdes : moisissures dangereuses pour la santé, dommages structurels sur les fondations, peintures et revêtements détruits, sans parler de la facture d'eau qui explose. Plus vous attendez, plus la réparation sera longue et coûteuse. Nos plombiers interviennent dans les heures qui suivent votre appel pour limiter les dégâts et stopper la fuite avant qu'elle ne devienne un sinistre."
+    imagePrompt="Water damage consequences on wall and ceiling"
+    imageAlt="Dégâts des eaux causés par une fuite non traitée"
+    imageSrc="/images/portfolio/reparation-fuite-murale.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Intervention rapide - Évitez les dégâts"
+    features={[
+      "Risque de moisissures et problèmes de santé",
+      "Dommages structurels sur murs et fondations",
+      "Facture d'eau qui explose silencieusement",
+      "Intervention rapide pour limiter les dégâts",
+    ]}
+  />
+
   <!-- Pricing -->
   <PricingCards cards={pricingFuite} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -93,12 +122,24 @@ import { pricingFuite } from "../data/pricing";
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Ne laissez pas une fuite causer des dégâts coûteux. Nos plombiers interviennent en urgence avec l'équipement qu'il faut pour trouver et stopper la fuite.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Détection précise — Réparation garantie — Devis gratuit"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Détection précise — Réparation garantie — Devis gratuit"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -108,24 +149,33 @@ import { pricingFuite } from "../data/pricing";
   <!-- SEO Text -->
   <SEOTextBlock title="Expert en recherche et réparation de fuite à Bruxelles">
     <p>
-      <strong>ITR Services</strong> est votre spécialiste en <strong>recherche et réparation de fuite à Bruxelles et ses alentours</strong>. Grâce à notre équipement de détection —
+      <strong>ITR Services</strong> est votre spécialiste en <strong>recherche et réparation de fuite à Bruxelles et ses alentours</strong>, dès 249€. Grâce à notre équipement de détection professionnel —
       <strong>caméra thermique</strong>, <strong>détecteur d'humidité</strong> et <strong>caméra d'inspection vidéo</strong> —
-      nous localisons les fuites cachées sans travaux destructifs.
+      nos plombiers localisent les fuites cachées sans travaux destructifs, avec une précision au millimètre près.
     </p>
     <p>
-      Une fuite non traitée, c'est le risque d'infiltrations, de moisissures, de dommages
-      structurels et de factures d'eau qui explosent. Notre approche : <strong>détecter sans casser</strong>
-      grâce à l'imagerie thermique, puis <strong>réparer sur place dans la foulée</strong>.
+      Nos plombiers maîtrisent l'ensemble des <strong>techniques de détection de fuite</strong> les plus avancées : détection acoustique par ultrasons pour repérer les fuites sous pression dans les canalisations enterrées, <strong>caméra thermique infrarouge</strong> pour visualiser les différences de température derrière les murs et les sols, <strong>caméra endoscopique</strong> pour inspecter l'intérieur des canalisations sans les ouvrir, <strong>gaz traceur</strong> pour détecter les micro-fuites invisibles à l'œil nu, et <strong>humidimètre professionnel</strong> pour mesurer le taux d'humidité dans les matériaux. Chaque technique est choisie en fonction de la situation pour garantir un diagnostic rapide et fiable.
     </p>
     <p>
-      Disponibles <strong>24h/24 et 7j/7</strong>, nous intervenons dans les heures qui suivent votre appel pour toute urgence
-      de fuite à Bruxelles et ses environs. Nos réparations sont <strong>garanties</strong> et réalisées avec des
-      matériaux éprouvés.
+      Nous intervenons sur <strong>tous les types de fuites</strong> : fuite sur canalisation d'eau chaude ou froide, fuite de radiateur ou de chauffage central, fuite sur joint de baignoire ou de douche, fuite de toiture avec infiltration, fuite sur raccord ou vanne, fuite sur tuyauterie encastrée dans les murs ou les sols, et fuite sur canalisation enterrée en extérieur. Quelle que soit l'origine du problème, nos plombiers ont l'expérience et le matériel pour le résoudre.
+    </p>
+    <p>
+      Pourquoi faire appel à un professionnel pour la <strong>détection de fuite</strong> plutôt que de chercher soi-même ? Parce qu'une fuite visible n'est souvent que la partie émergée de l'iceberg. L'eau peut parcourir plusieurs mètres dans un mur ou un plancher avant de ressortir, rendant la localisation de la source impossible sans équipement adapté. Un diagnostic amateur risque de vous faire casser des murs inutilement, alors que notre technologie de détection non destructive permet de localiser la fuite exacte sans aucun dommage.
+    </p>
+    <p>
+      Une fuite non traitée, c'est le risque d'infiltrations profondes, de <strong>moisissures dangereuses pour la santé</strong> (allergies, problèmes respiratoires), de <strong>dommages structurels</strong> sur les fondations, les poutres et les murs porteurs, et de factures d'eau qui explosent mois après mois. Plus une fuite persiste, plus les dégâts s'aggravent et plus la réparation devient coûteuse. Agir vite, c'est économiser sur le long terme.
+    </p>
+    <p>
+      Les avantages d'<strong>ITR Services</strong> pour votre recherche de fuite : des plombiers expérimentés formés aux dernières technologies de détection, un équipement professionnel complet embarqué dans nos véhicules, une <strong>intervention dans les heures qui suivent votre appel</strong> à Bruxelles et ses alentours, un devis gratuit et transparent avant toute réparation, des réparations <strong>garanties</strong> avec des matériaux de marques reconnues, et un service disponible <strong>24h/24 et 7j/7</strong> — nuits, week-ends et jours fériés inclus.
+    </p>
+    <p>
+      Nos plombiers interviennent dans toute la <strong>région de Bruxelles et ses alentours</strong> : Schaerbeek, Anderlecht, Ixelles, Saint-Gilles, Uccle, Forest, Etterbeek, Woluwe-Saint-Lambert, Woluwe-Saint-Pierre, Jette, Molenbeek, Koekelberg, Evere, Auderghem, Watermael-Boitsfort, et les communes avoisinantes. Où que vous soyez, nous arrivons rapidement avec tout le matériel nécessaire.
     </p>
     <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une recherche de fuite
-      précise et une réparation qui tient. Devis gratuit et sans engagement.
+      précise et une réparation qui tient. Devis gratuit et sans engagement — nos plombiers sont prêts à intervenir dès maintenant.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

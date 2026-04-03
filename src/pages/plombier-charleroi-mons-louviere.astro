@@ -16,6 +16,9 @@ import { siteConfig } from "../data/siteConfig";
 import { getFaqDepannage } from "../data/faq";
 import { pricingHomepage } from "../data/pricing";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("charleroi");
 const faqItems = getFaqDepannage(zone.citiesInline);
@@ -87,8 +90,34 @@ const faqItems = getFaqDepannage(zone.citiesInline);
     ]}
   />
 
+  <TextImageCTA
+    title="Urgence plomberie 24h/24 — de nuit comme le week-end."
+    text={`Une fuite à 3h du matin ou un WC bouché un dimanche ? Nos plombiers sont disponibles 24h/24, 7j/7 — jours fériés inclus — pour intervenir en urgence à ${zone.areasShort}. Pas de majoration abusive, pas de mauvaise surprise : le tarif est annoncé avant chaque intervention, même en pleine nuit.`}
+    imagePrompt=""
+    imageAlt="Chantier de réparation de canalisation par ITR Services"
+    imageSrc="/images/portfolio/chantier-reparation-tuyau.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Disponible maintenant - Dès 149€"
+    features={[
+      "Service d'urgence 24h/24, 7j/7",
+      "Intervention dans les heures qui suivent votre appel",
+      "Tarif transparent, annoncé avant intervention",
+      "Véhicules équipés pour toute situation",
+    ]}
+  />
+
   <PortfolioGallery />
   <PricingCards cards={pricingHomepage} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -104,12 +133,24 @@ const faqItems = getFaqDepannage(zone.citiesInline);
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         {`Nos plombiers sont disponibles 24h/24 pour intervenir à ${zone.areasShort}. Devis gratuit, pas de surprise sur la facture.`}
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Intervention rapide — Devis gratuit — Sans engagement"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Intervention rapide — Devis gratuit — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -125,7 +166,7 @@ const faqItems = getFaqDepannage(zone.citiesInline);
     <p>
       Notre force : être <strong>sur place dans les heures qui suivent votre appel</strong> avec un diagnostic gratuit.
       On vous présente un devis clair avant toute réparation. Pas de frais de déplacement cachés,
-      pas de surfacturation. Nos tarifs sont parmi les plus compétitifs de la région.
+      pas de surfacturation. Nos tarifs de dépannage commencent <strong>dès 149€</strong>, parmi les plus compétitifs de la région.
     </p>
     <p>
       Nos plombiers travaillent avec du matériel adapté à chaque situation et utilisent des pièces
@@ -133,9 +174,31 @@ const faqItems = getFaqDepannage(zone.citiesInline);
       <strong>garantie</strong> pour votre tranquillité d'esprit.
     </p>
     <p>
+      Que vous habitiez au centre de {zone.cities[0]}, dans les communes avoisinantes de {zone.cities[1]} ou dans la région de {zone.cities[2]},
+      nos plombiers connaissent parfaitement le terrain. Ils arrivent équipés de tout le nécessaire — pièces de rechange,
+      outillage spécialisé, matériel de détection — pour résoudre votre problème en une seule visite.
+    </p>
+    <p>
+      Le <strong>dépannage plomberie</strong> couvre un large éventail de situations : fuite sur canalisation cuivre ou PVC,
+      robinet mitigeur qui goutte, chasse d'eau qui coule en continu, siphon bouché, vanne d'arrêt grippée,
+      ou encore problème de pression d'eau. Nos plombiers sont formés pour intervenir sur tous ces cas de figure,
+      en résidentiel comme en commercial.
+    </p>
+    <p>
+      Nous intervenons également en <strong>prévention</strong> : remplacement de joints usés, contrôle de l'état
+      de vos canalisations, vérification des raccords et des vannes. Mieux vaut prévenir un dégât des eaux
+      que de le subir. Un simple contrôle peut vous éviter des réparations coûteuses.
+    </p>
+    <p>
+      Chaque intervention fait l'objet d'un <strong>rapport détaillé</strong> avec photos, utile pour vos archives
+      personnelles ou pour une déclaration auprès de votre assurance en cas de sinistre. Nos plombiers prennent
+      le temps de vous expliquer ce qui a été fait et ce qu'il faut surveiller à l'avenir.
+    </p>
+    <p>
       Contactez <strong>ITR Services</strong> dès maintenant au <strong>{siteConfig.phone}</strong> pour un
-      dépannage plomberie à {zone.citiesInline}.
+      dépannage plomberie à {zone.citiesInline}. Devis gratuit, intervention rapide, sans engagement.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

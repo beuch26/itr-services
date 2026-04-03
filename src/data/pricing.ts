@@ -9,28 +9,28 @@ export interface PricingCard {
 
 export const pricingHomepage: PricingCard[] = [
   {
-    title: "Détection de fuite",
-    price: "390",
+    title: "Dépannage plomberie",
+    price: "149",
     unit: "€",
-    description: "Détection et réparation de toute fuite d'eau",
+    description: "Intervention rapide pour tout problème de plomberie",
     features: [
-      "Diagnostic complet",
-      "Réparation durable",
+      "Diagnostic sur place inclus",
+      "Devis gratuit avant travaux",
       "Pièces de qualité incluses",
       "Garantie sur la réparation",
     ],
     highlighted: true,
   },
   {
-    title: "Remplacement boiler",
-    price: "899",
+    title: "Détection de fuite",
+    price: "249",
     unit: "€",
-    description: "Installation d'un nouveau boiler électrique",
+    description: "Détection et réparation de toute fuite d'eau",
     features: [
-      "Dépose ancien boiler",
-      "Installation neuf",
-      "Mise en service complète",
-      "Garantie constructeur",
+      "Détection non destructive",
+      "Caméra thermique & endoscopique",
+      "Réparation durable",
+      "Garantie sur la réparation",
     ],
   },
 ];
@@ -38,13 +38,13 @@ export const pricingHomepage: PricingCard[] = [
 export const pricingFuite: PricingCard[] = [
   {
     title: "Détection de fuite",
-    price: "390",
+    price: "249",
     unit: "€",
     description: "Détection et réparation de toute fuite d'eau",
     features: [
-      "Diagnostic complet",
+      "Détection non destructive",
+      "Caméra thermique & endoscopique",
       "Réparation durable",
-      "Pièces de qualité incluses",
       "Garantie sur la réparation",
     ],
     highlighted: true,
@@ -54,7 +54,7 @@ export const pricingFuite: PricingCard[] = [
 export const pricingDebouchage: PricingCard[] = [
   {
     title: "Débouchage classique",
-    price: "129",
+    price: "149",
     unit: "€",
     description: "Débouchage rapide de vos canalisations",
     features: [
@@ -66,7 +66,7 @@ export const pricingDebouchage: PricingCard[] = [
   },
   {
     title: "Curage haute pression",
-    price: "199",
+    price: "149",
     unit: "€",
     description: "Curage de vos canalisations à l'eau haute pression",
     features: [
@@ -78,7 +78,7 @@ export const pricingDebouchage: PricingCard[] = [
   },
   {
     title: "Débouchage hydrocurage",
-    price: "390",
+    price: "249",
     unit: "€",
     description: "Débouchage haute pression de vos canalisations",
     features: [
@@ -94,7 +94,7 @@ export const pricingDebouchage: PricingCard[] = [
 export const pricingBoiler: PricingCard[] = [
   {
     title: "Diagnostic",
-    price: "99",
+    price: "149",
     unit: "€",
     description: "Diagnostic complet de votre installation",
     features: [
@@ -105,20 +105,8 @@ export const pricingBoiler: PricingCard[] = [
     ],
   },
   {
-    title: "Débouchage classique",
-    price: "129",
-    unit: "€",
-    description: "Débouchage rapide de vos canalisations",
-    features: [
-      "Intervention rapide",
-      "Devis gratuit sur place",
-      "Matériel professionnel",
-      "Garantie de résultat",
-    ],
-  },
-  {
     title: "Groupe de sécurité",
-    price: "199",
+    price: "149",
     unit: "€",
     description: "Remplacement du groupe de sécurité",
     features: [
@@ -130,7 +118,7 @@ export const pricingBoiler: PricingCard[] = [
   },
   {
     title: "Remplacement boiler",
-    price: "899",
+    price: "249",
     unit: "€",
     description: "Installation d'un nouveau boiler électrique",
     features: [
@@ -140,21 +128,5 @@ export const pricingBoiler: PricingCard[] = [
       "Garantie constructeur",
     ],
     highlighted: true,
-  },
-];
-
-export const pricingFull: PricingCard[] = [
-  ...pricingHomepage,
-  {
-    title: "Déplacement",
-    price: "60 à 120",
-    unit: "€",
-    description: "Frais de déplacement dans la région bruxelloise",
-    features: [
-      "Diagnostic sur place inclus",
-      "Devis gratuit avant travaux",
-      "Toute la région de Bruxelles",
-      "Disponible 24h/24, 7j/7",
-    ],
   },
 ];

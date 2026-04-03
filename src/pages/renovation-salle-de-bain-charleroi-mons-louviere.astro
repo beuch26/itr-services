@@ -14,6 +14,9 @@ import PortfolioGallery from "../components/PortfolioGallery.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqRenovation } from "../data/faq";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("charleroi");
 ---
@@ -88,6 +91,23 @@ const zone = getZone("charleroi");
     ]}
   />
 
+  <TextImageCTA
+    title="Un projet clé en main, sans stress et sans mauvaise surprise."
+    text={`Pas besoin de jongler entre plombier, carreleur et électricien. Chez ITR Services, nos plombiers coordonnent tous les corps de métier pour votre rénovation de salle de bain à ${zone.areasShort}. Vous avez un seul interlocuteur, un planning clair et un devis détaillé — sur devis, adapté à vos envies et votre budget.`}
+    imagePrompt=""
+    imageAlt="Rénovation salle de bain avec baignoire îlot par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-baignoire-ilot.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Visite gratuite - Sur devis"
+    features={[
+      "Coordination complète des artisans",
+      "Planning de travaux précis et respecté",
+      "Devis détaillé sans surprise",
+      "Paiement du solde après validation finale",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
@@ -122,6 +142,15 @@ const zone = getZone("charleroi");
     </div>
   </section>
 
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -137,12 +166,24 @@ const zone = getZone("charleroi");
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         {`Visite gratuite à domicile à ${zone.areasShort}, devis détaillé sous 48h, et un seul interlocuteur de A à Z. Votre nouvelle salle de bain commence par un coup de fil.`}
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Visite gratuite — Devis sous 48h — Sans engagement"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Visite gratuite — Devis sous 48h — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -155,7 +196,7 @@ const zone = getZone("charleroi");
       <strong>ITR Services</strong> est votre partenaire pour la <strong>rénovation de salle de bain
       à {zone.cities[0]}</strong>, <strong>{zone.cities[1]}</strong> et <strong>{zone.cities[2]}</strong>. Que vous souhaitiez
       moderniser une salle de bain vieillissante ou créer un espace entièrement nouveau, nous proposons un
-      <strong>service clé en main</strong> qui couvre toutes les étapes du projet.
+      <strong>service clé en main</strong> — sur devis — qui couvre toutes les étapes du projet.
     </p>
     <p>
       De la <strong>conception</strong> à la <strong>remise des clés</strong>, notre équipe coordonne l'ensemble
@@ -169,9 +210,34 @@ const zone = getZone("charleroi");
       le solde qu'après avoir validé l'ensemble des travaux.
     </p>
     <p>
+      Nos plombiers réalisent des rénovations complètes à {zone.areasShort} : remplacement de baignoire par une
+      <strong>douche à l'italienne</strong>, installation de <strong>WC suspendus Geberit</strong>, pose de
+      <strong>robinetterie Grohe</strong> encastrée, et création de meubles vasques sur mesure. Chaque projet
+      est unique, et nous adaptons nos solutions à vos envies et à la configuration de votre espace.
+    </p>
+    <p>
+      Le <strong>carrelage</strong> est un élément central de toute rénovation de salle de bain. Nous posons
+      du carrelage grand format, de la faïence moderne, du grès cérame et de la mosaïque, avec des finitions
+      soignées (joints époxy, profilés inox). Nos plombiers maîtrisent également l'étanchéité sous carrelage,
+      indispensable pour éviter les infiltrations.
+    </p>
+    <p>
+      Pour les <strong>petits espaces</strong>, nous proposons des solutions astucieuses : douche d'angle, meuble
+      vasque compact, miroir avec rangement intégré, WC suspendu gain de place. Même dans une salle de bain
+      de 4 m², il est possible de créer un espace fonctionnel et esthétique.
+    </p>
+    <p>
+      L'<strong>accessibilité</strong> fait aussi partie de nos compétences. Pour les personnes à mobilité réduite
+      ou les seniors, nous installons des douches plain-pied, des barres d'appui, des sièges de douche rabattables
+      et des revêtements antidérapants. Nos plombiers connaissent les normes en vigueur et vous conseillent sur
+      les aménagements adaptés.
+    </p>
+    <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une visite gratuite
       et un devis personnalisé pour votre projet de rénovation de salle de bain à {zone.citiesInline}.
+      Sur devis, sans engagement.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

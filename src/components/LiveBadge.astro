@@ -1,0 +1,53 @@
+---
+import { siteConfig } from "../data/siteConfig";
+
+const today = new Date();
+const dateStr = today.toLocaleDateString('fr-BE', {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<div class="inline-flex items-center gap-3 bg-white rounded-2xl px-5 py-3 shadow-md ring-1 ring-gray-100">
+  <!-- Joseph photo -->
+  <div class="relative flex-shrink-0">
+    <img
+      src="/images/hero-joseph.webp"
+      alt="Joseph, artisan plombier ITR Services"
+      class="w-12 h-12 rounded-full object-cover object-top ring-2 ring-white shadow-sm"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <!-- Live dot -->
+    <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white">
+      <span class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></span>
+    </span>
+  </div>
+
+  <!-- Text -->
+  <div class="min-w-0">
+    <div class="flex items-center gap-1.5">
+      <span class="inline-block w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></span>
+      <span class="text-sm font-heading font-bold text-dark-blue">Artisan disponible</span>
+    </div>
+    <p class="text-xs text-gray-500 mt-0.5">
+      Intervention possible aujourd'hui — <span class="live-badge-date font-medium">{dateStr}</span>
+    </p>
+  </div>
+</div>
+
+<script>
+  // Update date client-side to ensure it's always current
+  document.querySelectorAll('.live-badge-date').forEach(el => {
+    const now = new Date();
+    el.textContent = now.toLocaleDateString('fr-BE', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+  });
+</script>

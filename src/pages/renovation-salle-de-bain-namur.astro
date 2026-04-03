@@ -14,6 +14,9 @@ import PortfolioGallery from "../components/PortfolioGallery.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqRenovation } from "../data/faq";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("namur");
 ---
@@ -88,6 +91,23 @@ const zone = getZone("namur");
     ]}
   />
 
+  <TextImageCTA
+    title="Un service clé en main, du premier rendez-vous à la remise des clés."
+    text="Pas besoin de chercher un carreleur, un électricien et un plombier séparément. Chez ITR Services, nos plombiers coordonnent l'ensemble du chantier. Vous avez un seul interlocuteur qui gère tout : les commandes de matériaux, le planning des travaux, la coordination des corps de métier et le suivi qualité. Vous ne levez pas le petit doigt."
+    imagePrompt=""
+    imageAlt="Rénovation salle de bain baignoire îlot par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-baignoire-ilot.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Projet clé en main - Sur devis"
+    features={[
+      "Un seul interlocuteur pour tout le projet",
+      "Coordination de tous les corps de métier",
+      "Planning précis et respect des délais",
+      "Paiement du solde après validation complète",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
@@ -122,6 +142,15 @@ const zone = getZone("namur");
     </div>
   </section>
 
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -137,12 +166,24 @@ const zone = getZone("namur");
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Visite gratuite à domicile, devis détaillé sous 48h, et un seul interlocuteur de A à Z. Votre nouvelle salle de bain commence par un coup de fil.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Visite gratuite — Devis sous 48h — Sans engagement"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Visite gratuite — Devis sous 48h — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -155,7 +196,8 @@ const zone = getZone("namur");
       <strong>ITR Services</strong> est votre partenaire pour la <strong>rénovation de salle de bain
       à Namur</strong> et ses alentours. Que vous souhaitiez
       moderniser une salle de bain vieillissante ou créer un espace entièrement nouveau, nous proposons un
-      <strong>service clé en main</strong> qui couvre toutes les étapes du projet.
+      <strong>service clé en main</strong> qui couvre toutes les étapes du projet. Chaque rénovation est réalisée
+      sur devis personnalisé, adapté à vos envies et à votre budget.
     </p>
     <p>
       De la <strong>conception</strong> à la <strong>remise des clés</strong>, notre équipe coordonne l'ensemble
@@ -169,9 +211,33 @@ const zone = getZone("namur");
       le solde qu'après avoir validé l'ensemble des travaux.
     </p>
     <p>
+      Nos plombiers interviennent sur l'ensemble de la province de Namur : {zone.areasShort}. Que votre salle
+      de bain soit petite ou spacieuse, en appartement ou en maison, nous adaptons notre approche pour
+      <strong>optimiser chaque mètre carré</strong>. Douche à l'italienne, baignoire îlot, double vasque,
+      WC suspendu Geberit — toutes les configurations sont possibles.
+    </p>
+    <p>
+      Le choix des matériaux fait toute la différence. Nos plombiers vous accompagnent dans la sélection du
+      <strong>carrelage</strong> (grand format, mosaïque, imitation bois ou pierre naturelle), de la
+      <strong>robinetterie</strong> (mitigeur thermostatique, colonne de douche encastrée) et des
+      <strong>sanitaires</strong> (WC sans bride, lavabo suspendu). Nous vous orientons vers le meilleur
+      rapport qualité-prix selon votre budget.
+    </p>
+    <p>
+      L'accessibilité est un enjeu important pour de nombreux foyers. Nous réalisons des <strong>salles de bain
+      adaptées PMR</strong> : douche de plain-pied, barres de maintien, siège de douche rabattable et
+      revêtements antidérapants. Des aménagements qui allient sécurité, confort et esthétique.
+    </p>
+    <p>
+      Chaque chantier est mené avec rigueur : <strong>protection des sols et des murs</strong> adjacents,
+      nettoyage quotidien, respect du planning annoncé. Nos plombiers veillent à minimiser les nuisances
+      et à vous rendre une salle de bain impeccable, prête à l'emploi.
+    </p>
+    <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une visite gratuite
-      et un devis personnalisé pour votre projet de rénovation de salle de bain.
+      et un devis personnalisé pour votre projet de rénovation de salle de bain à Namur et ses alentours.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

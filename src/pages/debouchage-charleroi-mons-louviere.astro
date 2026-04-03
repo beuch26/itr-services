@@ -15,6 +15,9 @@ import { siteConfig } from "../data/siteConfig";
 import { getFaqDebouchage } from "../data/faq";
 import { pricingDebouchage } from "../data/pricing";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("charleroi");
 const faqItems = getFaqDebouchage(zone.citiesInline);
@@ -87,11 +90,37 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
     ]}
   />
 
+  <TextImageCTA
+    title="L'hydrocurage : la solution pour les bouchons récurrents."
+    text={`Votre canalisation se bouche tous les mois ? C'est qu'il reste du dépôt à l'intérieur. L'hydrocurage haute pression nettoie l'intégralité du tuyau — graisse, calcaire, racines — et le remet à neuf. Nos plombiers interviennent dans les heures qui suivent votre appel à ${zone.areasShort} avec le matériel adapté. Résultat : des canalisations propres pour longtemps.`}
+    imagePrompt=""
+    imageAlt="Débouchage de canalisations extérieures par ITR Services"
+    imageSrc="/images/portfolio/debouchage-exterieur.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Hydrocurage professionnel - Dès 149€"
+    features={[
+      "Hydrocurage haute pression jusqu'à 350 bars",
+      "Nettoyage complet de la canalisation",
+      "Efficace contre graisse, calcaire et racines",
+      "Inspection caméra avant/après incluse",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
   <!-- Pricing -->
   <PricingCards cards={pricingDebouchage} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -108,12 +137,24 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         {`Débouchage garanti à ${zone.areasShort}. On arrive vite, on règle le problème, et on vous laisse tranquille. Dès 129€.`}
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Débouchage garanti — Dès 129€ — Devis gratuit"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Débouchage garanti — Dès 129€ — Devis gratuit"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -140,9 +181,34 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
       Chaque débouchage est <strong>garanti</strong> : si le bouchon revient, on revient aussi — gratuitement.
     </p>
     <p>
-      <strong>À partir de 129€</strong>, devis gratuit sur place. Appelez <strong>ITR Services</strong>
-      au <strong>{siteConfig.phone}</strong>.
+      L'<strong>hydrocurage haute pression</strong> est notre arme secrète contre les bouchons récurrents. Cette technique
+      projette de l'eau à très haute pression à l'intérieur de la canalisation, décollant graisse, calcaire, tartre
+      et même les racines qui s'infiltrent dans les joints. Le résultat : une canalisation remise à neuf,
+      avec un écoulement fluide pour longtemps. Nos plombiers interviennent dans les heures qui suivent votre appel
+      à {zone.areasShort}.
+    </p>
+    <p>
+      Nos interventions couvrent toutes les situations : WC bouché par un objet ou par accumulation, évier qui ne
+      se vide plus, douche qui refoule, regard extérieur obstrué, colonne d'immeuble engorgée, ou encore
+      canalisation principale bloquée par des racines. Quel que soit le problème, nos plombiers arrivent équipés
+      pour le résoudre en une seule visite.
+    </p>
+    <p>
+      Pour les copropriétés et les immeubles à {zone.cities[0]}, nous proposons également des <strong>contrats
+      d'entretien préventif</strong>. Un curage régulier de vos canalisations évite les engorgements récurrents
+      et prolonge la durée de vie de vos installations. Demandez un devis pour un entretien annuel adapté
+      à votre bâtiment.
+    </p>
+    <p>
+      Après chaque débouchage, nos plombiers réalisent un <strong>contrôle caméra</strong> pour vérifier que la
+      canalisation est parfaitement dégagée et qu'il n'y a pas de défaut structurel (fissure, affaissement, raccord
+      décalé) qui pourrait provoquer un nouveau bouchon. Ce contrôle est inclus dans nos prestations.
+    </p>
+    <p>
+      <strong>Dès 149€</strong>, devis gratuit sur place. Appelez <strong>ITR Services</strong>
+      au <strong>{siteConfig.phone}</strong> pour un débouchage garanti à {zone.citiesInline}.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

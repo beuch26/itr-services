@@ -70,14 +70,35 @@ const canonical = canonicalURL || new URL(Astro.url.pathname, siteConfig.siteUrl
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Plumber",
+      "@id": siteConfig.siteUrl + "/#organization",
       "name": siteConfig.companyName,
+      "legalName": "ITR Services SRL",
       "telephone": siteConfig.phone,
       "email": siteConfig.email,
       "url": siteConfig.siteUrl,
-      "areaServed": siteConfig.areas.map(area => ({
-        "@type": "City",
-        "name": area,
-      })),
+      "logo": siteConfig.siteUrl + "/favicon.svg",
+      "image": siteConfig.siteUrl + "/images/hero-joseph.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Leuvensesteenweg 246, bus 1",
+        "postalCode": "1932",
+        "addressLocality": "Zaventem",
+        "addressRegion": "Brabant flamand",
+        "addressCountry": "BE",
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.845,
+        "longitude": 4.350,
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Bruxelles" },
+        { "@type": "City", "name": "Waterloo" },
+        { "@type": "City", "name": "Charleroi" },
+        { "@type": "City", "name": "Namur" },
+        { "@type": "City", "name": "Wavre" },
+        { "@type": "City", "name": "Mons" },
+      ],
       "availableLanguage": "French",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -86,6 +107,44 @@ const canonical = canonicalURL || new URL(Astro.url.pathname, siteConfig.siteUrl
         "closes": "23:59",
       },
       "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "bestRating": "5",
+        "ratingCount": "116",
+        "reviewCount": "116",
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de plomberie",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Dépannage plomberie" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR", "minPrice": "149" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Débouchage canalisation" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR", "minPrice": "149" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Détection de fuite" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "249", "priceCurrency": "EUR", "minPrice": "249" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Remplacement boiler" },
+            "priceSpecification": { "@type": "PriceSpecification", "price": "249", "priceCurrency": "EUR", "minPrice": "249" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Rénovation salle de bain" },
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR" },
+          },
+        ],
+      },
     })} />
   </head>
   <body class="min-h-screen flex flex-col">

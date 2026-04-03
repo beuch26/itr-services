@@ -14,6 +14,9 @@ import PortfolioGallery from "../components/PortfolioGallery.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqRenovation } from "../data/faq";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("waterloo");
 ---
@@ -88,6 +91,23 @@ const zone = getZone("waterloo");
     ]}
   />
 
+  <TextImageCTA
+    title="Un service clé en main — vous n'avez qu'un seul coup de fil à passer."
+    text={`Pas besoin de chercher un carreleur, un électricien et un plombier séparément. À ${zone.areasShort}, notre équipe coordonne l'ensemble du chantier : démolition, plomberie, électricité, carrelage, peinture et pose des sanitaires. Vous avez un seul interlocuteur du début à la fin, un planning clair, et zéro mauvaise surprise. Votre salle de bain est livrée prête à l'emploi.`}
+    imagePrompt="Complete bathroom renovation in progress"
+    imageAlt="Rénovation complète de salle de bain avec baignoire îlot par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-baignoire-ilot.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Projet clé en main - Sur devis"
+    features={[
+      "Coordination de tous les corps de métier",
+      "Planning précis et respecté",
+      "Suivi personnalisé à chaque étape",
+      "Paiement du solde après validation",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
@@ -122,6 +142,15 @@ const zone = getZone("waterloo");
     </div>
   </section>
 
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -137,12 +166,24 @@ const zone = getZone("waterloo");
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Visite gratuite à domicile, devis détaillé sous 48h, et un seul interlocuteur de A à Z. Votre nouvelle salle de bain commence par un coup de fil.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Visite gratuite — Devis sous 48h — Sans engagement"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Visite gratuite — Devis sous 48h — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -155,7 +196,7 @@ const zone = getZone("waterloo");
       <strong>ITR Services</strong> est votre partenaire pour la <strong>rénovation de salle de bain
       à Waterloo</strong>, <strong>Wavre</strong> et <strong>Nivelles</strong>. Que vous souhaitiez
       moderniser une salle de bain vieillissante ou créer un espace entièrement nouveau, nous proposons un
-      <strong>service clé en main</strong> qui couvre toutes les étapes du projet.
+      <strong>service clé en main</strong>, sur devis, qui couvre toutes les étapes du projet.
     </p>
     <p>
       De la <strong>conception</strong> à la <strong>remise des clés</strong>, notre équipe coordonne l'ensemble
@@ -169,9 +210,37 @@ const zone = getZone("waterloo");
       le solde qu'après avoir validé l'ensemble des travaux.
     </p>
     <p>
+      Chaque projet de rénovation commence par une <strong>visite à domicile gratuite</strong>. Nos plombiers
+      prennent les mesures, écoutent vos envies et vos contraintes, et vous proposent un plan sur mesure.
+      Que vous rêviez d'une <strong>douche à l'italienne</strong>, d'une <strong>baignoire îlot</strong>,
+      d'un <strong>double vasque</strong> ou d'un <strong>WC suspendu</strong>, nous adaptons le projet
+      à vos goûts et à votre budget.
+    </p>
+    <p>
+      La <strong>coordination des travaux</strong> est notre spécialité. Pas besoin de jongler entre un
+      plombier, un carreleur, un électricien et un peintre : notre équipe gère l'ensemble du chantier,
+      du premier coup de masse aux dernières finitions. Le planning est établi à l'avance et respecté,
+      pour minimiser la durée des travaux et les désagréments dans votre quotidien.
+    </p>
+    <p>
+      Nous intervenons à Waterloo, Wavre, Nivelles et dans tout le Brabant wallon pour des projets
+      de rénovation de toutes tailles : de la <strong>rénovation partielle</strong> (remplacement de la
+      douche ou de la baignoire) à la <strong>rénovation complète</strong> avec modification des
+      arrivées d'eau et des évacuations. Nos plombiers s'adaptent à la configuration de votre logement,
+      qu'il s'agisse d'un appartement, d'une maison de ville ou d'une villa.
+    </p>
+    <p>
+      La qualité des <strong>matériaux et des sanitaires</strong> que nous posons est essentielle pour
+      garantir la durabilité de votre nouvelle salle de bain. C'est pourquoi nous sélectionnons des
+      marques reconnues pour leur fiabilité : Grohe et Hansgrohe pour la robinetterie, Geberit pour
+      les bâtis-supports, Villeroy & Boch pour la céramique. Du carrelage grand format aux mosaïques
+      de détail, chaque finition est soignée.
+    </p>
+    <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une visite gratuite
-      et un devis personnalisé pour votre projet de rénovation de salle de bain.
+      et un devis personnalisé pour votre projet de rénovation de salle de bain. Sur devis, sans engagement.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

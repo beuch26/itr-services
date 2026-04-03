@@ -14,6 +14,9 @@ import { siteConfig } from "../data/siteConfig";
 import { getFaqFuite } from "../data/faq";
 import { pricingFuite } from "../data/pricing";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("waterloo");
 const faqItems = getFaqFuite(zone.citiesInline);
@@ -87,8 +90,34 @@ const faqItems = getFaqFuite(zone.citiesInline);
     ]}
   />
 
+  <TextImageCTA
+    title="Une fuite ignorée peut vous coûter des milliers d'euros."
+    text={`Infiltrations dans les murs, moisissures, dégradation de la structure, facture d'eau qui explose... Une fuite non traitée ne se résorbe jamais d'elle-même. À ${zone.areasShort}, nos plombiers interviennent dans les heures qui suivent votre appel pour stopper les dégâts avant qu'il ne soit trop tard. La détection précoce est la clé pour éviter des travaux bien plus lourds.`}
+    imagePrompt="Water damage on wall from untreated leak"
+    imageAlt="Détection de fuite par caméra thermique professionnelle"
+    imageSrc="/images/portfolio/detection-fuite-thermique.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Détection urgente - Dès 249€"
+    features={[
+      "Évitez les dégâts structurels coûteux",
+      "Stoppez les moisissures et l'humidité",
+      "Réduisez votre facture d'eau immédiatement",
+      "Rapport de détection pour votre assurance",
+    ]}
+  />
+
   <!-- Pricing -->
   <PricingCards cards={pricingFuite} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -105,12 +134,24 @@ const faqItems = getFaqFuite(zone.citiesInline);
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Ne laissez pas une fuite causer des dégâts coûteux. Nos plombiers interviennent en urgence avec l'équipement qu'il faut pour trouver et stopper la fuite.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Détection précise — Réparation garantie — Devis gratuit"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Détection précise — Réparation garantie — Devis gratuit"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -131,9 +172,33 @@ const faqItems = getFaqFuite(zone.citiesInline);
       grâce à l'imagerie thermique, puis <strong>réparer sur place dans la foulée</strong>.
     </p>
     <p>
-      Disponibles <strong>24h/24 et 7j/7</strong>, nous intervenons dans les heures qui suivent votre appel pour toute urgence
+      Disponibles <strong>24h/24 et 7j/7</strong>, nos plombiers interviennent dans les heures qui suivent votre appel pour toute urgence
       de fuite à Waterloo, Wavre, Nivelles et alentours. Nos réparations sont <strong>garanties</strong> et réalisées avec des
-      matériaux éprouvés.
+      matériaux éprouvés. Nos tarifs commencent dès 249€ pour une recherche de fuite complète.
+    </p>
+    <p>
+      Nos plombiers maîtrisent plusieurs <strong>techniques de détection complémentaires</strong> : la détection
+      par <strong>ultrasons</strong> pour les fuites sous pression, la <strong>caméra endoscopique</strong> pour
+      inspecter l'intérieur des canalisations, le <strong>colorant traceur</strong> pour les infiltrations en
+      toiture, et l'<strong>humidimètre</strong> pour mesurer le taux d'humidité dans les murs et les sols.
+      Cette combinaison de méthodes permet de localiser la fuite au plus juste, sans démolition inutile.
+    </p>
+    <p>
+      En Brabant wallon, les <strong>problèmes de fuite</strong> sont fréquents dans les habitations anciennes
+      comme récentes : joints vieillissants, canalisations en cuivre corrodées, raccords défectueux,
+      infiltrations par la toiture ou les fondations. Nos plombiers connaissent bien ces problématiques
+      et adaptent leur méthode de détection à chaque situation rencontrée à Waterloo, Wavre et Nivelles.
+    </p>
+    <p>
+      La <strong>réparation est effectuée immédiatement</strong> après la détection, dans la même intervention.
+      Que ce soit un raccord à remplacer, un joint à refaire, une canalisation à souder ou une vanne à changer,
+      nos plombiers disposent des pièces et du matériel nécessaires pour réparer sur place. Vous n'avez pas besoin
+      de prendre un second rendez-vous.
+    </p>
+    <p>
+      Nous fournissons également un <strong>rapport de détection</strong> détaillé, utile pour vos démarches
+      auprès de votre <strong>assurance habitation</strong>. Ce document inclut les photos thermiques,
+      la localisation exacte de la fuite et la nature de la réparation effectuée.
     </p>
     <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une recherche de fuite
@@ -141,4 +206,5 @@ const faqItems = getFaqFuite(zone.citiesInline);
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

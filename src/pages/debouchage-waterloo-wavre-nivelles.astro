@@ -15,6 +15,9 @@ import { siteConfig } from "../data/siteConfig";
 import { getFaqDebouchage } from "../data/faq";
 import { pricingDebouchage } from "../data/pricing";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("waterloo");
 const faqItems = getFaqDebouchage(zone.citiesInline);
@@ -87,11 +90,37 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
     ]}
   />
 
+  <TextImageCTA
+    title="L'hydrocurage : la solution radicale pour les bouchons tenaces."
+    text={`Quand le furet ne suffit pas, on passe à l'hydrocurage haute pression. Un jet d'eau à plus de 200 bars qui décroche tout sur son passage : graisse accumulée, calcaire, racines d'arbres, résidus de travaux. À ${zone.areasShort}, nos plombiers utilisent cette technique pour redonner à vos canalisations un débit comme au premier jour — sans aucun produit chimique.`}
+    imagePrompt="Professional hydro-jetting equipment for drain cleaning"
+    imageAlt="Débouchage de chambre de visite par ITR Services"
+    imageSrc="/images/portfolio/debouchage-chambre-visite.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Hydrocurage professionnel - Dès 149€"
+    features={[
+      "Jet haute pression jusqu'à 200+ bars",
+      "Élimine graisse, calcaire et racines",
+      "Caméra de contrôle avant et après",
+      "Résultat durable et garanti",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
   <!-- Pricing -->
   <PricingCards cards={pricingDebouchage} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -108,12 +137,24 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Débouchage garanti à Waterloo, Wavre, Nivelles et alentours. On arrive vite, on règle le problème, et on vous laisse tranquille. Dès 129€.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Débouchage garanti — Dès 129€ — Devis gratuit"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Débouchage garanti — Dès 129€ — Devis gratuit"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -126,7 +167,7 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
       <strong>ITR Services</strong> est votre expert en <strong>débouchage de canalisations à Waterloo</strong>,
       <strong>Wavre</strong> et <strong>Nivelles</strong>. Nous intervenons en urgence <strong>24h/24</strong>
       pour déboucher tous types de canalisations : <strong>WC</strong>, <strong>éviers</strong>, <strong>douches</strong>,
-      <strong>baignoires</strong> et <strong>canalisations principales</strong>.
+      <strong>baignoires</strong> et <strong>canalisations principales</strong>. Nos tarifs commencent dès 149€.
     </p>
     <p>
       Nos plombiers utilisent des méthodes mécaniques éprouvées : <strong>furet mécanique</strong> pour les
@@ -140,9 +181,33 @@ const faqItems = getFaqDebouchage(zone.citiesInline);
       Chaque débouchage est <strong>garanti</strong> : si le bouchon revient, on revient aussi — gratuitement.
     </p>
     <p>
-      <strong>À partir de 129€</strong>, devis gratuit sur place. Appelez <strong>ITR Services</strong>
-      au <strong>{siteConfig.phone}</strong>.
+      L'<strong>hydrocurage haute pression</strong> est notre arme de choix pour les bouchons tenaces. Un jet
+      d'eau à plus de 200 bars propulse dans la canalisation et décroche tout sur son passage : graisse
+      accumulée, calcaire incrusté, racines d'arbres infiltrées, résidus alimentaires et objets coincés.
+      Le résultat est un tuyau propre comme au premier jour, avec un débit entièrement restauré.
+    </p>
+    <p>
+      À Waterloo, Wavre et Nivelles, les problèmes de <strong>canalisations bouchées</strong> sont souvent
+      liés à l'accumulation progressive de graisse dans les éviers de cuisine, au calcaire dans les
+      canalisations d'eau chaude, ou aux racines d'arbres qui s'infiltrent dans les canalisations
+      extérieures. Nos plombiers connaissent ces problématiques locales et interviennent dans les heures
+      qui suivent votre appel avec le matériel adapté.
+    </p>
+    <p>
+      Pour les <strong>débouchages préventifs</strong>, nous proposons aussi un passage caméra pour inspecter
+      l'état de vos canalisations et anticiper les problèmes avant qu'ils ne surviennent. C'est la meilleure
+      façon d'éviter les urgences et les dégâts des eaux liés à un refoulement.
+    </p>
+    <p>
+      Notre zone d'intervention couvre tout le Brabant wallon : Waterloo, Wavre, Nivelles, Braine-l'Alleud,
+      Ottignies-Louvain-la-Neuve, Rixensart et toutes les communes environnantes. Nos plombiers se déplacent
+      rapidement, de jour comme de nuit, week-ends et jours fériés compris.
+    </p>
+    <p>
+      Appelez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour un débouchage rapide
+      et garanti. Devis gratuit et sans engagement.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

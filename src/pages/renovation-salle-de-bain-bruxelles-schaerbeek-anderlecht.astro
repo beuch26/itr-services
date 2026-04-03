@@ -11,13 +11,16 @@ import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import AuthorityBrands from "../components/AuthorityBrands.astro";
 import PortfolioGallery from "../components/PortfolioGallery.astro";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 import { siteConfig } from "../data/siteConfig";
 import { faqRenovation } from "../data/faq";
 ---
 
 <BaseLayout
   title="Rénovation Salle de Bain Bruxelles | ITR Services"
-  description="Rénovation complète de salle de bain à Bruxelles et ses alentours. Service clé en main, marques premium (Grohe, Geberit). Devis gratuit. Appelez le +32 470 96 08 23."
+  description="Rénovation complète de salle de bain à Bruxelles et ses alentours. Service clé en main sur devis, marques premium (Grohe, Geberit). Devis gratuit. Appelez le +32 470 96 08 23."
 >
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
@@ -77,6 +80,23 @@ import { faqRenovation } from "../data/faq";
     ]}
   />
 
+  <TextImageCTA
+    title="Un service clé en main, du conseil design aux finitions."
+    text="Pas besoin de chercher un carreleur, un électricien et un plombier séparément. Nos plombiers coordonnent l'ensemble du chantier et vous accompagnent dès la phase de conception : choix des matériaux, agencement, couleurs, éclairage. Vous expliquez ce que vous voulez, on se charge du reste. Résultat : une salle de bain sur mesure, livrée clé en main, sans stress."
+    imagePrompt="Elegant bathroom with freestanding bathtub and modern tiles"
+    imageAlt="Rénovation salle de bain baignoire îlot par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-baignoire-ilot.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Consultation design gratuite — Sur devis"
+    features={[
+      "Accompagnement design et choix des matériaux",
+      "Coordination de tous les corps de métier",
+      "Planning de travaux détaillé avant démarrage",
+      "Livraison clé en main, vous ne gérez rien",
+    ]}
+  />
+
   <!-- Portfolio -->
   <PortfolioGallery />
 
@@ -111,6 +131,9 @@ import { faqRenovation } from "../data/faq";
     </div>
   </section>
 
+  <!-- Availability CTA -->
+  <AvailabilityCTA />
+
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -126,12 +149,22 @@ import { faqRenovation } from "../data/faq";
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Visite gratuite à domicile, devis détaillé sous 48h, et un seul interlocuteur de A à Z. Votre nouvelle salle de bain commence par un coup de fil.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Visite gratuite — Devis sous 48h — Sans engagement"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Visite gratuite — Sur devis — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center"><LiveBadge /></div>
     </div>
   </section>
 
@@ -144,7 +177,8 @@ import { faqRenovation } from "../data/faq";
       <strong>ITR Services</strong> est votre partenaire pour la <strong>rénovation de salle de bain
       à Bruxelles et ses alentours</strong>. Que vous souhaitiez
       moderniser une salle de bain vieillissante ou créer un espace entièrement nouveau, nous proposons un
-      <strong>service clé en main</strong> qui couvre toutes les étapes du projet.
+      <strong>service clé en main</strong> qui couvre toutes les étapes du projet. Nos plombiers se déplacent
+      dans les heures qui suivent votre appel pour une première visite gratuite.
     </p>
     <p>
       De la <strong>conception</strong> à la <strong>remise des clés</strong>, notre équipe coordonne l'ensemble
@@ -153,14 +187,39 @@ import { faqRenovation } from "../data/faq";
       <strong>Hansgrohe</strong> — des marques qui tiennent dans le temps.
     </p>
     <p>
+      Le choix des <strong>matériaux</strong> est une étape clé de votre rénovation. Carrelage grand format pour un effet moderne,
+      faïence en relief pour du caractère, mosaïque pour les douches à l'italienne — nos plombiers vous guident parmi les tendances actuelles
+      tout en respectant votre budget. Nous travaillons aussi bien avec des matériaux classiques qu'avec des finitions haut de gamme
+      comme le <strong>marbre</strong>, le <strong>terrazzo</strong> ou le <strong>béton ciré</strong>.
+    </p>
+    <p>
+      <strong>Planifier son budget</strong> est essentiel avant de se lancer. Une rénovation complète de salle de bain
+      comprend la démolition, la plomberie, l'électricité, le carrelage, les sanitaires et les finitions.
+      Chez ITR Services, le devis est détaillé poste par poste — pas de mauvaise surprise en cours de chantier.
+      Les tarifs varient selon la surface, les matériaux choisis et la complexité des travaux.
+    </p>
+    <p>
+      Pourquoi faire appel à des <strong>professionnels</strong> plutôt que de rénover soi-même ? Une salle de bain implique
+      de la plomberie, de l'électricité en zone humide et de l'étanchéité — trois domaines où une erreur peut coûter très cher.
+      Nos plombiers respectent les normes en vigueur et garantissent un résultat durable. Vous évitez les fuites, les infiltrations
+      et les reprises de chantier.
+    </p>
+    <p>
+      En termes de <strong>délai</strong>, une rénovation complète de salle de bain prend généralement entre
+      <strong>2 et 4 semaines</strong> selon l'ampleur du projet. Nous établissons un planning précis dès la validation du devis,
+      et nous nous engageons à respecter les délais annoncés. Un seul interlocuteur vous tient informé de l'avancement du chantier
+      à chaque étape.
+    </p>
+    <p>
       Notre processus est simple : visite gratuite à domicile, <strong>devis détaillé sous 48h</strong>,
       planning de travaux précis et un <strong>seul interlocuteur</strong> tout au long du projet. Vous ne payez
       le solde qu'après avoir validé l'ensemble des travaux.
     </p>
     <p>
       Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour une visite gratuite
-      et un devis personnalisé pour votre projet de rénovation de salle de bain.
+      et un devis personnalisé pour votre projet de rénovation de salle de bain à Bruxelles et ses alentours.
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

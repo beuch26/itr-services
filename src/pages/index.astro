@@ -11,13 +11,16 @@ import FAQSection from "../components/FAQSection.astro";
 import SEOTextBlock from "../components/SEOTextBlock.astro";
 import LocalInfo from "../components/LocalInfo.astro";
 import PortfolioGallery from "../components/PortfolioGallery.astro";
+import CallbackModal from "../components/CallbackModal.astro";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
 import { siteConfig } from "../data/siteConfig";
 import { services } from "../data/services";
 ---
 
 <BaseLayout
   title="Plombier Bruxelles Dépannage 24h/24 | ITR Services"
-  description="Plombier à Bruxelles et ses alentours — Intervention rapide, 24h/24 et 7j/7. Débouchage dès 129€, réparation fuite dès 399€, remplacement boiler dès 899€. Devis gratuit. Appelez le +32 470 96 08 23."
+  description="Plombier à Bruxelles et ses alentours — Intervention rapide, 24h/24 et 7j/7. Dépannage dès 149€, détection fuite dès 249€, remplacement boiler dès 249€. Devis gratuit. Appelez le +32 470 96 08 23."
 >
   <!-- Hero Section -->
   <HeroSection
@@ -174,6 +177,15 @@ import { services } from "../data/services";
   <!-- Pricing -->
   <PricingCards />
 
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
     <!-- Decorative background -->
@@ -210,6 +222,9 @@ import { services } from "../data/services";
           Écrivez-nous sur WhatsApp
         </a>
       </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -234,8 +249,8 @@ import { services } from "../data/services";
     </p>
     <p>
       Ce qui nous distingue : un <strong>devis clair et détaillé avant chaque intervention</strong>, sans frais cachés.
-      Nos tarifs figurent parmi les plus compétitifs de la région : débouchage dès 129€, réparation de fuite
-      dès 399€, remplacement de boiler dès 899€. Toutes nos réparations sont <strong>garanties</strong> et réalisées
+      Nos tarifs figurent parmi les plus compétitifs de la région : dépannage plomberie dès 149€, détection de fuite
+      dès 249€, remplacement de boiler dès 249€. Toutes nos réparations sont <strong>garanties</strong> et réalisées
       avec des matériaux de marques reconnues comme Grohe, Geberit et Vaillant.
     </p>
     <p>
@@ -245,4 +260,5 @@ import { services } from "../data/services";
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>

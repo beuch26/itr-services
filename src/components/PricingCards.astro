@@ -1,12 +1,12 @@
 ---
 import CTAButton from "./CTAButton.astro";
-import { pricingFull, type PricingCard } from "../data/pricing";
+import { pricingHomepage, type PricingCard } from "../data/pricing";
 
 interface Props {
   cards?: PricingCard[];
 }
 
-const { cards = pricingFull } = Astro.props;
+const { cards = pricingHomepage } = Astro.props;
 ---
 
 <section class="bg-surface py-12 md:py-16 relative overflow-hidden">

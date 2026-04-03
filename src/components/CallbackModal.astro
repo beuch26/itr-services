@@ -1,0 +1,176 @@
+---
+import { siteConfig } from "../data/siteConfig";
+---
+
+<!-- Trigger button (to be placed where needed) -->
+<button
+  id="callback-trigger"
+  type="button"
+  class="inline-flex items-center gap-2.5 bg-white hover:bg-gray-50 text-dark-blue font-heading font-bold px-7 py-4 rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl ring-1 ring-gray-200 hover:ring-primary/30 no-underline cursor-pointer"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </svg>
+  Être rappelé gratuitement
+  <span class="text-[11px] font-body font-normal text-gray-400 block mt-0.5">Réponse rapide — Sans engagement</span>
+</button>
+
+<!-- Modal Overlay -->
+<div id="callback-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <!-- Backdrop -->
+  <div id="callback-backdrop" class="absolute inset-0 bg-dark-blue/60 backdrop-blur-sm"></div>
+
+  <!-- Modal -->
+  <div class="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 transform transition-all duration-300 scale-95 opacity-0" id="callback-content">
+    <!-- Close button -->
+    <button id="callback-close" type="button" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Header -->
+    <div class="text-center mb-6">
+      <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-heading font-bold text-dark-blue">Demander un rappel gratuit</h3>
+      <p class="text-gray-500 text-sm mt-1">Nous vous rappelons dans les plus brefs délais</p>
+    </div>
+
+    <!-- Form -->
+    <form id="callback-form" class="space-y-4">
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="cb-prenom" class="block text-sm font-medium text-gray-700 mb-1">Prénom</label>
+          <input type="text" id="cb-prenom" name="prenom" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm"
+            placeholder="Joseph"
+          />
+        </div>
+        <div>
+          <label for="cb-nom" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+          <input type="text" id="cb-nom" name="nom" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm"
+            placeholder="Dupont"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="cb-telephone" class="block text-sm font-medium text-gray-700 mb-1">Numéro de téléphone</label>
+        <input type="tel" id="cb-telephone" name="telephone" required
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm"
+          placeholder="+32 4XX XX XX XX"
+        />
+      </div>
+
+      <div>
+        <label for="cb-codepostal" class="block text-sm font-medium text-gray-700 mb-1">Code postal</label>
+        <input type="text" id="cb-codepostal" name="codepostal" required
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm"
+          placeholder="1000"
+        />
+      </div>
+
+      <div>
+        <label for="cb-besoin" class="block text-sm font-medium text-gray-700 mb-1">Votre besoin</label>
+        <textarea id="cb-besoin" name="besoin" rows="3"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm resize-none"
+          placeholder="Décrivez brièvement votre problème..."
+        ></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-accent to-accent-hover text-white font-heading font-bold py-4 rounded-xl hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-base"
+      >
+        Demander un rappel gratuit
+      </button>
+
+      <p class="text-center text-xs text-gray-400">
+        En soumettant ce formulaire, vous acceptez d'être contacté par ITR Services.
+      </p>
+    </form>
+
+    <!-- Success message (hidden by default) -->
+    <div id="callback-success" class="hidden text-center py-8">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-heading font-bold text-dark-blue mb-2">Demande envoyée !</h3>
+      <p class="text-gray-500 text-sm">Nous vous rappelons dans les plus brefs délais.</p>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ whatsapp: siteConfig.phoneRaw }}>
+  const trigger = document.getElementById('callback-trigger');
+  const modal = document.getElementById('callback-modal');
+  const backdrop = document.getElementById('callback-backdrop');
+  const content = document.getElementById('callback-content');
+  const closeBtn = document.getElementById('callback-close');
+  const form = document.getElementById('callback-form');
+  const success = document.getElementById('callback-success');
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    requestAnimationFrame(() => {
+      content.classList.remove('scale-95', 'opacity-0');
+      content.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function closeModal() {
+    content.classList.add('scale-95', 'opacity-0');
+    content.classList.remove('scale-100', 'opacity-100');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      // Reset form
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+      form.reset();
+    }, 200);
+  }
+
+  trigger?.addEventListener('click', openModal);
+  backdrop?.addEventListener('click', closeModal);
+  closeBtn?.addEventListener('click', closeModal);
+
+  // Also allow opening from any element with data-open-callback
+  document.querySelectorAll('[data-open-callback]').forEach(el => {
+    el.addEventListener('click', openModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const prenom = document.getElementById('cb-prenom').value;
+    const nom = document.getElementById('cb-nom').value;
+    const telephone = document.getElementById('cb-telephone').value;
+    const codepostal = document.getElementById('cb-codepostal').value;
+    const besoin = document.getElementById('cb-besoin').value;
+
+    const message = `Demande de rappel:\n` +
+      `Nom: ${prenom} ${nom}\n` +
+      `Téléphone: ${telephone}\n` +
+      `Code postal: ${codepostal}\n` +
+      `Besoin: ${besoin || 'Non précisé'}`;
+
+    // Send via WhatsApp
+    const waUrl = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, '_blank');
+
+    // Show success
+    form.classList.add('hidden');
+    success.classList.remove('hidden');
+  });
+</script>

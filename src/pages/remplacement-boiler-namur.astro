@@ -14,6 +14,9 @@ import { siteConfig } from "../data/siteConfig";
 import { faqBoiler } from "../data/faq";
 import { pricingBoiler } from "../data/pricing";
 import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
 
 const zone = getZone("namur");
 ---
@@ -85,8 +88,34 @@ const zone = getZone("namur");
     ]}
   />
 
+  <TextImageCTA
+    title="Quel boiler choisir ? On vous guide sans jargon."
+    text="50 litres, 100 litres, 150 litres ? Électrique ou thermodynamique ? Le choix d'un boiler dépend de la taille de votre foyer, de vos habitudes de consommation et de votre installation existante. Nos plombiers prennent le temps de vous expliquer les options et de vous recommander le modèle le plus adapté — sans chercher à vous vendre le plus cher."
+    imagePrompt=""
+    imageAlt="Chantier de remplacement de canalisation par ITR Services"
+    imageSrc="/images/portfolio/chantier-canalisation.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Conseil gratuit - Dès 249€"
+    features={[
+      "Analyse de vos besoins en eau chaude",
+      "Recommandation du volume et du type adaptés",
+      "Comparatif des marques et modèles disponibles",
+      "Estimation du coût énergétique annuel",
+    ]}
+  />
+
   <!-- Pricing -->
   <PricingCards cards={pricingBoiler} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
 
   <!-- Final CTA -->
   <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
@@ -103,12 +132,24 @@ const zone = getZone("namur");
       <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         Réparation ou remplacement de boiler le jour même à Namur et ses alentours. Marques solides, garantie constructeur, tarif annoncé avant intervention.
       </p>
-      <CTAButton
-        text={`Appel Gratuit : ${siteConfig.phone}`}
-        subtext="Remplacement le jour même — Devis gratuit — Garantie incluse"
-        variant="accent"
-        size="lg"
-      />
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appel Gratuit : ${siteConfig.phone}`}
+          subtext="Remplacement le jour même — Devis gratuit — Garantie incluse"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Gratuit — Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
     </div>
   </section>
 
@@ -130,9 +171,32 @@ const zone = getZone("namur");
       ainsi que la <strong>mise en service complète</strong>.
     </p>
     <p>
-      Nos tarifs commencent à <strong>899€ tout compris</strong> pour un remplacement standard, avec
+      Nos tarifs commencent dès 249€ pour une réparation et à <strong>899€ tout compris</strong> pour un remplacement standard, avec
       <strong>garantie constructeur</strong> et garantie main-d'œuvre incluses. On vous conseille le
       modèle adapté à votre foyer, sans pousser à la vente.
+    </p>
+    <p>
+      Comment choisir le bon volume ? Pour un foyer d'une à deux personnes, un boiler de <strong>50 à 80 litres</strong>
+      suffit généralement. Pour une famille de trois à quatre personnes, comptez <strong>100 à 150 litres</strong>.
+      Au-delà, un modèle de <strong>200 litres ou plus</strong> sera recommandé. Nos plombiers prennent en compte
+      vos habitudes de consommation pour vous orienter vers le volume idéal.
+    </p>
+    <p>
+      Un boiler qui vieillit consomme davantage d'énergie et présente un risque accru de fuite. Si votre appareil
+      a plus de <strong>10 ans</strong>, un remplacement peut s'avérer plus économique qu'une énième réparation.
+      Les modèles récents offrent une meilleure isolation et un rendement supérieur, ce qui se traduit par
+      des <strong>économies sur votre facture d'énergie</strong>.
+    </p>
+    <p>
+      Nous intervenons dans les heures qui suivent votre appel sur l'ensemble de la zone de Namur :
+      {zone.areasShort}. Que ce soit pour une <strong>panne totale</strong>, un boiler qui fuit,
+      un groupe de sécurité défaillant ou un thermostat capricieux, nos plombiers arrivent équipés
+      pour diagnostiquer et résoudre le problème.
+    </p>
+    <p>
+      Chaque installation est réalisée dans les <strong>règles de l'art</strong> : raccordement hydraulique,
+      raccordement électrique conforme, réglage du thermostat et vérification de l'ensemble du circuit.
+      Nous récupérons et recyclons votre ancien boiler dans le respect des normes environnementales.
     </p>
     <p>
       Appelez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour un devis gratuit
@@ -140,4 +204,5 @@ const zone = getZone("namur");
     </p>
   </SEOTextBlock>
 
+  <CallbackModal />
 </BaseLayout>
