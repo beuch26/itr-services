@@ -16,7 +16,7 @@ export const pricingHomepage: PricingCard[] = [
     features: [
       "Devis transparent sur place",
       "Devis transparent avant travaux",
-      "Pièces de qualité incluses",
+      "Pièces de qualité",
       "Garantie sur la réparation",
     ],
     highlighted: true,
