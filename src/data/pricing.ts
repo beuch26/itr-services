@@ -118,12 +118,12 @@ export const pricingBoiler: PricingCard[] = [
   },
   {
     title: "Remplacement boiler",
-    price: "249",
+    price: "349",
     unit: "€",
     description: "Installation d'un nouveau boiler électrique",
     features: [
-      "Installation neuf",
-      "Mise en service complète",
+      "Installation",
+      "Mise en service",
       "Garantie constructeur",
     ],
     highlighted: true,

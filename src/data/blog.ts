@@ -128,7 +128,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Combien coute un plombier en Belgique ?</h3>
-<p>Les tarifs varient selon la nature de l'intervention. Chez ITR Services, nos depannages demarrent <strong>des 149&#8364;</strong> pour les interventions courantes et <strong>des 249&#8364;</strong> pour les prestations plus complexes comme la detection de fuite ou le remplacement de boiler. Tous nos tarifs sont communiques a l'avance, sans mauvaise surprise.</p>
+<p>Les tarifs varient selon la nature de l'intervention. Chez ITR Services, nos depannages demarrent <strong>des 149&#8364;</strong> pour les interventions courantes, <strong>des 249&#8364;</strong> pour la detection de fuite et <strong>des 349&#8364;</strong> pour le remplacement de boiler. Tous nos tarifs sont communiques a l'avance, sans mauvaise surprise.</p>
 
 <p>Vous cherchez un plombier de confiance ? Contactez ITR Services au <strong>+32 470 96 08 23</strong>. Nous intervenons dans toute la Belgique avec des tarifs transparents et un service professionnel garanti.</p>
 `,
@@ -491,7 +491,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Faites appel a un professionnel pour le remplacement</h3>
-<p>Le remplacement d'un boiler necessite des competences en plomberie et en electricite. ITR Services assure le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs de remplacement demarrent <strong>des 249&#8364;</strong>, fourniture et pose comprises.</p>
+<p>Le remplacement d'un boiler necessite des competences en plomberie et en electricite. ITR Services assure le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs de remplacement demarrent <strong>des 349&#8364;</strong>, fourniture et pose comprises.</p>
 
 <p>Vous hesitez entre reparation et remplacement ? Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise.</p>
 `,
@@ -554,7 +554,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Notre recommandation</h3>
 <p>Pour un remplacement rapide et economique a l'achat, le boiler electrique reste un excellent choix. Pour un investissement a long terme avec des economies substantielles, le thermodynamique est la meilleure option, a condition de disposer de l'espace necessaire.</p>
 
-<p>Chez ITR Services, nous installons les deux types de boilers et nous vous conseillons en fonction de votre situation. Notre service de <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a> couvre aussi <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs demarrent <strong>des 249&#8364;</strong>.</p>
+<p>Chez ITR Services, nous installons les deux types de boilers et nous vous conseillons en fonction de votre situation. Notre service de <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a> couvre aussi <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs demarrent <strong>des 349&#8364;</strong>.</p>
 
 <p>Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise et un devis detaille.</p>
 `,
@@ -609,7 +609,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Quand faire appel a un professionnel ?</h3>
 <p>Si vous n'etes pas a l'aise avec ces operations ou si votre boiler presente des signes de dysfonctionnement, faites appel a un professionnel. ITR Services propose l'entretien et le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>.</p>
 
-<p>Nos tarifs d'intervention demarrent <strong>des 149&#8364;</strong> pour l'entretien et <strong>des 249&#8364;</strong> pour le remplacement complet. Appelez-nous au <strong>+32 470 96 08 23</strong> pour planifier l'entretien de votre boiler.</p>
+<p>Nos tarifs d'intervention demarrent <strong>des 149&#8364;</strong> pour l'entretien et <strong>des 349&#8364;</strong> pour le remplacement complet. Appelez-nous au <strong>+32 470 96 08 23</strong> pour planifier l'entretien de votre boiler.</p>
 `,
   },
 

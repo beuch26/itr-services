@@ -116,7 +116,7 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Combien coûte le remplacement d'un boiler ?",
-    answer: "Le remplacement d'un boiler commence dès 249€, incluant la fourniture et l'installation du nouveau, ainsi que la mise en service. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
+    answer: "Le remplacement d'un boiler commence dès 349€, incluant la fourniture et l'installation du nouveau, ainsi que la mise en service. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
   },
   {
     question: "Proposez-vous des boilers économes en énergie ?",
@@ -393,7 +393,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Combien coûte une intervention de plomberie ?",
-    answer: "Nos tarifs varient selon le type d'intervention. Un dépannage plomberie commence dès 149€, une détection de fuite dès 249€ et un remplacement de boiler dès 249€. Nous vous communiquons toujours un devis clair et détaillé avant toute intervention.",
+    answer: "Nos tarifs varient selon le type d'intervention. Un dépannage plomberie commence dès 149€, une détection de fuite dès 249€ et un remplacement de boiler dès 349€. Nous vous communiquons toujours un devis clair et détaillé avant toute intervention.",
   },
   {
     question: "En combien de temps pouvez-vous intervenir ?",
