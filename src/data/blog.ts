@@ -78,7 +78,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Les raccords sous evier sont soumis a des contraintes mecaniques et a l'humidite permanente. Les joints en caoutchouc se deteriorent avec le temps, et les siphons peuvent se desserrer. Verifiez regulierement l'etat des raccords et remplacez les joints au moindre signe d'humidite.</p>
 
 <h3>Quand faut-il appeler un professionnel ?</h3>
-<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent dans toute la Belgique : a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Nos tarifs demarrent <strong>des 149&#8364;</strong> avec devis gratuit et transparent.</p>
+<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent dans toute la Belgique : a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Nos tarifs demarrent <strong>des 149&#8364;</strong> avec devis transparent.</p>
 
 <h3>La prevention : votre meilleur allie</h3>
 <ul>
@@ -556,7 +556,7 @@ export const blogArticles: BlogArticle[] = [
 
 <p>Chez ITR Services, nous installons les deux types de boilers et nous vous conseillons en fonction de votre situation. Notre service de <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a> couvre aussi <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs demarrent <strong>des 249&#8364;</strong>.</p>
 
-<p>Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise et un devis gratuit.</p>
+<p>Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise et un devis detaille.</p>
 `,
   },
   {
@@ -673,7 +673,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Une renovation de salle de bain reussie repose sur le savoir-faire du professionnel qui la realise. ITR Services intervient pour la <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">renovation de salle de bain a Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Nous prenons en charge l'ensemble du projet, de la conception a la realisation.</p>
 
 <h3>Delais et budget</h3>
-<p>Comptez en moyenne <strong>2 a 4 semaines</strong> pour une renovation complete de salle de bain. Nos projets de renovation demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet, contactez-nous au <strong>+32 470 96 08 23</strong> pour un devis personnalise gratuit.</p>
+<p>Comptez en moyenne <strong>2 a 4 semaines</strong> pour une renovation complete de salle de bain. Nos projets de renovation demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet, contactez-nous au <strong>+32 470 96 08 23</strong> pour un devis personnalise.</p>
 `,
   },
   {
@@ -714,7 +714,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Concretisez votre projet avec ITR Services</h3>
 <p>Vous souhaitez integrer ces tendances dans votre salle de bain ? ITR Services vous accompagne dans votre projet de <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">renovation de salle de bain a Bruxelles</a>. Nous intervenons egalement a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>.</p>
 
-<p>Nos renovations de salle de bain demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet sur mesure, appelez-nous au <strong>+32 470 96 08 23</strong> et recevez un devis gratuit et detaille.</p>
+<p>Nos renovations de salle de bain demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet sur mesure, appelez-nous au <strong>+32 470 96 08 23</strong> et recevez un devis detaille.</p>
 `,
   },
   {
@@ -769,8 +769,8 @@ export const blogArticles: BlogArticle[] = [
 <li><strong>Prevoyez une marge de 10%</strong> : les imprevu sont frequents en renovation (canalisations a remplacer, probleme d'etancheite, etc.)</li>
 </ul>
 
-<h3>Faites chiffrer votre projet gratuitement</h3>
-<p>Chez ITR Services, nous realisons des renovations de salle de bain a <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">Bruxelles et ses environs</a>, a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Nos interventions ponctuelles demarrent <strong>des 249&#8364;</strong>. Pour un projet complet, nous etablissons un devis gratuit detaille poste par poste.</p>
+<h3>Faites chiffrer votre projet</h3>
+<p>Chez ITR Services, nous realisons des renovations de salle de bain a <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">Bruxelles et ses environs</a>, a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Nos interventions ponctuelles demarrent <strong>des 249&#8364;</strong>. Pour un projet complet, nous etablissons un devis detaille poste par poste.</p>
 
 <p>Appelez-nous au <strong>+32 470 96 08 23</strong> ou envoyez-nous un message pour demarrer votre projet de renovation.</p>
 `,

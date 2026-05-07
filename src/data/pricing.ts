@@ -15,7 +15,7 @@ export const pricingHomepage: PricingCard[] = [
     description: "Intervention rapide pour tout problème de plomberie",
     features: [
       "Devis transparent sur place",
-      "Devis gratuit avant travaux",
+      "Devis transparent avant travaux",
       "Pièces de qualité incluses",
       "Garantie sur la réparation",
     ],
@@ -59,7 +59,7 @@ export const pricingDebouchage: PricingCard[] = [
     description: "Débouchage rapide de vos canalisations",
     features: [
       "Intervention rapide",
-      "Devis gratuit sur place",
+      "Devis transparent sur place",
       "Matériel professionnel",
       "Garantie de résultat",
     ],
@@ -71,7 +71,7 @@ export const pricingDebouchage: PricingCard[] = [
     description: "Curage de vos canalisations à l'eau haute pression",
     features: [
       "Intervention rapide",
-      "Devis gratuit sur place",
+      "Devis transparent sur place",
       "Eau haute pression professionnelle",
       "Garantie de résultat",
     ],

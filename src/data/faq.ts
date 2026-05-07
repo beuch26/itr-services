@@ -34,7 +34,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Combien coûte un dépannage plomberie ?",
-    answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis gratuit et sans engagement avant de commencer.",
+    answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis détaillé et sans engagement avant de commencer.",
   },
   {
     question: "Que faire en attendant l'arrivée de vos plombiers ?",
@@ -61,7 +61,7 @@ export const faqFuite: FAQItem[] = [
   },
   {
     question: "Combien coûte une recherche de fuite ?",
-    answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis gratuit et transparent avant toute intervention.",
+    answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
   },
   {
     question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -116,7 +116,7 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Combien coûte le remplacement d'un boiler ?",
-    answer: "Le remplacement d'un boiler commence dès 249€, incluant la dépose de l'ancien appareil, la fourniture et l'installation du nouveau, ainsi que la mise en service. Un devis précis et gratuit est établi avant toute intervention.",
+    answer: "Le remplacement d'un boiler commence dès 249€, incluant la fourniture et l'installation du nouveau, ainsi que la mise en service. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
   },
   {
     question: "Proposez-vous des boilers économes en énergie ?",
@@ -163,7 +163,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Combien coûte un débouchage ?",
-    answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis gratuit avant d'intervenir.",
+    answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis détaillé avant d'intervenir.",
   },
   {
     question: "Quels types de canalisations pouvez-vous déboucher ?",
@@ -210,7 +210,7 @@ export const faqRenovation: FAQItem[] = [
   },
   {
     question: "Comment se déroule le devis pour une rénovation ?",
-    answer: "Nous nous déplaçons gratuitement chez vous pour prendre les mesures, comprendre vos envies et évaluer les travaux nécessaires. Vous recevez ensuite un devis détaillé et transparent sous 48h, sans engagement.",
+    answer: "Nous nous déplaçons chez vous pour prendre les mesures, comprendre vos envies et évaluer les travaux nécessaires. Vous recevez ensuite un devis détaillé et transparent sous 48h, sans engagement.",
   },
   {
     question: "Les travaux de rénovation sont-ils garantis ?",
@@ -271,7 +271,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte un dépannage plomberie ?",
-      answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis gratuit et sans engagement avant de commencer.",
+      answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis détaillé et sans engagement avant de commencer.",
     },
     {
       question: "Que faire en attendant l'arrivée de vos plombiers ?",
@@ -300,7 +300,7 @@ export function getFaqFuite(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte une recherche de fuite ?",
-      answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis gratuit et transparent avant toute intervention.",
+      answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
     },
     {
       question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -357,7 +357,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte un débouchage ?",
-      answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis gratuit avant d'intervenir.",
+      answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis détaillé avant d'intervenir.",
     },
     {
       question: "Quels types de canalisations pouvez-vous déboucher ?",
@@ -393,7 +393,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Combien coûte une intervention de plomberie ?",
-    answer: "Nos tarifs varient selon le type d'intervention. Un dépannage plomberie commence dès 149€, une détection de fuite dès 249€ et un remplacement de boiler dès 249€. Nous vous communiquons toujours un devis clair et gratuit avant toute intervention.",
+    answer: "Nos tarifs varient selon le type d'intervention. Un dépannage plomberie commence dès 149€, une détection de fuite dès 249€ et un remplacement de boiler dès 249€. Nous vous communiquons toujours un devis clair et détaillé avant toute intervention.",
   },
   {
     question: "En combien de temps pouvez-vous intervenir ?",
@@ -405,7 +405,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Faut-il payer avant l'intervention ?",
-    answer: "Non, le paiement se fait à la fin de l'intervention, une fois le travail terminé et validé par vos soins. Il est également possible de demander un acompte. Devis gratuit et transparent avant chaque intervention.",
+    answer: "Non, le paiement se fait à la fin de l'intervention, une fois le travail terminé et validé par vos soins. Il est également possible de demander un acompte. Devis détaillé et transparent avant chaque intervention.",
   },
   {
     question: "Quelles zones desservez-vous ?",
