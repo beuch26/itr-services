@@ -155,7 +155,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Le débouchage est-il garanti ?",
-    answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons gratuitement pour le résoudre définitivement.",
+    answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons sans frais supplémentaires pour le résoudre définitivement.",
   },
   {
     question: "Les produits chimiques sont-ils efficaces pour déboucher ?",
@@ -349,7 +349,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Le débouchage est-il garanti ?",
-      answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons gratuitement pour le résoudre définitivement.",
+      answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons sans frais supplémentaires pour le résoudre définitivement.",
     },
     {
       question: "Les produits chimiques sont-ils efficaces pour déboucher ?",
