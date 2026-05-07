@@ -15,7 +15,6 @@ export const pricingHomepage: PricingCard[] = [
     description: "Intervention rapide pour tout problème de plomberie",
     features: [
       "Devis transparent sur place",
-      "Devis transparent avant travaux",
       "Pièces de qualité",
       "Garantie sur la réparation",
     ],
