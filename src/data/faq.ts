@@ -18,7 +18,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Comment se déroule une intervention de dépannage ?",
-    answer: "Dès votre appel, un plombier est dépêché chez vous. Il réalise un diagnostic gratuit sur place, vous présente un devis clair et détaillé, puis procède à la réparation une fois votre accord obtenu. Vous ne payez qu'à la fin de l'intervention.",
+    answer: "Dès votre appel, un plombier est dépêché chez vous. Il analyse la situation sur place, vous présente un devis clair et détaillé, puis procède à la réparation une fois votre accord obtenu. Vous ne payez qu'à la fin de l'intervention.",
   },
   {
     question: "Le déplacement est-il facturé ?",
@@ -128,7 +128,7 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Récupérez-vous l'ancien boiler lors du remplacement ?",
-    answer: "Oui, le remplacement de boiler inclut la dépose et l'évacuation de l'ancien appareil. Nous nous chargeons de son recyclage dans le respect des normes environnementales en vigueur.",
+    answer: "Oui, nous pouvons reprendre votre ancien boiler en option. La reprise est facturée 90€ et couvre le transport ainsi que les frais de déchèterie pour un recyclage dans le respect des normes environnementales en vigueur.",
   },
   {
     question: "Intervenez-vous sur tous les types de boilers ?",
@@ -255,7 +255,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Comment se déroule une intervention de dépannage ?",
-      answer: "Dès votre appel, un plombier est dépêché chez vous. Il réalise un diagnostic gratuit sur place, vous présente un devis clair et détaillé, puis procède à la réparation une fois votre accord obtenu. Vous ne payez qu'à la fin de l'intervention.",
+      answer: "Dès votre appel, un plombier est dépêché chez vous. Il analyse la situation sur place, vous présente un devis clair et détaillé, puis procède à la réparation une fois votre accord obtenu. Vous ne payez qu'à la fin de l'intervention.",
     },
     {
       question: "Le déplacement est-il facturé ?",

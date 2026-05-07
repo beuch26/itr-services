@@ -14,7 +14,7 @@ export const pricingHomepage: PricingCard[] = [
     unit: "€",
     description: "Intervention rapide pour tout problème de plomberie",
     features: [
-      "Diagnostic sur place inclus",
+      "Devis transparent sur place",
       "Devis gratuit avant travaux",
       "Pièces de qualité incluses",
       "Garantie sur la réparation",
@@ -122,7 +122,6 @@ export const pricingBoiler: PricingCard[] = [
     unit: "€",
     description: "Installation d'un nouveau boiler électrique",
     features: [
-      "Dépose ancien boiler",
       "Installation neuf",
       "Mise en service complète",
       "Garantie constructeur",

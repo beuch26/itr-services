@@ -493,7 +493,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Faites appel a un professionnel pour le remplacement</h3>
 <p>Le remplacement d'un boiler necessite des competences en plomberie et en electricite. ITR Services assure le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs de remplacement demarrent <strong>des 249&#8364;</strong>, fourniture et pose comprises.</p>
 
-<p>Vous hesitez entre reparation et remplacement ? Appelez-nous au <strong>+32 470 96 08 23</strong> pour un diagnostic gratuit et un conseil personnalise.</p>
+<p>Vous hesitez entre reparation et remplacement ? Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise.</p>
 `,
   },
   {
