@@ -1,13 +1,5 @@
 ---
 import { siteConfig } from "../data/siteConfig";
-
-const today = new Date();
-const dateStr = today.toLocaleDateString('fr-BE', {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
 ---
 
 <div class="inline-flex items-center gap-3 bg-white rounded-2xl px-5 py-3 shadow-md ring-1 ring-gray-100">
@@ -34,16 +26,16 @@ const dateStr = today.toLocaleDateString('fr-BE', {
       <span class="text-sm font-heading font-bold text-dark-blue">Artisan disponible</span>
     </div>
     <p class="text-xs text-gray-500 mt-0.5">
-      Intervention possible aujourd'hui — <span class="live-badge-date font-medium">{dateStr}</span>
+      Intervention possible aujourd'hui<span class="live-badge-date font-medium"></span>
     </p>
   </div>
 </div>
 
 <script>
-  // Update date client-side to ensure it's always current
+  // Date is rendered client-side only so the static HTML never shows a stale build date
   document.querySelectorAll('.live-badge-date').forEach(el => {
     const now = new Date();
-    el.textContent = now.toLocaleDateString('fr-BE', {
+    el.textContent = ' — ' + now.toLocaleDateString('fr-BE', {
       weekday: 'long',
       day: 'numeric',
       month: 'long',

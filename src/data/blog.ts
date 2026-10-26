@@ -78,7 +78,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Les raccords sous evier sont soumis a des contraintes mecaniques et a l'humidite permanente. Les joints en caoutchouc se deteriorent avec le temps, et les siphons peuvent se desserrer. Verifiez regulierement l'etat des raccords et remplacez les joints au moindre signe d'humidite.</p>
 
 <h3>Quand faut-il appeler un professionnel ?</h3>
-<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent dans toute la Belgique : a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Nos tarifs demarrent <strong>des 149&#8364;</strong> avec devis transparent.</p>
+<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent a Bruxelles et ses alentours, a Waterloo, Wavre et Nivelles, a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Nos tarifs demarrent <strong>des 149&#8364;</strong> avec devis transparent.</p>
 
 <h3>La prevention : votre meilleur allie</h3>
 <ul>
@@ -101,10 +101,10 @@ export const blogArticles: BlogArticle[] = [
     categorySlug: "plombier",
     content: `
 <h2>Les criteres pour choisir un plombier de confiance</h2>
-<p>Quand une urgence plomberie survient, le reflexe est souvent de chercher le premier numero disponible sur internet. Pourtant, tous les plombiers ne se valent pas, et certains pratiques peu scrupuleuses persistent dans le secteur. Voici comment identifier un <a href="/plombier-bruxelles-schaerbeek-anderlecht">plombier fiable a Bruxelles</a> et dans toute la Belgique.</p>
+<p>Quand une urgence plomberie survient, le reflexe est souvent de chercher le premier numero disponible sur internet. Pourtant, tous les plombiers ne se valent pas, et certains pratiques peu scrupuleuses persistent dans le secteur. Voici comment identifier un <a href="/plombier-bruxelles-schaerbeek-anderlecht">plombier fiable a Bruxelles</a> et dans ses alentours.</p>
 
 <h3>1. Verifiez l'enregistrement a la BCE</h3>
-<p>En Belgique, tout plombier professionnel doit etre enregistre a la Banque-Carrefour des Entreprises (BCE) et posseder les acces a la profession requis. Demandez le numero d'entreprise et verifiez-le sur le site du SPF Economie. Un professionnel serieux comme ITR Services (TVA BE 0795.547.955) communique ces informations de maniere transparente.</p>
+<p>En Belgique, tout plombier professionnel doit etre enregistre a la Banque-Carrefour des Entreprises (BCE) et posseder les acces a la profession requis. Demandez le numero d'entreprise et verifiez-le sur le site du SPF Economie. Un professionnel serieux comme ITR Services (TVA BE 0773.364.370) communique ces informations de maniere transparente.</p>
 
 <h3>2. Exigez un devis ecrit avant toute intervention</h3>
 <p>Un plombier de confiance etablit toujours un devis clair et detaille avant de commencer les travaux. Ce devis doit mentionner le cout de la main-d'oeuvre, des pieces de rechange, des deplacements eventuels, et la TVA applicable. Mefiez-vous des professionnels qui refusent de donner un prix avant d'intervenir.</p>
@@ -130,7 +130,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Combien coute un plombier en Belgique ?</h3>
 <p>Les tarifs varient selon la nature de l'intervention. Chez ITR Services, nos depannages demarrent <strong>des 149&#8364;</strong> pour les interventions courantes, <strong>des 249&#8364;</strong> pour la detection de fuite et <strong>des 349&#8364;</strong> pour le remplacement de boiler. Tous nos tarifs sont communiques a l'avance, sans mauvaise surprise.</p>
 
-<p>Vous cherchez un plombier de confiance ? Contactez ITR Services au <strong>+32 470 96 08 23</strong>. Nous intervenons dans toute la Belgique avec des tarifs transparents et un service professionnel garanti.</p>
+<p>Vous cherchez un plombier de confiance ? Contactez ITR Services au <strong>+32 470 96 08 23</strong>. Nous intervenons a Bruxelles, en Brabant wallon, a Namur, Charleroi et Mons avec des tarifs transparents et un service professionnel garanti.</p>
 `,
   },
 
