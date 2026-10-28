@@ -275,7 +275,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Combien coute la reparation d'une fuite ?</h3>
-<p>Le cout depend de la nature et de l'accessibilite de la fuite. Chez ITR Services, nos interventions de recherche et reparation de fuite demarrent <strong>des 249&#8364;</strong>. Ce prix comprend le deplacement, le diagnostic avec equipement professionnel et un devis detaille pour la reparation. Aucun supplement cache, aucune mauvaise surprise.</p>
+<p>Le cout depend de la nature et de l'accessibilite de la fuite. Chez ITR Services, nos recherches de fuite demarrent <strong>des 249&#8364;</strong>. Ce prix couvre le diagnostic avec equipement professionnel ; la reparation et les eventuels frais de deplacement sont precises sur devis avant les travaux. Aucune mauvaise surprise.</p>
 
 <h3>Prevention : evitez les fuites futures</h3>
 <p>Quelques gestes simples peuvent prevenir la majorite des fuites :</p>

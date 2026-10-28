@@ -6,7 +6,7 @@ export interface FAQItem {
 export const faqDepannage: FAQItem[] = [
   {
     question: "En combien de temps intervenez-vous pour une urgence plomberie ?",
-    answer: "Pour toute urgence plomberie à Bruxelles et ses alentours, nous intervenons dans les heures qui suivent votre appel. Notre équipe est disponible 24h/24, 7j/7.",
+    answer: "Pour toute urgence plomberie à Bruxelles et ses alentours, nous intervenons rapidement, selon nos disponibilités et votre localisation : le délai vous est confirmé lors de l'appel. Notre équipe est disponible 24h/24, 7j/7.",
   },
   {
     question: "Quels types de pannes de plomberie prenez-vous en charge ?",
@@ -22,7 +22,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Le déplacement est-il facturé ?",
-    answer: "Non, le déplacement est inclus dans nos tarifs pour toutes les interventions à Bruxelles et ses alentours. Aucun frais caché ne vous sera facturé.",
+    answer: "Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention. Leur montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.",
   },
   {
     question: "Quels moyens de paiement acceptez-vous ?",
@@ -61,7 +61,7 @@ export const faqFuite: FAQItem[] = [
   },
   {
     question: "Combien coûte une recherche de fuite ?",
-    answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
+    answer: "La recherche de fuite commence dès 249€ (diagnostic avec équipement professionnel). La réparation et l'éventuelle remise en état font l'objet d'un devis séparé, selon la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
   },
   {
     question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -116,7 +116,7 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Combien coûte le remplacement d'un boiler ?",
-    answer: "Le remplacement d'un boiler commence dès 349€, incluant la fourniture et l'installation du nouveau, ainsi que la mise en service. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
+    answer: "Le remplacement d'un boiler se fait sur devis, selon la capacité, le modèle, l'accessibilité et les adaptations de tuyauterie nécessaires. Nos tarifs démarrent dès 349€ pour l'installation et la mise en service d'un boiler électrique standard. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
   },
   {
     question: "Proposez-vous des boilers économes en énergie ?",
@@ -163,7 +163,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Combien coûte un débouchage ?",
-    answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis détaillé avant d'intervenir.",
+    answer: "Un débouchage commence dès 149€. Le tarif dépend du type de canalisation, de la difficulté du bouchon et de la technique nécessaire. Les éventuels frais de déplacement, de diagnostic, de main-d'œuvre et de matériel sont précisés avant intervention.",
   },
   {
     question: "Quels types de canalisations pouvez-vous déboucher ?",
@@ -243,7 +243,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
   return [
     {
       question: "En combien de temps intervenez-vous pour une urgence plomberie ?",
-      answer: `Pour toute urgence plomberie à ${citiesInline}, nous intervenons dans les heures qui suivent votre appel. Notre équipe est disponible 24h/24, 7j/7.`,
+      answer: `Pour toute urgence plomberie à ${citiesInline}, nous intervenons rapidement, selon nos disponibilités et votre localisation : le délai vous est confirmé lors de l'appel. Notre équipe est disponible 24h/24, 7j/7.`,
     },
     {
       question: "Quels types de pannes de plomberie prenez-vous en charge ?",
@@ -259,7 +259,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Le déplacement est-il facturé ?",
-      answer: `Non, le déplacement est inclus dans nos tarifs pour toutes les interventions à ${citiesInline}. Aucun frais caché ne vous sera facturé.`,
+      answer: `Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention à ${citiesInline}. Leur montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.`,
     },
     {
       question: "Quels moyens de paiement acceptez-vous ?",
@@ -300,7 +300,7 @@ export function getFaqFuite(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte une recherche de fuite ?",
-      answer: "Une recherche et réparation de fuite commence dès 249€. Le tarif exact dépend de la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
+      answer: "La recherche de fuite commence dès 249€ (diagnostic avec équipement professionnel). La réparation et l'éventuelle remise en état font l'objet d'un devis séparé, selon la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
     },
     {
       question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -357,7 +357,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte un débouchage ?",
-      answer: "Un débouchage commence dès 149€. Le tarif varie selon le type de canalisation et la complexité du bouchon. Nous vous communiquons toujours un devis détaillé avant d'intervenir.",
+      answer: "Un débouchage commence dès 149€. Le tarif dépend du type de canalisation, de la difficulté du bouchon et de la technique nécessaire. Les éventuels frais de déplacement, de diagnostic, de main-d'œuvre et de matériel sont précisés avant intervention.",
     },
     {
       question: "Quels types de canalisations pouvez-vous déboucher ?",

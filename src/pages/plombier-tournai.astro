@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import HeroSection from "../components/HeroSection.astro";
+import TextImageCTA from "../components/TextImageCTA.astro";
+import SocialProofFull from "../components/SocialProofFull.astro";
+import PricingCards from "../components/PricingCards.astro";
+import CTAButton from "../components/CTAButton.astro";
+import FAQSection from "../components/FAQSection.astro";
+import SEOTextBlock from "../components/SEOTextBlock.astro";
+import LocalInfo from "../components/LocalInfo.astro";
+import AuthorityBrands from "../components/AuthorityBrands.astro";
+import PortfolioGallery from "../components/PortfolioGallery.astro";
+import { siteConfig } from "../data/siteConfig";
+import { getFaqDepannage } from "../data/faq";
+import { pricingHomepage } from "../data/pricing";
+import { getZone } from "../data/zones";
+import LiveBadge from "../components/LiveBadge.astro";
+import AvailabilityCTA from "../components/AvailabilityCTA.astro";
+import CallbackModal from "../components/CallbackModal.astro";
+
+const zone = getZone("tournai");
+const faqItems = [
+  ...getFaqDepannage(zone.citiesInline),
+  {
+    question: "Quels services proposez-vous à Tournai ?",
+    answer: "À Tournai et dans le Tournaisis, nous assurons le dépannage plomberie, la recherche et la réparation de fuites, le débouchage de canalisations et de WC, ainsi que la réparation et le remplacement de boilers. Chaque intervention fait l'objet d'un devis communiqué avant les travaux.",
+  },
+  {
+    question: "L'eau calcaire de la région abîme-t-elle mon boiler ?",
+    answer: "Une eau dure accélère l'entartrage de la résistance et de la cuve d'un boiler électrique : chauffe plus lente, bruits, consommation en hausse. Un détartrage régulier et un contrôle du groupe de sécurité prolongent sa durée de vie. Nous pouvons vous conseiller sur place.",
+  },
+];
+---
+
+<BaseLayout
+  title="Plombier à Tournai et Alentours | Dépannage, Fuite, Débouchage - ITR Services"
+  description={`Plombier à Tournai, Kain, Froyennes, Templeuve et Antoing : dépannage, recherche de fuite, débouchage et boiler. Intervention rapide selon disponibilités, devis avant travaux. Appelez le ${siteConfig.phone}.`}
+>
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Plombier à Tournai", href: "/plombier-tournai" },
+  ]} />
+
+  <HeroSection
+    h1="Plombier à Tournai et dans le Tournaisis"
+    slogan="Fuite, bouchon, boiler en panne ? Un seul numéro pour tout régler."
+    description={`Dépannage, recherche de fuite, débouchage et boiler à Tournai et ses alentours. Délai et tarif confirmés par téléphone, devis avant travaux. Disponible <strong class='text-gray-700'>24h/24, 7j/7</strong>.`}
+    imagePrompt=""
+    imageAlt="Joseph, plombier ITR Services à Tournai"
+    imageSrc="/images/plombier-itr-services.webp"
+  />
+
+  <SocialProofFull />
+
+  <LocalInfo
+    mapCenter={zone.mapCenter}
+    mapZoom={zone.mapZoom}
+    mapRadius={zone.mapRadius}
+    mapPopupText={zone.mapPopupText}
+    areasDetailed={zone.areasDetailed}
+    localInfoTitle={zone.localInfoTitle}
+    localInfoText={zone.localInfoText}
+  />
+
+  <TextImageCTA
+    title="Dépannage et fuites : on localise avant de casser."
+    text="Une tache d'humidité au plafond, un compteur qui tourne alors que tout est fermé, une facture d'eau qui grimpe : à Tournai, beaucoup de maisons anciennes du centre ont des canalisations encastrées difficiles d'accès. Nos plombiers localisent la fuite avec caméra thermique et endoscope avant d'ouvrir, pour limiter les dégâts au strict nécessaire."
+    imagePrompt=""
+    imageAlt="Recherche de fuite par caméra thermique par ITR Services"
+    imageSrc="/images/portfolio/detection-camera-thermique.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Recherche de fuite dès 249€"
+    features={[
+      "Dépannage plomberie dès 149€",
+      "Recherche de fuite non destructive dès 249€",
+      "Réparation chiffrée avant travaux",
+      "Rapport d'intervention pour votre assurance",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Débouchage : WC, évier, douche et égouts."
+    text="Graisses dans l'évier, lingettes dans les WC, racines dans une canalisation extérieure : on identifie la cause du bouchon avant de choisir la technique. Furet, curage haute pression ou inspection caméra, le tarif dépend de la canalisation et de la méthode nécessaire, et il vous est annoncé avant de commencer."
+    imagePrompt=""
+    imageAlt="Débouchage de WC par ITR Services"
+    imageSrc="/images/portfolio/debouchage-wc.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Débouchage dès 149€"
+    features={[
+      "WC, éviers, douches, baignoires",
+      "Curage haute pression des canalisations",
+      "Inspection caméra si nécessaire",
+      "Tarif annoncé avant intervention",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Boiler : réparation ou remplacement, on vous dit ce qui vaut la peine."
+    text="L'eau du Tournaisis est réputée calcaire, et le tartre est l'ennemi numéro un des boilers électriques : résistance entartrée, chauffe lente, groupe de sécurité qui goutte. Nos plombiers diagnostiquent la panne, réparent quand c'est possible, et vous proposent un remplacement sur devis seulement quand il s'impose."
+    imagePrompt=""
+    imageAlt="Remplacement de boiler par ITR Services"
+    imageSrc="/images/avant-apres-boiler-thermor.webp"
+    imagePosition="right"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Diagnostic boiler dès 149€"
+    features={[
+      "Diagnostic boiler dès 149€",
+      "Remplacement du groupe de sécurité",
+      "Remplacement de boiler sur devis",
+      "Conseils détartrage et entretien",
+    ]}
+  />
+
+  <AuthorityBrands />
+  <PortfolioGallery />
+  <PricingCards cards={pricingHomepage} />
+
+  <!-- Availability CTA -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-dark-blue mb-2">Vérifiez la disponibilité dans votre zone</h2>
+      <p class="text-gray-500 mb-8">Entrez votre code postal pour savoir si nous intervenons chez vous.</p>
+      <AvailabilityCTA />
+    </div>
+  </section>
+
+  <section class="py-14 md:py-20 bg-dark-blue relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 32px 32px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+      <span class="inline-block text-xs font-heading font-bold uppercase tracking-[0.2em] text-accent mb-4">Plombier à Tournai</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-white mb-5 tracking-tight leading-tight">
+        Un problème de plomberie à Tournai ?<br />Appelez, on s'organise.
+      </h2>
+      <p class="text-white/50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        Nos plombiers interviennent à Tournai et dans le Tournaisis selon leurs disponibilités. Délai, tarif et éventuels frais de déplacement confirmés avant la visite.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <CTAButton
+          text={`Appeler Joseph : ${siteConfig.phone}`}
+          subtext="Intervention rapide — Sans engagement"
+          variant="accent"
+          size="lg"
+        />
+        <button data-open-callback type="button" class="inline-flex flex-col items-center justify-center rounded-2xl font-heading font-bold transition-all duration-300 hover:-translate-y-1 bg-white/10 hover:bg-white/20 text-white shadow-lg px-7 py-5 text-lg cursor-pointer border border-white/20">
+          <span class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Être rappelé
+          </span>
+          <span class="text-[11px] font-normal opacity-70 mt-0.5">Sans engagement</span>
+        </button>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <LiveBadge />
+      </div>
+    </div>
+  </section>
+
+  <FAQSection items={faqItems} title="Questions fréquentes — Plombier à Tournai" />
+
+  <SEOTextBlock title="ITR Services, votre plombier à Tournai et dans le Tournaisis">
+    <p>
+      <strong>ITR Services</strong> intervient à <strong>Tournai</strong> et dans les communes voisines :
+      Kain, Froyennes, Templeuve, Gaurain-Ramecroix, Warchin, Vaulx, mais aussi Antoing, Péruwelz,
+      Leuze-en-Hainaut, Pecq, Rumes, Brunehaut et Celles. Une seule équipe pour le <strong>dépannage plomberie</strong>,
+      la <strong>recherche de fuite</strong>, le <strong>débouchage</strong> et le <strong>boiler</strong>.
+    </p>
+    <p>
+      Le bâti tournaisien mélange maisons de maître du centre historique, maisons ouvrières et constructions
+      récentes en périphérie. Dans l'ancien, les canalisations sont souvent encastrées ou cachées sous les sols :
+      c'est pourquoi nous localisons les fuites avec un équipement non destructif avant toute ouverture,
+      et que la réparation est chiffrée séparément, une fois la cause connue.
+    </p>
+    <p>
+      Côté tarifs, la règle est simple : vous connaissez le prix avant que l'on commence. Le dépannage démarre
+      dès 149€, la recherche de fuite dès 249€. Le débouchage dépend du type de canalisation et de la technique
+      nécessaire, et le remplacement de boiler se fait sur devis selon la capacité et le modèle. Les éventuels
+      frais de déplacement vous sont communiqués par téléphone et soumis à votre accord avant la visite.
+    </p>
+    <p>
+      Nous sommes joignables <strong>24h/24 et 7j/7</strong>. Le délai d'intervention dépend de nos disponibilités,
+      de votre localisation et de la nature du problème : il vous est confirmé lors de l'appel.
+    </p>
+    <p>
+      Contactez <strong>ITR Services</strong> au <strong>{siteConfig.phone}</strong> pour un plombier à Tournai
+      et ses alentours. Devis transparent et sans engagement.
+    </p>
+  </SEOTextBlock>
+
+  <CallbackModal />
+</BaseLayout>

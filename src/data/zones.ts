@@ -12,6 +12,8 @@ export interface Zone {
   mapPopupText: string;
   localInfoTitle: string;
   localInfoText: string;
+  /** Zone covered by a single all-services page (/plombier-<slugSuffix>) instead of one page per service */
+  singlePage?: boolean;
 }
 
 export const zones: Zone[] = [
@@ -86,6 +88,26 @@ export const zones: Zone[] = [
     mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Namur et alentours",
     localInfoTitle: "Votre plombier local à Namur et ses alentours",
     localInfoText: "Une fuite d'eau, une canalisation bouchée ou un problème de plomberie ? Nos plombiers interviennent <strong class=\"text-dark-blue\">dans les heures qui suivent votre appel</strong> à Namur et dans toutes les communes environnantes. Service professionnel, rapide et au prix juste.",
+  },
+  {
+    id: "tournai",
+    name: "Tournai & Wallonie picarde",
+    slugSuffix: "tournai",
+    cities: ["Tournai"],
+    citiesInline: "Tournai et ses alentours",
+    areasShort: "Tournai et ses alentours",
+    areasDetailed: [
+      "Tournai", "Kain", "Froyennes", "Templeuve", "Gaurain-Ramecroix",
+      "Warchin", "Vaulx", "Antoing", "Péruwelz", "Leuze-en-Hainaut",
+      "Pecq", "Rumes", "Brunehaut", "Celles",
+    ],
+    mapCenter: [50.6056, 3.3878],
+    mapZoom: 10,
+    mapRadius: 15000,
+    mapPopupText: "<strong>Zone d'intervention ITR Services</strong><br>Tournai et alentours",
+    localInfoTitle: "Votre plombier à Tournai et dans le Tournaisis",
+    localInfoText: "Fuite, WC bouché, boiler en panne ? Nos plombiers interviennent à Tournai, Kain, Froyennes, Templeuve, Antoing et dans les communes voisines, <strong class=\"text-dark-blue\">selon nos disponibilités</strong>, 24h/24 et 7j/7. Le délai et les éventuels frais de déplacement sont confirmés par téléphone avant la visite.",
+    singlePage: true,
   },
 ];
 
