@@ -1,35 +1,36 @@
 export interface PricingCard {
   title: string;
-  price: string;
-  unit: string;
   description: string;
   features: string[];
   highlighted?: boolean;
 }
 
+/** Shown under every pricing grid */
+export const pricingNote =
+  "Prix HTVA. TVA 6 % (logement de plus de 10 ans) ou 21 %. Le prix total TVAC est toujours communiqué avant l'intervention. Déplacement de 60 à 120 € selon la zone. Majoration : +50 % après 18h et le samedi, +100 % après 22h, le dimanche et les jours fériés.";
+
+export const pricingDebouchageIntro =
+  "Chaque bouchon est différent. Notre technicien fait d'abord un diagnostic, puis vous annonce le prix exact avant de commencer. Vous décidez, sans engagement. Aucun travail n'est effectué sans votre accord : pas de mauvaise surprise sur la facture.";
+
 export const pricingHomepage: PricingCard[] = [
   {
     title: "Dépannage plomberie",
-    price: "149",
-    unit: "€",
     description: "Intervention rapide pour tout problème de plomberie",
     features: [
-      "Devis transparent sur place",
+      "Prix annoncé avant intervention",
       "Pièces de qualité",
-      "Garantie sur la réparation",
+      "Travaux garantis 2 ans",
     ],
     highlighted: true,
   },
   {
     title: "Détection de fuite",
-    price: "249",
-    unit: "€",
-    description: "Recherche de fuite non destructive, réparation sur devis",
+    description: "390 € HTVA — recherche de fuite uniquement",
     features: [
       "Détection non destructive",
       "Caméra thermique & endoscopique",
-      "Réparation chiffrée avant travaux",
-      "Garantie sur la réparation",
+      "Réparation en plus, dès 390 € HTVA",
+      "Ouverture et remise en état chiffrées à part",
     ],
   },
 ];
@@ -37,54 +38,54 @@ export const pricingHomepage: PricingCard[] = [
 export const pricingFuite: PricingCard[] = [
   {
     title: "Détection de fuite",
-    price: "249",
-    unit: "€",
-    description: "Recherche de fuite non destructive, réparation sur devis",
+    description: "390 € HTVA — recherche de fuite uniquement",
     features: [
       "Détection non destructive",
       "Caméra thermique & endoscopique",
-      "Réparation chiffrée avant travaux",
-      "Garantie sur la réparation",
+      "Localisation précise de la fuite",
     ],
     highlighted: true,
+  },
+  {
+    title: "Réparation de fuite",
+    description: "Dès 390 € HTVA — prix annoncé avant les travaux",
+    features: [
+      "Réparation durable",
+      "Ouverture et remise en état chiffrées à part",
+      "Travaux garantis 2 ans",
+    ],
   },
 ];
 
 export const pricingDebouchage: PricingCard[] = [
   {
     title: "Débouchage classique",
-    price: "149",
-    unit: "€",
     description: "Débouchage rapide de vos canalisations",
     features: [
-      "Intervention rapide",
-      "Devis transparent sur place",
+      "Diagnostic avant tout travail",
+      "Prix exact annoncé avant de commencer",
       "Matériel professionnel",
-      "Garantie de résultat",
+      "Garantie 3 mois (même bouchon)",
     ],
   },
   {
     title: "Curage haute pression",
-    price: "149",
-    unit: "€",
     description: "Curage de vos canalisations à l'eau haute pression",
     features: [
-      "Intervention rapide",
-      "Devis transparent sur place",
+      "Diagnostic avant tout travail",
+      "Prix exact annoncé avant de commencer",
       "Eau haute pression professionnelle",
-      "Garantie de résultat",
+      "Garantie 3 mois (même bouchon)",
     ],
   },
   {
     title: "Débouchage hydrocurage",
-    price: "249",
-    unit: "€",
     description: "Débouchage haute pression de vos canalisations",
     features: [
       "Hydrocurage haute pression",
       "Bouchons tenaces et profonds",
-      "Caméra d'inspection incluse",
-      "Garantie de résultat",
+      "Prix exact annoncé avant de commencer",
+      "Garantie 3 mois (même bouchon)",
     ],
     highlighted: true,
   },
@@ -93,37 +94,32 @@ export const pricingDebouchage: PricingCard[] = [
 export const pricingBoiler: PricingCard[] = [
   {
     title: "Diagnostic",
-    price: "149",
-    unit: "€",
     description: "Diagnostic complet de votre installation",
     features: [
       "Intervention rapide",
       "Analyse complète du système",
-      "Devis détaillé fourni",
+      "Prix annoncé avant réparation",
       "Sans engagement",
     ],
   },
   {
     title: "Groupe de sécurité",
-    price: "149",
-    unit: "€",
-    description: "Remplacement du groupe de sécurité",
+    description: "290 € HTVA de main-d'œuvre, pièce en plus",
     features: [
+      "Vidange comprise",
+      "Remise en service comprise",
       "Pièces de qualité",
-      "Installation professionnelle",
-      "Mise en service incluse",
-      "Garantie sur la réparation",
+      "Travaux garantis 2 ans",
     ],
   },
   {
     title: "Remplacement boiler",
-    price: "349",
-    unit: "€",
-    description: "Installation d'un nouveau boiler électrique",
+    description: "Boiler électrique complet dès 1 290 € HTVA",
     features: [
-      "Installation",
-      "Mise en service",
-      "Garantie constructeur",
+      "Appareil et groupe de sécurité",
+      "Dépose de l'ancien boiler",
+      "Placement, déplacement et main-d'œuvre",
+      "Garantie 2 ans appareil et installation",
     ],
     highlighted: true,
   },

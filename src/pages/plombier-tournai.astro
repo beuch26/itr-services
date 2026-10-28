@@ -24,7 +24,7 @@ const faqItems = [
   ...getFaqDepannage(zone.citiesInline),
   {
     question: "Quels services proposez-vous à Tournai ?",
-    answer: "À Tournai et dans le Tournaisis, nous assurons le dépannage plomberie, la recherche et la réparation de fuites, le débouchage de canalisations et de WC, ainsi que la réparation et le remplacement de boilers. Chaque intervention fait l'objet d'un devis communiqué avant les travaux.",
+    answer: "À Tournai et dans le Tournaisis, nous assurons le dépannage plomberie, la recherche et la réparation de fuites, le débouchage de canalisations et de WC, la réparation et le remplacement de boilers, ainsi que la rénovation de salle de bain (sur devis après visite). Chaque intervention fait l'objet d'un devis communiqué avant les travaux.",
   },
   {
     question: "L'eau calcaire de la région abîme-t-elle mon boiler ?",
@@ -71,46 +71,63 @@ const faqItems = [
     imageSrc="/images/portfolio/detection-camera-thermique.webp"
     imagePosition="right"
     ctaText="Appeler Joseph"
-    ctaSubtext="Recherche de fuite dès 249€"
+    ctaSubtext="Détection de fuite 390 € HTVA"
     features={[
-      "Dépannage plomberie dès 149€",
-      "Recherche de fuite non destructive dès 249€",
-      "Réparation chiffrée avant travaux",
+      "Détection non destructive : 390 € HTVA",
+      "Réparation en plus, dès 390 € HTVA",
+      "Ouverture et remise en état chiffrées à part",
       "Rapport d'intervention pour votre assurance",
     ]}
   />
 
   <TextImageCTA
     title="Débouchage : WC, évier, douche et égouts."
-    text="Graisses dans l'évier, lingettes dans les WC, racines dans une canalisation extérieure : on identifie la cause du bouchon avant de choisir la technique. Furet, curage haute pression ou inspection caméra, le tarif dépend de la canalisation et de la méthode nécessaire, et il vous est annoncé avant de commencer."
+    text="Graisses dans l'évier, lingettes dans les WC, racines dans une canalisation extérieure : on identifie la cause du bouchon avant de choisir la technique. Chaque bouchon est différent : notre technicien fait d'abord un diagnostic, puis vous annonce le prix exact avant de commencer. Vous décidez, sans engagement."
     imagePrompt=""
     imageAlt="Débouchage de WC par ITR Services"
     imageSrc="/images/portfolio/debouchage-wc.webp"
     imagePosition="left"
     ctaText="Appeler Joseph"
-    ctaSubtext="Débouchage dès 149€"
+    ctaSubtext="Prix annoncé après diagnostic"
     features={[
       "WC, éviers, douches, baignoires",
       "Curage haute pression des canalisations",
       "Inspection caméra si nécessaire",
-      "Tarif annoncé avant intervention",
+      "Garantie 3 mois si le même bouchon revient",
     ]}
   />
 
   <TextImageCTA
     title="Boiler : réparation ou remplacement, on vous dit ce qui vaut la peine."
-    text="L'eau du Tournaisis est réputée calcaire, et le tartre est l'ennemi numéro un des boilers électriques : résistance entartrée, chauffe lente, groupe de sécurité qui goutte. Nos plombiers diagnostiquent la panne, réparent quand c'est possible, et vous proposent un remplacement sur devis seulement quand il s'impose."
+    text="L'eau du Tournaisis est réputée calcaire, et le tartre est l'ennemi numéro un des boilers électriques : résistance entartrée, chauffe lente, groupe de sécurité qui goutte. Nos plombiers diagnostiquent la panne, réparent quand c'est possible, et vous proposent un remplacement seulement quand il s'impose."
     imagePrompt=""
     imageAlt="Remplacement de boiler par ITR Services"
     imageSrc="/images/avant-apres-boiler-thermor.webp"
     imagePosition="right"
     ctaText="Appeler Joseph"
-    ctaSubtext="Diagnostic boiler dès 149€"
+    ctaSubtext="Remplacement complet dès 1 290 € HTVA"
     features={[
-      "Diagnostic boiler dès 149€",
-      "Remplacement du groupe de sécurité",
-      "Remplacement de boiler sur devis",
+      "Remplacement complet dès 1 290 € HTVA",
+      "Groupe de sécurité : 290 € HTVA de main-d'œuvre",
+      "Garantie 2 ans appareil et installation",
       "Conseils détartrage et entretien",
+    ]}
+  />
+
+  <TextImageCTA
+    title="Rénovation de salle de bain : sur devis, après visite."
+    text="Remplacer une baignoire par une douche à l'italienne, refaire l'arrivée d'eau, installer un WC suspendu ou rénover entièrement la pièce : chaque salle de bain est différente. On vient voir sur place à Tournai ou dans les environs, on écoute ce que vous voulez, puis on vous remet un devis détaillé poste par poste."
+    imagePrompt=""
+    imageAlt="Salle de bain rénovée avec douche moderne par ITR Services"
+    imageSrc="/images/portfolio/renovation-sdb-douche-moderne.webp"
+    imagePosition="left"
+    ctaText="Appeler Joseph"
+    ctaSubtext="Visite et devis sans engagement"
+    features={[
+      "Visite sur place avant tout devis",
+      "Devis détaillé poste par poste",
+      "Plomberie, sanitaires et carrelage",
+      "Travaux garantis 2 ans",
     ]}
   />
 
@@ -169,7 +186,8 @@ const faqItems = [
       <strong>ITR Services</strong> intervient à <strong>Tournai</strong> et dans les communes voisines :
       Kain, Froyennes, Templeuve, Gaurain-Ramecroix, Warchin, Vaulx, mais aussi Antoing, Péruwelz,
       Leuze-en-Hainaut, Pecq, Rumes, Brunehaut et Celles. Une seule équipe pour le <strong>dépannage plomberie</strong>,
-      la <strong>recherche de fuite</strong>, le <strong>débouchage</strong> et le <strong>boiler</strong>.
+      la <strong>recherche de fuite</strong>, le <strong>débouchage</strong>, le <strong>boiler</strong> et la
+      <strong>rénovation de salle de bain</strong>.
     </p>
     <p>
       Le bâti tournaisien mélange maisons de maître du centre historique, maisons ouvrières et constructions
@@ -178,10 +196,10 @@ const faqItems = [
       et que la réparation est chiffrée séparément, une fois la cause connue.
     </p>
     <p>
-      Côté tarifs, la règle est simple : vous connaissez le prix avant que l'on commence. Le dépannage démarre
-      dès 149€, la recherche de fuite dès 249€. Le débouchage dépend du type de canalisation et de la technique
-      nécessaire, et le remplacement de boiler se fait sur devis selon la capacité et le modèle. Les éventuels
-      frais de déplacement vous sont communiqués par téléphone et soumis à votre accord avant la visite.
+      Côté tarifs, la règle est simple : vous connaissez le prix avant que l'on commence. La détection de fuite
+      coûte 390 € HTVA, la réparation est en plus (dès 390 € HTVA) et le remplacement complet d'un boiler électrique
+      démarre à 1 290 € HTVA. Pour un dépannage ou un débouchage, le prix exact est annoncé après diagnostic.
+      Les frais de déplacement (60 à 120 € HTVA selon la zone) vous sont communiqués par téléphone avant la visite.
     </p>
     <p>
       Nous sommes joignables <strong>24h/24 et 7j/7</strong>. Le délai d'intervention dépend de nos disponibilités,

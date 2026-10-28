@@ -22,7 +22,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Le déplacement est-il facturé ?",
-    answer: "Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention. Leur montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.",
+    answer: "Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention. Comptez de 60 à 120 € HTVA selon la zone ; le montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.",
   },
   {
     question: "Quels moyens de paiement acceptez-vous ?",
@@ -34,7 +34,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Combien coûte un dépannage plomberie ?",
-    answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis détaillé et sans engagement avant de commencer.",
+    answer: "Le prix d'un dépannage dépend de la nature de la panne et des pièces à remplacer. Il vous est toujours annoncé avant de commencer, sans engagement. Nos prix sont HTVA ; le total TVAC vous est communiqué avant l'intervention.",
   },
   {
     question: "Que faire en attendant l'arrivée de vos plombiers ?",
@@ -46,7 +46,7 @@ export const faqDepannage: FAQItem[] = [
   },
   {
     question: "Proposez-vous une garantie sur vos réparations ?",
-    answer: "Oui, toutes nos réparations sont garanties. Nous utilisons des pièces de rechange de marques reconnues et nos plombiers suivent les normes en vigueur pour assurer la durabilité de chaque intervention.",
+    answer: "Oui, nos travaux sont garantis 2 ans. Nous utilisons des pièces de rechange de marques reconnues et nos plombiers suivent les normes en vigueur pour assurer la durabilité de chaque intervention.",
   },
 ];
 
@@ -61,7 +61,7 @@ export const faqFuite: FAQItem[] = [
   },
   {
     question: "Combien coûte une recherche de fuite ?",
-    answer: "La recherche de fuite commence dès 249€ (diagnostic avec équipement professionnel). La réparation et l'éventuelle remise en état font l'objet d'un devis séparé, selon la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
+    answer: "La détection de fuite coûte 390 € HTVA et couvre uniquement la recherche. La réparation est en plus, dès 390 € HTVA, avec un prix annoncé avant les travaux. Si un mur, un sol ou un plafond doit être ouvert, l'ouverture et la remise en état sont chiffrées à part.",
   },
   {
     question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -69,7 +69,7 @@ export const faqFuite: FAQItem[] = [
   },
   {
     question: "La réparation de fuite est-elle garantie ?",
-    answer: "Oui, toutes nos réparations de fuite sont garanties. Nous utilisons des matériaux de marques reconnues et des techniques éprouvées pour que la réparation tienne dans le temps.",
+    answer: "Oui, nos réparations de fuite sont garanties 2 ans. Nous utilisons des matériaux de marques reconnues et des techniques éprouvées pour que la réparation tienne dans le temps.",
   },
   {
     question: "Une fuite peut-elle causer des dégâts importants si elle n'est pas traitée ?",
@@ -112,11 +112,11 @@ export const faqBoiler: FAQItem[] = [
   },
   {
     question: "Le remplacement de boiler est-il garanti ?",
-    answer: "Oui, vous bénéficiez d'une double garantie : la garantie constructeur sur l'appareil (généralement 2 à 5 ans) et notre garantie sur la main-d'œuvre et l'installation.",
+    answer: "Oui, le remplacement de boiler est garanti 2 ans, sur l'appareil comme sur l'installation.",
   },
   {
     question: "Combien coûte le remplacement d'un boiler ?",
-    answer: "Le remplacement d'un boiler se fait sur devis, selon la capacité, le modèle, l'accessibilité et les adaptations de tuyauterie nécessaires. Nos tarifs démarrent dès 349€ pour l'installation et la mise en service d'un boiler électrique standard. La reprise de l'ancien boiler est proposée en option (90€). Un devis précis est établi avant toute intervention.",
+    answer: "Le remplacement complet d'un boiler électrique démarre à 1 290 € HTVA : appareil, groupe de sécurité, dépose de l'ancien boiler, placement, déplacement et main-d'œuvre compris. Le remplacement du seul groupe de sécurité coûte 290 € HTVA de main-d'œuvre (vidange et remise en service comprises), pièce en plus.",
   },
   {
     question: "Proposez-vous des boilers économes en énergie ?",
@@ -155,7 +155,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Le débouchage est-il garanti ?",
-    answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons sans frais supplémentaires pour le résoudre définitivement.",
+    answer: "Oui : si le même bouchon revient dans les 3 mois, nous revenons sans frais. La garantie ne s'applique pas en cas de mauvaise utilisation (lingettes, graisses, objets jetés dans les canalisations).",
   },
   {
     question: "Les produits chimiques sont-ils efficaces pour déboucher ?",
@@ -163,7 +163,7 @@ export const faqDebouchage: FAQItem[] = [
   },
   {
     question: "Combien coûte un débouchage ?",
-    answer: "Un débouchage commence dès 149€. Le tarif dépend du type de canalisation, de la difficulté du bouchon et de la technique nécessaire. Les éventuels frais de déplacement, de diagnostic, de main-d'œuvre et de matériel sont précisés avant intervention.",
+    answer: "Chaque bouchon est différent. Notre technicien fait d'abord un diagnostic, puis vous annonce le prix exact avant de commencer. Vous décidez, sans engagement. Aucun travail n'est effectué sans votre accord : pas de mauvaise surprise sur la facture.",
   },
   {
     question: "Quels types de canalisations pouvez-vous déboucher ?",
@@ -214,7 +214,7 @@ export const faqRenovation: FAQItem[] = [
   },
   {
     question: "Les travaux de rénovation sont-ils garantis ?",
-    answer: "Oui, tous nos travaux de rénovation sont garantis. La garantie couvre la main-d'œuvre et l'installation. Les matériaux et sanitaires bénéficient en plus de la garantie constructeur de chaque fabricant.",
+    answer: "Oui, nos travaux de rénovation sont garantis 2 ans. La garantie couvre la main-d'œuvre et l'installation. Les matériaux et sanitaires bénéficient en plus de la garantie constructeur de chaque fabricant.",
   },
   {
     question: "Pouvez-vous adapter une salle de bain pour les personnes à mobilité réduite ?",
@@ -259,7 +259,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Le déplacement est-il facturé ?",
-      answer: `Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention à ${citiesInline}. Leur montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.`,
+      answer: `Des frais de déplacement peuvent être facturés selon le lieu et la nature de l'intervention à ${citiesInline}. Comptez de 60 à 120 € HTVA selon la zone ; le montant vous est communiqué par téléphone avant la visite et soumis à votre accord : aucun frais caché.`,
     },
     {
       question: "Quels moyens de paiement acceptez-vous ?",
@@ -271,7 +271,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte un dépannage plomberie ?",
-      answer: "Un dépannage plomberie commence dès 149€. Le tarif exact dépend de la nature de la panne et des pièces à remplacer. Nous vous remettons toujours un devis détaillé et sans engagement avant de commencer.",
+      answer: "Le prix d'un dépannage dépend de la nature de la panne et des pièces à remplacer. Il vous est toujours annoncé avant de commencer, sans engagement. Nos prix sont HTVA ; le total TVAC vous est communiqué avant l'intervention.",
     },
     {
       question: "Que faire en attendant l'arrivée de vos plombiers ?",
@@ -283,7 +283,7 @@ export function getFaqDepannage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Proposez-vous une garantie sur vos réparations ?",
-      answer: "Oui, toutes nos réparations sont garanties. Nous utilisons des pièces de rechange de marques reconnues et nos plombiers suivent les normes en vigueur pour assurer la durabilité de chaque intervention.",
+      answer: "Oui, nos travaux sont garantis 2 ans. Nous utilisons des pièces de rechange de marques reconnues et nos plombiers suivent les normes en vigueur pour assurer la durabilité de chaque intervention.",
     },
   ];
 }
@@ -300,7 +300,7 @@ export function getFaqFuite(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte une recherche de fuite ?",
-      answer: "La recherche de fuite commence dès 249€ (diagnostic avec équipement professionnel). La réparation et l'éventuelle remise en état font l'objet d'un devis séparé, selon la complexité de la situation. Nous vous communiquons un devis détaillé et transparent avant toute intervention.",
+      answer: "La détection de fuite coûte 390 € HTVA et couvre uniquement la recherche. La réparation est en plus, dès 390 € HTVA, avec un prix annoncé avant les travaux. Si un mur, un sol ou un plafond doit être ouvert, l'ouverture et la remise en état sont chiffrées à part.",
     },
     {
       question: "Ma fuite est urgente, pouvez-vous intervenir rapidement ?",
@@ -308,7 +308,7 @@ export function getFaqFuite(citiesInline: string): FAQItem[] {
     },
     {
       question: "La réparation de fuite est-elle garantie ?",
-      answer: "Oui, toutes nos réparations de fuite sont garanties. Nous utilisons des matériaux de marques reconnues et des techniques éprouvées pour que la réparation tienne dans le temps.",
+      answer: "Oui, nos réparations de fuite sont garanties 2 ans. Nous utilisons des matériaux de marques reconnues et des techniques éprouvées pour que la réparation tienne dans le temps.",
     },
     {
       question: "Une fuite peut-elle causer des dégâts importants si elle n'est pas traitée ?",
@@ -349,7 +349,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Le débouchage est-il garanti ?",
-      answer: "Oui, nous garantissons le résultat de chaque débouchage. Si le problème persiste après notre intervention, nous revenons sans frais supplémentaires pour le résoudre définitivement.",
+      answer: "Oui : si le même bouchon revient dans les 3 mois, nous revenons sans frais. La garantie ne s'applique pas en cas de mauvaise utilisation (lingettes, graisses, objets jetés dans les canalisations).",
     },
     {
       question: "Les produits chimiques sont-ils efficaces pour déboucher ?",
@@ -357,7 +357,7 @@ export function getFaqDebouchage(citiesInline: string): FAQItem[] {
     },
     {
       question: "Combien coûte un débouchage ?",
-      answer: "Un débouchage commence dès 149€. Le tarif dépend du type de canalisation, de la difficulté du bouchon et de la technique nécessaire. Les éventuels frais de déplacement, de diagnostic, de main-d'œuvre et de matériel sont précisés avant intervention.",
+      answer: "Chaque bouchon est différent. Notre technicien fait d'abord un diagnostic, puis vous annonce le prix exact avant de commencer. Vous décidez, sans engagement. Aucun travail n'est effectué sans votre accord : pas de mauvaise surprise sur la facture.",
     },
     {
       question: "Quels types de canalisations pouvez-vous déboucher ?",
@@ -393,7 +393,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Combien coûte une intervention de plomberie ?",
-    answer: "Nos tarifs varient selon le type d'intervention. Un dépannage plomberie commence dès 149€, une détection de fuite dès 249€ et un remplacement de boiler dès 349€. Nous vous communiquons toujours un devis clair et détaillé avant toute intervention.",
+    answer: "Nos prix sont HTVA. La détection de fuite coûte 390 €, la réparation de fuite démarre à 390 € et le remplacement complet d'un boiler électrique démarre à 1 290 €. Pour un dépannage ou un débouchage, le prix exact vous est annoncé après diagnostic, avant de commencer.",
   },
   {
     question: "En combien de temps pouvez-vous intervenir ?",
@@ -401,7 +401,7 @@ export const faqHomepage: FAQItem[] = [
   },
   {
     question: "Vos réparations sont-elles garanties ?",
-    answer: "Absolument. Toutes nos réparations et installations sont garanties. Nous utilisons des pièces et matériaux de marques reconnues (Grohe, Geberit, Atlantic) pour des réparations qui tiennent dans le temps.",
+    answer: "Absolument. Nos travaux sont garantis 2 ans. Nous utilisons des pièces et matériaux de marques reconnues (Grohe, Geberit, Atlantic) pour des réparations qui tiennent dans le temps.",
   },
   {
     question: "Faut-il payer avant l'intervention ?",

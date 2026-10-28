@@ -1,12 +1,13 @@
 ---
 import CTAButton from "./CTAButton.astro";
-import { pricingHomepage, type PricingCard } from "../data/pricing";
+import { pricingHomepage, pricingNote, type PricingCard } from "../data/pricing";
 
 interface Props {
   cards?: PricingCard[];
+  intro?: string;
 }
 
-const { cards = pricingHomepage } = Astro.props;
+const { cards = pricingHomepage, intro = "Prix annoncé avant intervention, sans engagement. Aucune mauvaise surprise." } = Astro.props;
 ---
 
 <section class="bg-surface py-12 md:py-16 relative overflow-hidden">
@@ -21,8 +22,8 @@ const { cards = pricingHomepage } = Astro.props;
       <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark-blue mb-3 tracking-tight">
         Nos prestations
       </h2>
-      <p class="text-gray-500 max-w-lg mx-auto">
-        Devis détaillé sur place, sans engagement. Aucune mauvaise surprise.
+      <p class="text-gray-500 max-w-2xl mx-auto">
+        {intro}
       </p>
     </div>
 
@@ -111,5 +112,8 @@ const { cards = pricingHomepage } = Astro.props;
       ))}
     </div>
 
+    <p class="mt-10 text-xs text-gray-500 max-w-3xl mx-auto text-center leading-relaxed">
+      {pricingNote}
+    </p>
   </div>
 </section>

@@ -39,7 +39,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Pour une fuite legere, du ruban adhesif etanche (type chatterton) ou du mastic epoxy peut offrir un colmatage temporaire. Pour un WC bouche, evitez d'actionner la chasse d'eau a repetition, cela ne ferait qu'aggraver la situation. En revanche, de l'eau chaude versee lentement peut parfois degager un bouchon leger.</p>
 
 <h3>Combien coute un depannage en urgence ?</h3>
-<p>Chez ITR Services, nos interventions de depannage plomberie demarrent <strong>des 149&#8364;</strong>, avec un devis clair et transparent avant toute reparation. Pas de mauvaise surprise : le prix annonce est le prix facture.</p>
+<p>Chez ITR Services, le prix d'un depannage vous est annonce avant toute reparation. Pas de mauvaise surprise : le prix annonce est le prix facture.</p>
 
 <h3>Ce qu'il faut eviter absolument</h3>
 <ul>
@@ -78,7 +78,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Les raccords sous evier sont soumis a des contraintes mecaniques et a l'humidite permanente. Les joints en caoutchouc se deteriorent avec le temps, et les siphons peuvent se desserrer. Verifiez regulierement l'etat des raccords et remplacez les joints au moindre signe d'humidite.</p>
 
 <h3>Quand faut-il appeler un professionnel ?</h3>
-<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent a Bruxelles et ses alentours, a Waterloo, Wavre et Nivelles, a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Nos tarifs demarrent <strong>des 149&#8364;</strong> avec devis transparent.</p>
+<p>Si le probleme persiste apres une tentative de reparation simple, ou si vous constatez une fuite importante, n'attendez pas. Chez ITR Services, nos plombiers qualifies interviennent a Bruxelles et ses alentours, a Waterloo, Wavre et Nivelles, a <a href="/plombier-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a> comme a <a href="/plombier-namur">Namur</a>. Le prix vous est annonce avant toute intervention.</p>
 
 <h3>La prevention : votre meilleur allie</h3>
 <ul>
@@ -128,7 +128,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Combien coute un plombier en Belgique ?</h3>
-<p>Les tarifs varient selon la nature de l'intervention. Chez ITR Services, nos depannages demarrent <strong>des 149&#8364;</strong> pour les interventions courantes, <strong>des 249&#8364;</strong> pour la detection de fuite et <strong>des 349&#8364;</strong> pour le remplacement de boiler. Tous nos tarifs sont communiques a l'avance, sans mauvaise surprise.</p>
+<p>Les tarifs varient selon la nature de l'intervention. Chez ITR Services, la detection de fuite coute <strong>390&#8364; HTVA</strong> et le remplacement complet d'un boiler electrique demarre a <strong>1 290&#8364; HTVA</strong> ; pour un depannage, le prix est annonce avant de commencer. Tous nos tarifs sont communiques a l'avance, sans mauvaise surprise.</p>
 
 <p>Vous cherchez un plombier de confiance ? Contactez ITR Services au <strong>+32 470 96 08 23</strong>. Nous intervenons a Bruxelles, en Brabant wallon, a Namur, Charleroi et Mons avec des tarifs transparents et un service professionnel garanti.</p>
 `,
@@ -182,7 +182,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Si vous suspectez une fuite cachee, n'attendez pas. Plus le temps passe, plus les degats s'aggravent et plus la reparation sera couteuse. ITR Services dispose d'equipements de detection professionnels (camera thermique, detection acoustique, gaz traceur) pour localiser toute fuite avec precision. Nous intervenons a <a href="/recherche-reparation-fuite-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/recherche-reparation-fuite-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, ainsi qu'a <a href="/recherche-reparation-fuite-namur">Namur et dans toute la province</a>.</p>
 
 <h3>Le cout d'une detection de fuite professionnelle</h3>
-<p>Chez ITR Services, nos prestations de recherche et reparation de fuite demarrent <strong>des 249&#8364;</strong>. Ce tarif comprend la detection avec un equipement professionnel et un rapport detaille. La reparation est chiffree separement dans un devis clair et transparent.</p>
+<p>Chez ITR Services, la detection de fuite coute <strong>390&#8364; HTVA</strong> et couvre uniquement la recherche, avec un equipement professionnel. La reparation est en plus, des 390&#8364; HTVA, avec un prix annonce avant les travaux.</p>
 
 <p>Ne laissez pas une fuite cachee deteriorer votre habitation. Appelez ITR Services au <strong>+32 470 96 08 23</strong> pour une detection rapide et fiable.</p>
 `,
@@ -228,7 +228,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Les techniques de bricolage (colorant alimentaire, papier absorbant) peuvent aider a confirmer une fuite visible, mais elles sont totalement inefficaces pour les fuites cachees. Seul un professionnel equipe peut localiser une fuite sans causer de degats supplementaires. Chez ITR Services, nous intervenons avec l'ensemble de ces equipements a <a href="/recherche-reparation-fuite-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/recherche-reparation-fuite-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, ainsi qu'a <a href="/recherche-reparation-fuite-namur">Namur</a>.</p>
 
 <h3>Tarifs et garanties</h3>
-<p>Nos prestations de detection de fuite professionnelle demarrent <strong>des 249&#8364;</strong>. Chaque intervention comprend un rapport complet avec localisation precise de la fuite et recommandations de reparation. Appelez-nous au <strong>+32 470 96 08 23</strong> pour un diagnostic rapide.</p>
+<p>Notre detection de fuite professionnelle coute <strong>390&#8364; HTVA</strong> et couvre uniquement la recherche. La reparation est en plus, des 390&#8364; HTVA, avec un prix annonce avant les travaux. Appelez-nous au <strong>+32 470 96 08 23</strong> pour un diagnostic rapide.</p>
 `,
   },
   {
@@ -275,7 +275,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Combien coute la reparation d'une fuite ?</h3>
-<p>Le cout depend de la nature et de l'accessibilite de la fuite. Chez ITR Services, nos recherches de fuite demarrent <strong>des 249&#8364;</strong>. Ce prix couvre le diagnostic avec equipement professionnel ; la reparation et les eventuels frais de deplacement sont precises sur devis avant les travaux. Aucune mauvaise surprise.</p>
+<p>Le cout depend de la nature et de l'accessibilite de la fuite. Chez ITR Services, la detection de fuite coute <strong>390&#8364; HTVA</strong> et couvre uniquement la recherche. La reparation est en plus, des 390&#8364; HTVA ; si un mur, un sol ou un plafond doit etre ouvert, l'ouverture et la remise en etat sont chiffrees a part. Aucune mauvaise surprise.</p>
 
 <h3>Prevention : evitez les fuites futures</h3>
 <p>Quelques gestes simples peuvent prevenir la majorite des fuites :</p>
@@ -331,7 +331,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Pour les bouchons resistants ou recurrents, le debouchage professionnel est la seule solution efficace et durable. ITR Services intervient avec un equipement adapte : furet mecanique, hydrocureur haute pression, camera d'inspection. Nos services de <a href="/debouchage-bruxelles-schaerbeek-anderlecht">debouchage a Bruxelles</a> sont disponibles 24h/24. Nous intervenons egalement a <a href="/debouchage-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/debouchage-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/debouchage-namur">Namur</a>.</p>
 
 <h3>Tarifs de debouchage professionnel</h3>
-<p>Chez ITR Services, nos interventions de debouchage demarrent <strong>des 149&#8364;</strong>. Le prix exact depend de la complexite du bouchon et de l'accessibilite de la canalisation. Un devis precis est toujours communique avant le debut des travaux.</p>
+<p>Chez ITR Services, chaque bouchon est different : notre technicien fait d'abord un diagnostic, puis vous annonce le prix exact avant de commencer. Vous decidez, sans engagement.</p>
 
 <p>Un bouchon persistant ? N'attendez pas que la situation empire. Appelez ITR Services au <strong>+32 470 96 08 23</strong> pour une intervention rapide et efficace.</p>
 `,
@@ -381,7 +381,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Comparatif des couts</h3>
-<p>Un produit deboucheur coute entre 5 et 15 euros, mais si le probleme persiste (ce qui est frequent), vous accumulerez les achats sans resultat durable. Un <a href="/debouchage-bruxelles-schaerbeek-anderlecht">debouchage professionnel a Bruxelles</a> chez ITR Services demarre <strong>des 149&#8364;</strong> et regle le probleme definitivement.</p>
+<p>Un produit deboucheur coute entre 5 et 15 euros, mais si le probleme persiste (ce qui est frequent), vous accumulerez les achats sans resultat durable. Un <a href="/debouchage-bruxelles-schaerbeek-anderlecht">debouchage professionnel a Bruxelles</a> chez ITR Services regle le probleme durablement, avec un prix annonce apres diagnostic, avant de commencer.</p>
 
 <p>Nous intervenons egalement a <a href="/debouchage-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/debouchage-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/debouchage-namur">Namur</a> avec le meme niveau de service et d'equipement.</p>
 
@@ -435,7 +435,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>L'entretien preventif professionnel</h3>
 <p>Meme avec toutes ces precautions, un entretien professionnel periodique est recommande, surtout pour les habitations anciennes ou les reseaux de canalisations sont plus fragiles. Un <a href="/debouchage-bruxelles-schaerbeek-anderlecht">nettoyage preventif des canalisations a Bruxelles</a> permet d'eliminer les depots accumules avant qu'ils ne forment un bouchon.</p>
 
-<p>ITR Services propose des interventions preventives dans toutes ses zones de couverture : <a href="/debouchage-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/debouchage-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/debouchage-namur">Namur</a>. Nos tarifs de debouchage et d'entretien demarrent <strong>des 149&#8364;</strong>.</p>
+<p>ITR Services propose des interventions preventives dans toutes ses zones de couverture : <a href="/debouchage-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/debouchage-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/debouchage-namur">Namur</a>. Le prix exact vous est annonce apres diagnostic, avant de commencer.</p>
 
 <h3>Recette naturelle d'entretien mensuel</h3>
 <p>Une fois par mois, versez dans chaque bonde :</p>
@@ -491,7 +491,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Faites appel a un professionnel pour le remplacement</h3>
-<p>Le remplacement d'un boiler necessite des competences en plomberie et en electricite. ITR Services assure le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs de remplacement demarrent <strong>des 349&#8364;</strong>, fourniture et pose comprises.</p>
+<p>Le remplacement d'un boiler necessite des competences en plomberie et en electricite. ITR Services assure le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>. Le remplacement complet d'un boiler electrique demarre a <strong>1 290&#8364; HTVA</strong> : appareil, groupe de securite, depose de l'ancien, placement, deplacement et main-d'oeuvre compris.</p>
 
 <p>Vous hesitez entre reparation et remplacement ? Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise.</p>
 `,
@@ -554,7 +554,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Notre recommandation</h3>
 <p>Pour un remplacement rapide et economique a l'achat, le boiler electrique reste un excellent choix. Pour un investissement a long terme avec des economies substantielles, le thermodynamique est la meilleure option, a condition de disposer de l'espace necessaire.</p>
 
-<p>Chez ITR Services, nous installons les deux types de boilers et nous vous conseillons en fonction de votre situation. Notre service de <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a> couvre aussi <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/remplacement-boiler-namur">Namur</a>. Nos tarifs demarrent <strong>des 349&#8364;</strong>.</p>
+<p>Chez ITR Services, nous installons les deux types de boilers et nous vous conseillons en fonction de votre situation. Notre service de <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a> couvre aussi <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et <a href="/remplacement-boiler-namur">Namur</a>. Le remplacement complet d'un boiler electrique demarre a <strong>1 290&#8364; HTVA</strong>.</p>
 
 <p>Appelez-nous au <strong>+32 470 96 08 23</strong> pour un conseil personnalise et un devis detaille.</p>
 `,
@@ -609,7 +609,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Quand faire appel a un professionnel ?</h3>
 <p>Si vous n'etes pas a l'aise avec ces operations ou si votre boiler presente des signes de dysfonctionnement, faites appel a un professionnel. ITR Services propose l'entretien et le <a href="/remplacement-boiler-bruxelles-schaerbeek-anderlecht">remplacement de boiler a Bruxelles</a>, a <a href="/remplacement-boiler-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/remplacement-boiler-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/remplacement-boiler-namur">Namur</a>.</p>
 
-<p>Nos tarifs d'intervention demarrent <strong>des 149&#8364;</strong> pour l'entretien et <strong>des 349&#8364;</strong> pour le remplacement complet. Appelez-nous au <strong>+32 470 96 08 23</strong> pour planifier l'entretien de votre boiler.</p>
+<p>Le remplacement du groupe de securite coute <strong>290&#8364; HTVA</strong> de main-d'oeuvre (piece en plus) et le remplacement complet d'un boiler demarre a <strong>1 290&#8364; HTVA</strong>. Appelez-nous au <strong>+32 470 96 08 23</strong> pour planifier l'entretien de votre boiler.</p>
 `,
   },
 
@@ -673,7 +673,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Une renovation de salle de bain reussie repose sur le savoir-faire du professionnel qui la realise. ITR Services intervient pour la <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">renovation de salle de bain a Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Nous prenons en charge l'ensemble du projet, de la conception a la realisation.</p>
 
 <h3>Delais et budget</h3>
-<p>Comptez en moyenne <strong>2 a 4 semaines</strong> pour une renovation complete de salle de bain. Nos projets de renovation demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet, contactez-nous au <strong>+32 470 96 08 23</strong> pour un devis personnalise.</p>
+<p>Comptez en moyenne <strong>2 a 4 semaines</strong> pour une renovation complete de salle de bain. Chaque projet est chiffre sur devis apres visite : contactez-nous au <strong>+32 470 96 08 23</strong> pour un devis personnalise.</p>
 `,
   },
   {
@@ -714,7 +714,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Concretisez votre projet avec ITR Services</h3>
 <p>Vous souhaitez integrer ces tendances dans votre salle de bain ? ITR Services vous accompagne dans votre projet de <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">renovation de salle de bain a Bruxelles</a>. Nous intervenons egalement a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>.</p>
 
-<p>Nos renovations de salle de bain demarrent <strong>des 249&#8364;</strong> pour les interventions ponctuelles. Pour un projet complet sur mesure, appelez-nous au <strong>+32 470 96 08 23</strong> et recevez un devis detaille.</p>
+<p>Nos renovations de salle de bain sont chiffrees sur devis apres visite. Appelez-nous au <strong>+32 470 96 08 23</strong> et recevez un devis detaille.</p>
 `,
   },
   {
@@ -770,7 +770,7 @@ export const blogArticles: BlogArticle[] = [
 </ul>
 
 <h3>Faites chiffrer votre projet</h3>
-<p>Chez ITR Services, nous realisons des renovations de salle de bain a <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">Bruxelles et ses environs</a>, a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Nos interventions ponctuelles demarrent <strong>des 249&#8364;</strong>. Pour un projet complet, nous etablissons un devis detaille poste par poste.</p>
+<p>Chez ITR Services, nous realisons des renovations de salle de bain a <a href="/renovation-salle-de-bain-bruxelles-schaerbeek-anderlecht">Bruxelles et ses environs</a>, a <a href="/renovation-salle-de-bain-waterloo-wavre-nivelles">Waterloo, Wavre et Nivelles</a>, a <a href="/renovation-salle-de-bain-charleroi-mons-louviere">Charleroi, Mons et La Louviere</a>, et a <a href="/renovation-salle-de-bain-namur">Namur</a>. Chaque projet est chiffre sur devis apres visite, poste par poste.</p>
 
 <p>Appelez-nous au <strong>+32 470 96 08 23</strong> ou envoyez-nous un message pour demarrer votre projet de renovation.</p>
 `,
